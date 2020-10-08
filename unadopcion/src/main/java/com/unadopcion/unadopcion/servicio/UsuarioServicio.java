@@ -15,27 +15,26 @@ public class UsuarioServicio {
     private UsuarioRepositorio usuarioRepositorio;
 
     @Transactional
-    public Usuario crearUsuario(int logeoId, String usuarioNombre, String usuarioTelefono) {
-        String ninguno = "";
-        Usuario usuario = new Usuario();
-        usuario.setLogeoId(logeoId);
-        usuario.setUsuarioNombre(usuarioNombre);
-        usuario.setUsuarioTelefono(usuarioTelefono);
-        usuario.setUsuarioRol(ninguno);
-        usuario.setUsuarioPuntos(0);
-        usuario.setUsuarioEmail(ninguno);
-        usuario.setUsuarioLugar(ninguno);
-        usuario.setUsuarioInfo(ninguno);
-        return usuarioRepositorio.save(usuario);
+    public Usuario crearUsuario(int logeoId, String usuarioNombre,
+                                String usuarioCorreo,
+                                String usuarioTelefono){
+         String ninguno = "";
+         Usuario usuario = new Usuario();
+         usuario.setLogeoId(logeoId);
+         usuario.setUsuarioNombre(usuarioNombre);
+         usuario.setUsuarioTelefono(usuarioTelefono);
+         usuario.setUsuarioRol(ninguno);
+         usuario.setUsuarioPuntos(0);
+         usuario.setUsuarioEmail(usuarioCorreo);
+         usuario.setUsuarioLugar(ninguno);
+         usuario.setUsuarioInfo(ninguno);
+         return usuarioRepositorio.save(usuario);
 
     }
 
-    public Optional<Usuario> buscarUsuario(int id) {
+    public Optional<Usuario> buscarUsuario(int id)
+    {
         return usuarioRepositorio.findById(id);
     }
-
-    public boolean existeUsuario(int id) {
-        return usuarioRepositorio.existsById(id);
-    }
-
 }
+
