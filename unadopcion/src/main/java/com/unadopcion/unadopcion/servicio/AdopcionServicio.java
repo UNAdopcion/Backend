@@ -17,11 +17,14 @@ public class AdopcionServicio {
     public Adopcion crearAdopcion(int animalId, int usuarioId, String adopcionFecha){
 
         Adopcion adopcion = new Adopcion();
-        adopcion.setAnimalId(animalId);
+        adopcion.setAnimId(animalId);
         adopcion.setUsuarioId(usuarioId);
-        adopcion.setAdopcionFecha(adopcionFecha);
+        adopcion.setAdopFecha(adopcionFecha);
         return adopcionRepositorio.save(adopcion);
 
+    }
+    public Adopcion guardar(Adopcion adopcion){
+        return adopcionRepositorio.save(adopcion);
     }
 
     public Optional buscarAdopcionById(int id){

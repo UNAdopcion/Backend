@@ -2,7 +2,9 @@ package com.unadopcion.unadopcion.servicio;
 
 import javax.transaction.Transactional;
 
+import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.modelo.Registro;
+import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.repositorio.RegistroRepositorio;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +17,17 @@ public class RegistroServicio {
     private RegistroRepositorio registroRepositorio;
 
     @Transactional
-    public Registro crearRegistro(int animalId, int usuarioId, String fecha) {
+    public Registro crearRegistro(int usuarioId, String fecha) {
 
         Registro registro = new Registro();
-        registro.setAnimalId(animalId);
         registro.setUsuarioId(usuarioId);
-        registro.setRegistroFecha(fecha);
+        registro.setRegisFecha(fecha);
         return registroRepositorio.save(registro);
 
+    }
+
+    public Registro guardar(Registro registro){
+        return registroRepositorio.save(registro);
     }
 
 }

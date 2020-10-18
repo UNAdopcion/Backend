@@ -5,4 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UsuarioRepositorio extends CrudRepository<Usuario, Integer>{
 
+    boolean existsByUsuarioNombre(String nombre);
+    Usuario getUsuarioByUsuarioNombre(String nombre);
+    boolean existsByUsuarioEmail(String email);
 }

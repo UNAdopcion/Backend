@@ -8,8 +8,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int usuarioId;
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int logeoId;
+    private Integer logeoId;
     private String usuarioNombre;
     private String usuarioRol;
     private double usuarioPuntos;
@@ -17,10 +16,23 @@ public class Usuario {
     private String usuarioTelefono;
     private String usuarioLugar;
     private String usuarioInfo;
+    @Lob
+    @Column(columnDefinition = "LONGBLOB")
+    private byte[] usuarioFoto;
+
 
 
 
     public Usuario() {}
+
+    public byte[] getUsuarioFoto() {
+        return usuarioFoto;
+    }
+
+    public void setUsuarioFoto(byte[] usuarioFoto) {
+        this.usuarioFoto = usuarioFoto;
+    }
+
 
     public int getUsuarioId() {
         return usuarioId;

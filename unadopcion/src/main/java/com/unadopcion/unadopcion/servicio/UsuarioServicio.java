@@ -1,5 +1,6 @@
 package com.unadopcion.unadopcion.servicio;
 
+import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.repositorio.UsuarioRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +32,26 @@ public class UsuarioServicio {
          return usuarioRepositorio.save(usuario);
 
     }
+    public boolean existeEmail(String email){
+        return usuarioRepositorio.existsByUsuarioEmail(email);
+    }
+
+    public Usuario guardar(Usuario usuario){
+        return usuarioRepositorio.save(usuario);
+    }
 
     public Optional<Usuario> buscarUsuario(int id)
     {
         return usuarioRepositorio.findById(id);
     }
+
+    public Usuario buscarUsuario(String nombre){
+        return usuarioRepositorio.getUsuarioByUsuarioNombre(nombre);
+    }
+
+    public boolean usuarioExiste(String nombre){
+        return usuarioRepositorio.existsByUsuarioNombre(nombre);
+    }
+
 }
 

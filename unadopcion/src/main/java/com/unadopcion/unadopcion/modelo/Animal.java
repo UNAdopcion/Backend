@@ -1,93 +1,118 @@
 package com.unadopcion.unadopcion.modelo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Animal {
+public class Animal implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
-    private int animalId;
-    private int animalEdad;
-    private int adopcionId;
-    private int registroId;
-    String animalNombre;
-    String animalTipo;
-    String animalLugar;
-    String animalDescripcion;
-    String animalSexo;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int animId;
+    private int animEdad;
+    private Integer adopId;
+    private Integer regisId;
+    private String animNombre;
+    private String animTipo;
+    private String animLugar;
+    private String animDescrip;
+    private String animSexo;
+    @Lob
+    @Column(columnDefinition = "LONGBLOB")
+    private byte[] animFoto;
 
-    public Animal(){}
 
-    public int getAnimalId() {
-        return animalId;
+
+    public Animal(){
+        regisId = null;
+
+
     }
 
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public int getAnimalEdad() {
-        return animalEdad;
+    public int getAnimId() {
+        return animId;
     }
 
-    public void setAnimalEdad(int animalEdad) {
-        this.animalEdad = animalEdad;
+    public void setAnimId(int animId) {
+        this.animId = animId;
     }
 
-    public int getAdopcionId() {
-        return adopcionId;
+    public int getAnimEdad() {
+        return animEdad;
     }
 
-    public void setAdopcionId(int adopcionId) {
-        this.adopcionId = adopcionId;
+    public void setAnimEdad(int animEdad) {
+        this.animEdad = animEdad;
     }
 
-    public int getRegistroId() {
-        return registroId;
+    public Integer getAdopId() {
+        return adopId;
     }
 
-    public void setRegistroId(int registroId) {
-        this.registroId = registroId;
+    public void setAdopId(Integer adopId) {
+        this.adopId = adopId;
     }
 
-    public String getAnimalNombre() {
-        return animalNombre;
+    public Integer getRegisId() {
+        return regisId;
     }
 
-    public void setAnimalNombre(String animalNombre) {
-        this.animalNombre = animalNombre;
+    public void setRegisId(Integer regisId) {
+        this.regisId = regisId;
     }
 
-    public String getAnimalTipo() {
-        return animalTipo;
+    public String getAnimNombre() {
+        return animNombre;
     }
 
-    public void setAnimalTipo(String animalTipo) {
-        this.animalTipo = animalTipo;
+    public void setAnimNombre(String animNombre) {
+        this.animNombre = animNombre;
     }
 
-    public String getAnimalLugar() {
-        return animalLugar;
+    public String getAnimTipo() {
+        return animTipo;
     }
 
-    public void setAnimalLugar(String animalLugar) {
-        this.animalLugar = animalLugar;
+    public void setAnimTipo(String animTipo) {
+        this.animTipo = animTipo;
     }
 
-    public String getAnimalDescripcion() {
-        return animalDescripcion;
+    public String getAnimLugar() {
+        return animLugar;
     }
 
-    public void setAnimalDescripcion(String animalDescripcion) {
-        this.animalDescripcion = animalDescripcion;
+    public void setAnimLugar(String animLugar) {
+        this.animLugar = animLugar;
     }
 
-    public String getAnimalSexo() {
-        return animalSexo;
+    public String getAnimDescrip() {
+        return animDescrip;
     }
 
-    public void setAnimalSexo(String animalSexo) {
-        this.animalSexo = animalSexo;
+    public void setAnimDescrip(String animDescrip) {
+        this.animDescrip = animDescrip;
+    }
+
+    public String getAnimSexo() {
+        return animSexo;
+    }
+
+    public void setAnimSexo(String animSexo) {
+        this.animSexo = animSexo;
+    }
+
+    public byte[] getAnimFoto() {
+        return animFoto;
+    }
+
+    public void setAnimFoto(byte[] animFoto) {
+        this.animFoto = animFoto;
     }
 }

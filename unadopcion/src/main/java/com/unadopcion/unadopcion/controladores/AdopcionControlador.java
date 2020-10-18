@@ -29,7 +29,7 @@ public class AdopcionControlador {
 
             //crear adopcion
             Adopcion adopcion = adopcionServicio.crearAdopcion(animalid, usuarioid, adopcionfecha);
-            return "Solicitud creada con id " + adopcion.getAdopcionId();
+            return "Solicitud creada con id " + adopcion.getAdopId();
         }else{
 
             return "El animal con id " + animalid + "ya fue adoptado";

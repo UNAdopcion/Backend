@@ -10,14 +10,15 @@ public class Logeo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int logeoId;
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int usuarioId;
+    private Integer usuarioId;
     private String logeoNombre;
     private String logeoContra;
 
 
 
-    public Logeo() { }
+    public Logeo() {
+        usuarioId = null;
+    }
 
     public int getLogeoId() {
         return logeoId;

@@ -1,14 +1,11 @@
 package com.unadopcion.unadopcion.controladores;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.modelo.Logeo;
-
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.servicio.LogeoServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
+import com.unadopcion.unadopcion.herramientas.JsonLector;
+import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
@@ -17,34 +14,42 @@ import java.util.Optional;
 @RestController
 public class LogeoControlador {
 
-    private ObjectMapper objectMapper = new ObjectMapper();
-
     @Autowired
     private LogeoServicio logeoServicio;
     @Autowired
     private UsuarioServicio usuarioServicio;
-    private Integer logeoId;
+
 
     @RequestMapping(value="/crearusuario",
             method = RequestMethod.POST,
             consumes = "application/json", produces = "text/plain")
-    public String crearNuevoUsuario(@RequestBody String json) throws JsonProcessingException {
-         JsonNode jsonNode = objectMapper.readTree(json);
-         String nombre = jsonNode.get("nombre").asText();
-         String correo = jsonNode.get("correo").asText();
-         String telefono = jsonNode.get("telefono").asText();
-         String contrasena = jsonNode.get("nombre").asText();
-         //crea registro logeo primero
-         if(!logeoServicio.existsByNombre(nombre))
+    public String crearNuevoUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
+         JsonLector jsonLector = new JsonLector(json);
+         String nombre = jsonLector.getJsonCampo("nombre");
+         String correo = jsonLector.getJsonCampo("correo");
+         String telefono = jsonLector.getJsonCampo("telefono");
+         String contrasena = jsonLector.getJsonCampo("contrasena");
+         boolean nombreExiste = logeoServicio.existsByNombre(nombre);
+         boolean correoExiste = usuarioServicio.existeEmail(correo);
+         //crea logeo primero, verifica que no exista usuario nombre o usuario con mismo correo
+         if(!nombreExiste && !correoExiste)
          {
+             //primero crear logeo
              Logeo logeo = logeoServicio.crearLogeo(nombre, contrasena);
-             logeoId = logeo.getLogeoId();
              //crear usuario con el id del logeo
-             Usuario usuario = usuarioServicio.crearUsuario(logeoId,  nombre, correo, telefono);
+             Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(),  nombre, correo, telefono);
+             logeo.setUsuarioId(usuario.getUsuarioId());
+             //guardar cambio a logeo
+             logeoServicio.guardar(logeo);
+
              return "ID nuevo usuario: " + usuario.getUsuarioId();
          }else{
 
-             return "El nombre de usuario " + nombre + " ya existe";
+             if(nombreExiste)
+                return "El nombre de usuario " + nombre + " ya existe";
+             else
+                 return "El correo " + correo + " ya existe";
+
          }
 
 
@@ -62,11 +67,5 @@ public class LogeoControlador {
        return null;
     }
 
-    @RequestMapping(value = "/probar",
-            method = RequestMethod.POST,
-            consumes = "application/json", produces = "text/plain")
-    public String probar(@RequestBody String json) throws JsonProcessingException {
-        JsonNode jsonNode = objectMapper.readTree(json);
-        return jsonNode.get("nombre").asText();
-    }
+
 }

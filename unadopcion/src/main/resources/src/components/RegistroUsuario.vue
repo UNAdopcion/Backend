@@ -3,10 +3,10 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header"><b>Bienvenido a Registro de usuario</b></div>
+          <div class="card-header"><b>Crea tu cuenta con nosotros!</b></div>
 
           <div class="card-body">
-            <form @submit="formSubmit">
+            <form @submit="enviarForma">
               <strong>Nombre de usuario:</strong>
               <input type="text" class="form-control" v-model="nombre">
               <strong>Correo:</strong>
@@ -31,12 +31,10 @@
 
 <script>
 
-import axios from 'axios'
-const UNADOPCION_API_URL = "http://localhost:8080";
-const CONTROLADOR = "/crearusuario";
+import RegistrarUsuarioServicio from "@/servicio/RegistrarUsuarioServicio";
 export default {
   mounted() {
-    console.log('Componente OK.')
+    console.log('Componente RegistroUsuario OK.')
   },
   data() {
     return {
@@ -48,26 +46,29 @@ export default {
     };
   },
   methods: {
-    formSubmit(e) {
+    enviarForma(e) {
       e.preventDefault();
       let objectoActual = this;
-      axios.post(UNADOPCION_API_URL + CONTROLADOR, {
-        nombre: this.nombre,
-        correo: this.correo,
-        telefono: this.telefono,
-        contrasena: this.contrasena
-      })
-          .then(function (respuesta) {
-            objectoActual.probar = respuesta.data;
-          })
-          .catch(function (error) {
-            objectoActual.probar = error;
-          });
+       let info = {
+         nombre:this.nombre,
+         correo:this.correo,
+         telefono:this.telefono,
+         contrasena:this.contrasena
+      }
+       this.registrarUsuario(objectoActual, info);
+    },
+
+    registrarUsuario(objetoActual, info){
+      RegistrarUsuarioServicio.registrarUsuario(info)
+      .then(respuesta=>{
+        objetoActual.probar = (respuesta.data);
+        console.log(respuesta.data);
+      });
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 @import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
 </style>

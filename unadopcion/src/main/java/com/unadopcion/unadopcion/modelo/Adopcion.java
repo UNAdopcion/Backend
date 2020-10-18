@@ -1,42 +1,45 @@
 package com.unadopcion.unadopcion.modelo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Adopcion {
     @Id
-    private int adopcionId;
-    private int animalId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int adopId;
+    private int animId;
     private int usuarioId;
-    private String adopcionFecha;
-    private String adopcionEstado;
+    private String adopFecha;
+    private String adopEstado;
 
-    public String getAdopcionEstado() {
-        return adopcionEstado;
+    public String getAdopEstado() {
+        return adopEstado;
     }
 
-    public void setAdopcionEstado(String adopcionEstado) {
-        this.adopcionEstado = adopcionEstado;
+    public void setAdopEstado(String adopcionEstado) {
+        this.adopEstado = adopcionEstado;
     }
 
     public Adopcion() {
     }
 
-    public int getAdopcionId() {
-        return adopcionId;
+    public int getAdopId() {
+        return adopId;
     }
 
-    public void setAdopcionId(int adopcionId) {
-        this.adopcionId = adopcionId;
+    public void setAdopId(int adopcionId) {
+        this.adopId = adopcionId;
     }
 
-    public int getAnimalId() {
-        return animalId;
+    public int getAnimId() {
+        return animId;
     }
 
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
+    public void setAnimId(int animalId) {
+        this.animId = animalId;
     }
 
     public int getUsuarioId() {
@@ -47,11 +50,11 @@ public class Adopcion {
         this.usuarioId = usuarioId;
     }
 
-    public String getAdopcionFecha() {
-        return adopcionFecha;
+    public String getAdopFecha() {
+        return adopFecha;
     }
 
-    public void setAdopcionFecha(String adopcionFecha) {
-        this.adopcionFecha = adopcionFecha;
+    public void setAdopFecha(String adopcionFecha) {
+        this.adopFecha = adopcionFecha;
     }
 }

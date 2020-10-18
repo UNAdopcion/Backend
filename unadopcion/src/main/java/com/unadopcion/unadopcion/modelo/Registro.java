@@ -10,21 +10,31 @@ public class Registro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int registroId;
-    private int animalId;
-    private int usuarioId;
-    private String registroFecha;
+    private int regisId;
+    private Integer animId;
+    private Integer usuarioId;
+    private String regisFecha;
 
     public Registro() {
+        animId = null;
+        usuarioId = null;
+
     }
 
-    public int getRegistroId() {
-        return registroId;
+    public int getRegisId() {
+        return regisId;
     }
 
-    public void setRegistroId(int registroId) {
-        this.registroId = registroId;
+    public void setRegisId(int regisId) {
+        this.regisId = regisId;
+    }
 
+    public Integer getAnimId() {
+        return animId;
+    }
+
+    public void setAnimId(Integer animalId) {
+        this.animId = animalId;
     }
 
     public int getUsuarioId() {
@@ -33,23 +43,13 @@ public class Registro {
 
     public void setUsuarioId(int usuarioId) {
         this.usuarioId = usuarioId;
-
     }
 
-    public int getAnimalId() {
-        return animalId;
+    public String getRegisFecha() {
+        return regisFecha;
     }
 
-    public void setAnimalId(int idAnimal) {
-        this.animalId = idAnimal;
+    public void setRegisFecha(String regisFecha) {
+        this.regisFecha = regisFecha;
     }
-
-    public void setRegistroFecha(String fecha) {
-        this.registroFecha = fecha;
-    }
-
-    public String getRegistroFecha() {
-        return registroFecha;
-    }
-
 }

@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <Logeo />
+    <componente />
   </div>
 </template>
 
 <script>
-import Logeo from './components/Logeo.vue'
+import componente from './components/BusquedaMascota'
 
 export default {
   name: 'App',
   components: {
-    Logeo
+    componente
   }
 }
 </script>
