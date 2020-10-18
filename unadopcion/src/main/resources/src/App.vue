@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import componente from './components/BusquedaMascota'
+import componente from './views/BusquedaMascota'
 
 export default {
   name: 'App',
