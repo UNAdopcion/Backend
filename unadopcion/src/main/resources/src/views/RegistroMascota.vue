@@ -1,65 +1,71 @@
 <template>
-  <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header"><b>Registra una macota!</b  ></div>
-        <!--<img :src="probar"  width="100px" height="100px" alt="yahoo">!-->
-        <div class="card-body">
-          <form id="formulario" @submit="formaEnviar">
-            <strong>Nombre de usuario de quien registra</strong>
-            <input required type="text" class="form-control" v-model="nombreusuario">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header"><b>Registra una macota!</b></div>
+            <!--<img :src="probar"  width="100px" height="100px" alt="yahoo">!-->
+            <div class="card-body">
+              <form id="formulario" @submit="formaEnviar">
+                <strong>Nombre de usuario de quien registra</strong>
+                <input required type="text" class="form-control" v-model="nombreusuario">
 
-            <strong>Nombre de la mascota</strong>
-            <input required type="text" class="form-control" v-model="animalnombre">
+                <strong>Nombre de la mascota</strong>
+                <input required type="text" class="form-control" v-model="animalnombre">
 
-            <strong>Lugar donde se encuentra la mascota</strong>
-            <input required type="text" class="form-control" v-model="animallugar" >
+                <strong>Lugar donde se encuentra la mascota</strong>
+                <input required type="text" class="form-control" v-model="animallugar" >
 
-            <strong>Edad de la mascota:</strong>
-            <input required type="number" class="form-control" v-model="animaledad">
+                <strong>Edad de la mascota:</strong>
+                <input required type="number" class="form-control" v-model="animaledad">
 
-            <strong >Especie del animal</strong>
-            <select required class="form-control" v-model="animaltipo">
-              <option>Perro</option>
-              <option>Gato</option>
-              <option>Ave</option>
-              <option>Roedor</option>
-              <option>Bestia</option>
-              <option>Pez</option>
-              <option>Reptil</option>
-              <option>Otro</option>
-            </select>
+                <strong >Especie del animal</strong>
+                <select required class="form-control" v-model="animaltipo">
+                  <option>Perro</option>
+                  <option>Gato</option>
+                  <option>Ave</option>
+                  <option>Roedor</option>
+                  <option>Bestia</option>
+                  <option>Pez</option>
+                  <option>Reptil</option>
+                  <option>Otro</option>
+                </select>
 
-            <strong>Sexo:</strong>
-            <select required class="form-control" v-model="animalsexo">
-              <option>Hembra</option>
-              <option>Macho</option>
-            </select>
+                <strong>Sexo:</strong>
+                <select required class="form-control" v-model="animalsexo">
+                  <option>Hembra</option>
+                  <option>Macho</option>
+                </select>
 
-            <strong>Algo curioso sobre la mascota</strong>
-            <input type="text" class="form-control" v-model="animaldescripcion">
+                <strong>Algo curioso sobre la mascota</strong>
+                <input type="text" class="form-control" v-model="animaldescripcion">
 
-            <input required type="file" @change="enCambioArchivo">
+                <input required type="file" @change="enCambioArchivo">
 
-            <button class="btn btn-success">Enviar</button>
-          </form>
-          <strong>Respuesta servidor:</strong>
-          <pre>
+                <button class="btn btn-success">Enviar</button>
+              </form>
+              <strong>Respuesta servidor:</strong>
+              <pre>
                         {{probar}}
             </pre>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
     </div>
 </template>
 
 <script>
 import swal from "sweetalert2";
-import RegistrarMascotaServicio from "@/servicio/RegistrarMascotaServicio";
-export default {
+import RegistrarMascotaServicio from "../servicio/RegistrarMascotaServicio";
+//import LoggedHeader from "../components/LoggedHeader";
 
+
+export default {
+  name: "RegistroMascota",
+  components: {
+
+  },
   mounted() {
     console.log('Componente Registro OK.')
   },

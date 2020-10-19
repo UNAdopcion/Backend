@@ -1,4 +1,5 @@
 <template>
+  <div id="registrousuario"><Header></Header>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -27,12 +28,18 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
+import RegistrarUsuarioServicio from "../servicio/RegistrarUsuarioServicio";
+import Header from "../components/Header";
 
-import RegistrarUsuarioServicio from "@/servicio/RegistrarUsuarioServicio";
 export default {
+  name: "RegistroUsuario",
+  components: {
+    Header
+  },
   mounted() {
     console.log('Componente RegistroUsuario OK.')
   },

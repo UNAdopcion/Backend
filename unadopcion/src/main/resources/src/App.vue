@@ -1,19 +1,11 @@
 <template>
-  <div class="container">
-    <componente />
+  <div id="app">
+    <router-view/>
   </div>
 </template>
 
-<script>
-import componente from './views/BusquedaMascota'
-
-export default {
-  name: 'App',
-  components: {
-    componente
-  }
-}
-</script>
+<style>
+</style>
 
 <style>
 #app {

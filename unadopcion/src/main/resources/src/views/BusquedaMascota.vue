@@ -1,4 +1,5 @@
 <template>
+  <div id="busquedamacota"><LoggedHeader></LoggedHeader>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -48,14 +49,19 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
-import BuscarMascotaServicio from "@/servicio/BuscarMascotaServicio";
+import BuscarMascotaServicio from "../servicio/BuscarMascotaServicio";
 import swal from "sweetalert2"
+import LoggedHeader from "../components/LoggedHeader";
 
 export default {
   name: "BusquedaMascota",
+  components: {
+    LoggedHeader,
+  },
   data() {
     return {
       tipo:'',
