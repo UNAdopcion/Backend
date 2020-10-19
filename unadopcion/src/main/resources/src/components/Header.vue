@@ -3,7 +3,7 @@
 <!--Header-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="index.html">
-    <img src="img/UNAdopcion.svg" alt="Logo UNadopcion" height="80" >
+    <img src="@/assets/UNAdopcion.svg" alt="Logo UNadopcion" height="80" >
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
