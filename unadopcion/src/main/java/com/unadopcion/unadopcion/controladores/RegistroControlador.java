@@ -1,4 +1,5 @@
 package com.unadopcion.unadopcion.controladores;
+
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
@@ -8,6 +9,9 @@ import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import com.unadopcion.unadopcion.servicio.RegistroServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +23,8 @@ import java.io.IOException;
 @CrossOrigin
 @RestController
 public class RegistroControlador {
+
+    Logger logger = LoggerFactory.getLogger(RegistroControlador.class);
 
     @Autowired
     private RegistroServicio registroServicio;

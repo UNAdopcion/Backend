@@ -1,0 +1,173 @@
+2020-10-19 07:52:04.080  INFO 15728 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on LAPTOP-09PQROQR with PID 15728 (C:\Users\David\Documents\GitHub\Backend\unadopcion\target\classes started by David in C:\Users\David\Documents\GitHub\Backend)
+2020-10-19 07:52:04.090  INFO 15728 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-10-19 07:52:05.166  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 07:52:05.170  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-10-19 07:52:05.284  INFO 15728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 07:52:05.284  INFO 15728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 07:52:05.288  INFO 15728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 07:52:05.292  INFO 15728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 07:52:05.296  INFO 15728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 07:52:05.296  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116ms. Found 0 JDBC repository interfaces.
+2020-10-19 07:52:05.319  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 07:52:05.327  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-19 07:52:05.458  INFO 15728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119ms. Found 5 JPA repository interfaces.
+2020-10-19 07:52:07.520  INFO 15728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-19 07:52:07.570  INFO 15728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-19 07:52:07.574  INFO 15728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 07:52:07.704  INFO 15728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-19 07:52:07.704  INFO 15728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3494 ms
+2020-10-19 07:52:07.950  INFO 15728 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-10-19 07:52:07.963  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-19 07:52:08.444  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-19 07:52:08.465  INFO 15728 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopcion (MySQL 5.5)
+2020-10-19 07:52:08.603  INFO 15728 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.014s)
+2020-10-19 07:52:08.603  WARN 15728 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2020-10-19 07:52:08.610  INFO 15728 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopcion`: << Empty Schema >>
+2020-10-19 07:52:08.620  INFO 15728 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopcion` is up to date. No migration necessary.
+2020-10-19 07:52:08.750  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-19 07:52:08.768  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-19 07:52:10.320  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 07:52:10.325  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 07:52:10.330  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM unadopcion.DATABASECHANGELOGLOCK WHERE ID=1
+2020-10-19 07:52:10.501  INFO 15728 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2020-10-19 07:52:11.402  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM unadopcion.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-10-19 07:52:11.402  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOG
+2020-10-19 07:52:11.410  INFO 15728 --- [main] l.c.StandardChangeLogHistoryService      : Reading from unadopcion.DATABASECHANGELOG
+2020-10-19 07:52:11.410  INFO 15728 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM unadopcion.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-10-19 07:52:11.790  INFO 15728 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2020-10-19 07:52:11.790  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-19 07:52:11.875  INFO 15728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-10-19 07:52:12.050  INFO 15728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 07:52:12.139  INFO 15728 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-19 07:52:12.252  INFO 15728 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-10-19 07:52:12.296  WARN 15728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-19 07:52:12.564  INFO 15728 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-19 07:52:12.752  INFO 15728 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [public/index.html]
+2020-10-19 07:52:13.130  INFO 15728 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-10-19 07:52:13.560  INFO 15728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 07:52:13.565  INFO 15728 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-19 07:52:14.740  INFO 15728 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-19 07:52:14.759  INFO 15728 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-19 07:52:15.220  INFO 15728 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-19 07:52:15.230  INFO 15728 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 11.875 seconds (JVM running for 12.478)
+2020-10-19 08:03:59.637  INFO 2340 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on LAPTOP-09PQROQR with PID 2340 (C:\Users\David\Documents\GitHub\Backend\unadopcion\target\classes started by David in C:\Users\David\Documents\GitHub\Backend)
+2020-10-19 08:03:59.645  INFO 2340 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-10-19 08:04:00.676  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 08:04:00.680  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-10-19 08:04:00.740  INFO 2340 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:04:00.744  INFO 2340 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:04:00.748  INFO 2340 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:04:00.752  INFO 2340 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:04:00.756  INFO 2340 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:04:00.756  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 0 JDBC repository interfaces.
+2020-10-19 08:04:00.772  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 08:04:00.772  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-19 08:04:00.840  INFO 2340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 5 JPA repository interfaces.
+2020-10-19 08:04:02.341  INFO 2340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-19 08:04:02.358  INFO 2340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-19 08:04:02.358  INFO 2340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 08:04:02.474  INFO 2340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-19 08:04:02.478  INFO 2340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2738 ms
+2020-10-19 08:04:02.730  INFO 2340 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-10-19 08:04:02.746  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-19 08:04:03.108  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-19 08:04:03.132  INFO 2340 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopcion (MySQL 5.5)
+2020-10-19 08:04:03.215  INFO 2340 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.012s)
+2020-10-19 08:04:03.215  WARN 2340 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2020-10-19 08:04:03.300  INFO 2340 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `unadopcion`.`flyway_schema_history` with baseline ...
+2020-10-19 08:04:03.802  WARN 2340 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Name 'flyway_schema_history_pk' ignored for PRIMARY key. (SQL State: 42000 - Error Code: 1280)
+2020-10-19 08:04:04.234  INFO 2340 --- [main] o.f.core.internal.command.DbBaseline     : Successfully baselined schema with version: 1
+2020-10-19 08:04:04.354  INFO 2340 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopcion`: 1
+2020-10-19 08:04:04.354  INFO 2340 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopcion` is up to date. No migration necessary.
+2020-10-19 08:04:04.411  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-19 08:04:04.428  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-19 08:04:06.474  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:04:06.498  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE unadopcion.DATABASECHANGELOGLOCK (ID INT NOT NULL, `LOCKED` BIT(1) NOT NULL, LOCKGRANTED datetime NULL, LOCKEDBY VARCHAR(255) NULL, CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2020-10-19 08:04:06.828  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:04:06.836  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : DELETE FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:04:06.838  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO unadopcion.DATABASECHANGELOGLOCK (ID, `LOCKED`) VALUES (1, 0)
+2020-10-19 08:04:06.908  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM unadopcion.DATABASECHANGELOGLOCK WHERE ID=1
+2020-10-19 08:04:06.954  INFO 2340 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2020-10-19 08:04:07.588  INFO 2340 --- [main] l.c.StandardChangeLogHistoryService      : Creating database history table with name: unadopcion.DATABASECHANGELOG
+2020-10-19 08:04:07.592  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : CREATE TABLE unadopcion.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED datetime NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35) NULL, `DESCRIPTION` VARCHAR(255) NULL, COMMENTS VARCHAR(255) NULL, TAG VARCHAR(255) NULL, LIQUIBASE VARCHAR(20) NULL, CONTEXTS VARCHAR(255) NULL, LABELS VARCHAR(255) NULL, DEPLOYMENT_ID VARCHAR(10) NULL)
+2020-10-19 08:04:08.010  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOG
+2020-10-19 08:04:08.026  INFO 2340 --- [main] l.c.StandardChangeLogHistoryService      : Reading from unadopcion.DATABASECHANGELOG
+2020-10-19 08:04:08.030  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM unadopcion.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-10-19 08:04:08.030  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:04:08.066  INFO 2340 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/migration/changelog.xml::1::Edisson Prieto ran successfully in 0ms
+2020-10-19 08:04:08.070  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM unadopcion.DATABASECHANGELOG
+2020-10-19 08:04:08.074  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO unadopcion.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Edisson Prieto', 'db/migration/changelog.xml', NOW(), 1, '8:b9df6dc92692a3782ffd10520f7088f7', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.10.2', '3112648030')
+2020-10-19 08:04:08.280  INFO 2340 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/migration/changelog.xml::2::Edisson Prieto ran successfully in 4ms
+2020-10-19 08:04:08.362  INFO 2340 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO unadopcion.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, `DESCRIPTION`, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Edisson Prieto', 'db/migration/changelog.xml', NOW(), 2, '8:99e5f545a71270c4615088c155e318d2', 'sqlFile', '', 'EXECUTED', NULL, NULL, '3.10.2', '3112648030')
+2020-10-19 08:04:08.670  INFO 2340 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2020-10-19 08:04:08.674  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-19 08:04:08.717  INFO 2340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-10-19 08:04:09.140  INFO 2340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 08:04:09.920  INFO 2340 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-19 08:04:09.956  WARN 2340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-19 08:04:10.689  INFO 2340 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-10-19 08:04:10.774  INFO 2340 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [public/index.html]
+2020-10-19 08:04:11.674  INFO 2340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 08:04:11.678  INFO 2340 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-19 08:04:12.355  INFO 2340 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-19 08:04:12.806  INFO 2340 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-10-19 08:04:14.509  INFO 2340 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-19 08:04:14.525  INFO 2340 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-19 08:04:15.102  INFO 2340 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-19 08:04:15.118  INFO 2340 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 16.309 seconds (JVM running for 16.976)
+2020-10-19 08:14:52.148  INFO 8860 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on LAPTOP-09PQROQR with PID 8860 (C:\Users\David\Documents\GitHub\Backend\unadopcion\target\classes started by David in C:\Users\David\Documents\GitHub\Backend)
+2020-10-19 08:14:52.156  INFO 8860 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-10-19 08:14:53.571  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 08:14:53.575  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-10-19 08:14:53.648  INFO 8860 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:14:53.652  INFO 8860 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:14:53.652  INFO 8860 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:14:53.657  INFO 8860 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:14:53.660  INFO 8860 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-10-19 08:14:53.662  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80ms. Found 0 JDBC repository interfaces.
+2020-10-19 08:14:53.679  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-19 08:14:53.711  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-19 08:14:53.800  INFO 8860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 5 JPA repository interfaces.
+2020-10-19 08:14:56.230  INFO 8860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-19 08:14:56.264  INFO 8860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-19 08:14:56.264  INFO 8860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 08:14:56.465  INFO 8860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-19 08:14:56.465  INFO 8860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4145 ms
+2020-10-19 08:14:56.785  INFO 8860 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-10-19 08:14:56.790  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-19 08:14:57.200  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-19 08:14:57.230  INFO 8860 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopcion (MySQL 5.5)
+2020-10-19 08:14:57.453  INFO 8860 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.045s)
+2020-10-19 08:14:57.464  INFO 8860 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopcion`: 1
+2020-10-19 08:14:57.468  INFO 8860 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopcion` is up to date. No migration necessary.
+2020-10-19 08:14:57.760  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-10-19 08:14:57.761  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-10-19 08:14:59.350  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:14:59.354  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOGLOCK
+2020-10-19 08:14:59.354  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT `LOCKED` FROM unadopcion.DATABASECHANGELOGLOCK WHERE ID=1
+2020-10-19 08:14:59.460  INFO 8860 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2020-10-19 08:15:00.702  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM unadopcion.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-10-19 08:15:00.710  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM unadopcion.DATABASECHANGELOG
+2020-10-19 08:15:00.710  INFO 8860 --- [main] l.c.StandardChangeLogHistoryService      : Reading from unadopcion.DATABASECHANGELOG
+2020-10-19 08:15:00.710  INFO 8860 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM unadopcion.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-10-19 08:15:00.838  INFO 8860 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2020-10-19 08:15:00.838  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-10-19 08:15:00.895  INFO 8860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-10-19 08:15:01.472  INFO 8860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 08:15:01.712  INFO 8860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-19 08:15:01.872  WARN 8860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-19 08:15:01.888  INFO 8860 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-10-19 08:15:02.510  INFO 8860 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [public/index.html]
+2020-10-19 08:15:02.769  INFO 8860 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-19 08:15:03.206  INFO 8860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 08:15:03.206  INFO 8860 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-19 08:15:03.604  INFO 8860 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-10-19 08:15:08.560  INFO 8860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-19 08:15:08.601  INFO 8860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-19 08:15:09.230  INFO 8860 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-19 08:15:09.240  INFO 8860 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 18.357 seconds (JVM running for 18.994)
+2020-10-19 08:15:15.099  INFO 8860 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 08:15:15.103  INFO 8860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-19 08:15:15.111  INFO 8860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-10-19 08:15:15.984  INFO 8860 --- [http-nio-8080-exec-2] c.u.u.controladores.LogeoControlador     : Se registro un nuevo usuario con el mombre pepe rol  y su username es: pepe
+2020-10-19 08:16:04.014 ERROR 8860 --- [http-nio-8080-exec-3] c.u.u.controladores.LogeoControlador     : Usuario tratando de registrarse con el nombre pepepero ya existe
