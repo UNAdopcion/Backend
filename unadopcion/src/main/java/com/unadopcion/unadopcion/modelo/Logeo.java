@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 
 @Entity
+@Table( name = "logeo")
 public class Logeo {
 
     @Id

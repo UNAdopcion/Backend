@@ -3,6 +3,7 @@ package com.unadopcion.unadopcion.modelo;
 import javax.persistence.*;
 
 @Entity
+@Table( name = "usuario")
 public class Usuario {
 
     @Id

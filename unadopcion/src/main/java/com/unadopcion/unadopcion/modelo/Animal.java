@@ -1,4 +1,5 @@
 package com.unadopcion.unadopcion.modelo;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -7,6 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table( name = "animal")
 public class Animal implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

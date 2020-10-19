@@ -1,6 +1,6 @@
 
 INSERT INTO hibernate_sequence (
-    next_val,
+    next_val
 )
 VALUES
     (

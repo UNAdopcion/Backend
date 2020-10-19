@@ -24,11 +24,11 @@ drop table if exists veterinaria;
 /*==============================================================*/
 create table adopcion
 (
-   adop_id              int not null IDENTITY,
+   adop_id              int not null auto_increment,
    anim_id              int not null,
    usuario_id           int not null,
    adop_fecha           varchar(32) not null,
-   adop_estado          VARCHAR(32) NOT NULL,
+   adop_estado          varchar(32) NOT NULL,
    primary key (adop_id)
 );
 
@@ -37,7 +37,7 @@ create table adopcion
 /*==============================================================*/
 create table animal
 (
-   anim_id              int not null IDENTITY,
+   anim_id              int not null auto_increment,
    adop_id              int,
    regis_id             int not null,
    anim_nombre          varchar(100) not null,
@@ -55,7 +55,7 @@ create table animal
 /*==============================================================*/
 create table animal_vacuna
 (
-   anim_vac_id          int not null IDENTITY,
+   anim_vac_id          int not null auto_increment,
    anim_id              int not null,
    vacuna_id            varchar(32) not null,
    vet_id               int not null,
@@ -67,7 +67,7 @@ create table animal_vacuna
 /*==============================================================*/
 create table denuncia
 (
-   denun_id             int not null IDENTITY,
+   denun_id             int not null auto_increment,
    usuario_id           int not null,
    denun_fecha          varchar(32) not null,
    denun_tipo           varchar(32),
@@ -80,7 +80,7 @@ create table denuncia
 /*==============================================================*/
 create table logeo
 (
-   logeo_id             int not null IDENTITY,
+   logeo_id             int not null auto_increment,
    usuario_id           int,
    logeo_nombre         varchar(100) not null,
    logeo_contra         varchar(255) not null,
@@ -92,7 +92,7 @@ create table logeo
 /*==============================================================*/
 create table registro
 (
-   regis_id             int not null IDENTITY,
+   regis_id             int not null auto_increment,
    usuario_id           int not null,
    anim_id              int,
    regis_fecha          varchar(32) not null,
@@ -104,7 +104,7 @@ create table registro
 /*==============================================================*/
 create table solicitud
 (
-   solici_id            int not null IDENTITY,
+   solici_id            int not null auto_increment,
    anim_id              int not null,
    solici_fecha         varchar(32) not null,
    primary key (solici_id)
@@ -115,7 +115,7 @@ create table solicitud
 /*==============================================================*/
 create table usuario
 (
-   usuario_id           int not null IDENTITY,
+   usuario_id           int not null auto_increment,
    logeo_id             int not null,
    usuario_nombre       varchar(100) not null,
    usuario_rol          varchar(32) not null,
@@ -143,45 +143,47 @@ create table vacuna
 /*==============================================================*/
 create table veterinaria
 (
-   vet_id               int not null IDENTITY,
+   vet_id               int not null auto_increment,
    vet_lugar            varchar(255) not null,
    primary key (vet_id)
 );
 
-create table hibernate_sequence ( next_val bigint not null );
+create table hibernate_sequence ( next_val bigint not null); 
 
 alter table adopcion add constraint fk_adoptado2 foreign key (anim_id)
-      references animal (anim_id) on delete NO ACTION on update NO ACTION;
+      references animal (anim_id) on delete restrict on update restrict;
 
 alter table adopcion add constraint fk_adoptador foreign key (usuario_id)
-      references usuario (usuario_id) on delete NO ACTION on update NO ACTION;
+      references usuario (usuario_id) on delete restrict on update restrict;
 
 alter table animal add constraint fk_adoptado foreign key (adop_id)
-      references adopcion (adop_id) on delete NO ACTION on update NO ACTION;
+      references adopcion (adop_id) on delete restrict on update restrict;
 
 alter table animal add constraint fk_registrado foreign key (regis_id)
-      references registro (regis_id) on delete NO ACTION on update NO ACTION;
+      references registro (regis_id) on delete restrict on update restrict;
 
 alter table animal_vacuna add constraint fk_vacunado foreign key (anim_id)
-      references animal (anim_id) on delete NO ACTION on update NO ACTION;
+      references animal (anim_id) on delete restrict on update restrict;
 
 alter table animal_vacuna add constraint fk_vacuna_aplicada foreign key (vacuna_id)
-      references vacuna (vacuna_id) on delete NO ACTION on update NO ACTION;
+      references vacuna (vacuna_id) on delete restrict on update restrict;
 
 alter table animal_vacuna add constraint fk_vet_vacuna_anim foreign key (vet_id)
-      references veterinaria (vet_id) on delete NO ACTION on update NO ACTION;
+      references veterinaria (vet_id) on delete restrict on update restrict;
 
 alter table denuncia add constraint fk_denunciado foreign key (usuario_id)
-      references usuario (usuario_id) on delete NO ACTION on update NO ACTION;
+      references usuario (usuario_id) on delete restrict on update restrict;
 
 alter table logeo add constraint fk_logeado2 foreign key (usuario_id)
-      references usuario (usuario_id) on delete NO ACTION on update NO ACTION;
+      references usuario (usuario_id) on delete restrict on update restrict;
 
 alter table registro add constraint fk_registrado2 foreign key (anim_id)
-      references animal (anim_id) on delete NO ACTION on update NO ACTION;
+      references animal (anim_id) on delete restrict on update restrict;
 
 alter table solicitud add constraint fk_solicitado foreign key (anim_id)
-      references animal (anim_id) on delete NO ACTION on update NO ACTION;
+      references animal (anim_id) on delete restrict on update restrict;
 
 alter table usuario add constraint fk_logeado foreign key (logeo_id)
-      references logeo (logeo_id) on delete NO ACTION on update NO ACTION;
+      references logeo (logeo_id) on delete restrict on update restrict;
+
+
