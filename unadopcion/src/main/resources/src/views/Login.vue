@@ -1,26 +1,25 @@
 <template>
-  <div>
+  <div id="principal">
     <Header></Header>
-    <h1>SECCION DE DENUNCIAS</h1>
-    <Denuncia></Denuncia>
+    <h1>Login</h1>
     <Footer></Footer>
   </div>
-  
 </template>
 
 <script>
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Denuncia from "../components/ComponentDenuncia";
 
 export default {
-  name: "Denuncia",
+  name: "Login",
   components: {
-    Header, Footer, Denuncia
+    Header, Footer
   }
 }
 </script>
-
+#Principal{
+padding-top: 10%;
+}
 <style scoped>
 
 </style>
