@@ -53,5 +53,9 @@ public class UsuarioServicio {
         return usuarioRepositorio.existsByUsuarioNombre(nombre);
     }
 
+    public boolean usuarioIdExiste(int  usuarioId){
+        return usuarioRepositorio.existsByUsuarioId(usuarioId);
+    }
+
 }
 

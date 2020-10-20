@@ -45,7 +45,7 @@ public class LogeoControlador {
             // guardar cambio a logeo
             logeoServicio.guardar(logeo);
             logger.info("Se registro un nuevo usuario con el mombre " + usuario.getUsuarioNombre() + " y rol "
-                    + usuario.getUsuarioRol() );
+                    + usuario.getUsuarioRol());
             return "ID nuevo usuario: " + usuario.getUsuarioId();
         } else {
 
