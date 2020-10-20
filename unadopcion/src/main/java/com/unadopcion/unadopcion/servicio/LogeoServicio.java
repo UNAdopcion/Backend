@@ -16,7 +16,7 @@ public class LogeoServicio {
     private LogeoRepositorio logeoRepositorio;
 
     @Transactional
-    public Logeo crearLogeo(String nombre, String contrasena){
+    public Logeo crearLogeo(String nombre, String contrasena) {
 
         Logeo logeo = new Logeo();
         logeo.setLogeoNombre(nombre);
@@ -24,16 +24,22 @@ public class LogeoServicio {
         return logeoRepositorio.save(logeo);
 
     }
-    public Logeo guardar(Logeo logeo){
+
+    public Logeo guardar(Logeo logeo) {
         return logeoRepositorio.save(logeo);
     }
 
-    public boolean existsByNombre(String nombre)
-    {
+    public boolean existsByNombre(String nombre) {
         return logeoRepositorio.existsByLogeoNombre(nombre);
     }
 
-
-
+    public boolean autenticar(String nombre, String contrasena) {
+        Logeo logeo = logeoRepositorio.findByLogeoNombre(nombre);
+        if (logeo.getLogeoContra().equals(contrasena)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }

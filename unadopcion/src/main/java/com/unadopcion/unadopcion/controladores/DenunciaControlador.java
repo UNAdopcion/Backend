@@ -30,12 +30,14 @@ public class DenunciaControlador {
     @RequestMapping(value = "/denunciarmaltrato", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
     public String denunciarMaltrato(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
         JsonLector jsonLector = new JsonLector(json);
-        int usuarioId = Integer.parseInt(jsonLector.getJsonCampo("usuarioId"));
+        Usuario usuario = usuarioServicio.buscarUsuario(jsonLector.getJsonCampo("nombre"));
+        int usuarioId = 0;
+        usuarioId = usuario.getUsuarioId();
         Fecha fecha = new Fecha();
         String denunTipo = jsonLector.getJsonCampo("tipo");
         String denunDescrip = jsonLector.getJsonCampo("descripcion");
-        boolean usuario = usuarioServicio.usuarioIdExiste(usuarioId);
-        if (!usuario) {
+        boolean existe = usuarioServicio.usuarioIdExiste(usuarioId);
+        if (!existe) {
             return "El usuario " + usuarioId + " no existe";
         } else {
             denunciaServicio.crearDenuncia(usuarioId, fecha.getFecha(), denunTipo, denunDescrip);
