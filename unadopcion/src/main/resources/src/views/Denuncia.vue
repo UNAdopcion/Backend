@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <h1>SECCION DE DENUNCIAS</h1>
-    <Denuncia></Denuncia>
+    <DenunciaComp></DenunciaComp>
     <Footer></Footer>
   </div>
   
@@ -11,12 +11,12 @@
 <script>
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Denuncia from "../components/ComponentDenuncia";
+import DenunciaComp from "../components/ComponentDenuncia";
 
 export default {
   name: "Denuncia",
   components: {
-    Header, Footer, Denuncia
+    Header, Footer, DenunciaComp
   }
 }
 </script>
