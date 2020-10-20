@@ -73,4 +73,21 @@ public class LogeoControlador {
         return null;
     }
 
+    @RequestMapping(value = "/autenticar", method = RequestMethod.GET, consumes = "application/json", produces = "text/plain")
+    public String autenticarUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
+        JsonLector jsonLector = new JsonLector(json);
+        String nombre = jsonLector.getJsonCampo("nombre");
+        String contrasena = jsonLector.getJsonCampo("contrasena");
+        boolean existe = usuarioServicio.usuarioExiste(nombre);
+        if (!existe) {
+            return "El usuario con nombre " + nombre + " no existe";
+        } else {
+            if (logeoServicio.autenticar(nombre, contrasena)) {
+                return "Acceso permitido.";
+            } else {
+                return "Acceso denegado.";
+            }
+        }
+    }
+
 }
