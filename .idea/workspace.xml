@@ -23,8 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarDenunciaServicio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Denuncia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Denuncia.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -82,6 +84,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.UnadopcionApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in unadopcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unadopcion" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,6 +147,7 @@
       <workItem from="1603069018661" duration="2212000" />
       <workItem from="1603071298317" duration="677000" />
       <workItem from="1603176849808" duration="153000" />
+      <workItem from="1603177141038" duration="13012000" />
     </task>
     <servers />
   </component>
