@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import Header from "../components/Header";
+import LoogedHeader from "../components/LoggedHeader";
 import Footer from "../components/Footer";
-import Denuncia from "../components/ComponentDenuncia";
+//import Denuncia from "../components/ComponentDenuncia";
 
 export default {
   name: "Denuncia",
   components: {
-    Header, Footer, Denuncia
+    LoogedHeader, Footer, /*Denuncia*/
   }
 }
 </script>
