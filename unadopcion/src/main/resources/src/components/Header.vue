@@ -3,7 +3,7 @@
 <!--Header-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="principal">
-    <img src="@/assets/UNAdopcion.svg" alt="Logo UNadopcion" height="80" >
+    <img src="@/assets/UNAdopcion.svg" alt="Logo UNadopcion" height="40" >
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,28 +11,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-md-auto">
       <li class="nav-item" id="btnPrincipal">
-        <a class="nav-link" href="principal" >Principal <!--<span class="sr-only">(current)</span> --></a>
+        <a class="nav-link" href="principal" >Principal</a>
       </li>
       <li class="nav-item" id="btnRegisUser">
-        <a class="nav-link" href="registro" >Registrarse <!--<span class="sr-only">(current)</span> --></a>
+        <a class="nav-link" href="registro" >Registrarse</a>
       </li>
       <li class="nav-item" id="btnLogUser">
-        <a class="nav-link" href="login" >Iniciar Sesión <!--<span class="sr-only">(current)</span> --></a>
+        <a class="nav-link" href="login" >Iniciar Sesión</a>
       </li>
-      <!--<li class="nav-item" id="btnRegisPet">
-        <a class="nav-link" href="registrar-mascota">Registrar mascota <span class="sr-only">(current)</span></a>
-      </li>-->
-      <!--<li class="nav-item">
-        <a class="nav-link" href="buscar-mascota">Buscar Mascota<span class="sr-only">(current)</span></a>
-      </li>-->
-      <!--<li class="nav-item">
-        <a class="nav-link" href="denuncia">Denunciar <span class="sr-only">(current)</span></a>
-      </li>-->
-      <!--<li class="nav-item">
-          <a class="nav-link" href="cuidados">Cuidados <span class="sr-only">(current)</span></a>
-        </li>-->
       <li class="nav-item">
-        <a class="nav-link" href="contacto">Contactanos <!--<span class="sr-only">(current)</span> --></a>
+        <a class="nav-link" href="contacto">Contactanos</a>
       </li>
     </ul>
   </div>

@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+  <div><LoggedHeader></LoggedHeader>
+    <br><div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card">
             <div class="card-header"><b>Registra una macota!</b></div>
-            <!--<img :src="probar"  width="100px" height="100px" alt="yahoo">!-->
             <div class="card-body">
               <form id="formulario" @submit="formaEnviar">
                 <strong>Nombre de usuario de quien registra</strong>
@@ -53,17 +53,21 @@
         </div>
       </div>
     </div>
+    <Footer></Footer>
+  </div>
 </template>
 
 <script>
 import swal from "sweetalert2";
 import RegistrarMascotaServicio from "../servicio/RegistrarMascotaServicio";
-//import LoggedHeader from "../components/LoggedHeader";
+import LoggedHeader from "../components/LoggedHeader";
+import Footer from "@/components/Footer";
 
 
 export default {
   name: "RegistroMascota",
   components: {
+    LoggedHeader, Footer
 
   },
   mounted() {
@@ -112,18 +116,6 @@ export default {
       datos.append("imagen", this.imagenSeleccionada);
       datos.append("info", json);
       this.registrarMascota(objectoActual, datos);
-      /*axios.post(UNADOPCION_API_URL + CONTROLADOR, datos)
-          .then(function (respuesta) {
-            objectoActual.probar = respuesta.data;
-            //hay que verificar que el servido responde OK con un if
-           // this.mostrarRegistroExitoso(respuesta.data)
-
-
-
-          })
-          .catch(function (error) {
-            objectoActual.probar = error;
-          });*/
     },
 
     registrarMascota(objetoActual, datos){

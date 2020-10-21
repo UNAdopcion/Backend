@@ -7,8 +7,9 @@ import Denuncia from "@/components/Denuncia";
 import CuidadosMascota from "@/views/CuidadosMascota";
 import Contacto from "@/views/Contacto";
 import BusquedaMascota from "@/views/BusquedaMascota";
-import LoggedHeader from "@/components/LoggedHeader";
 import Logeo from "@/views/Logeo";
+import EditarUsuario from "@/views/EditarUsuario";
+import Inicio from "@/views/Inicio";
 
 
 Vue.use(Router);
@@ -60,9 +61,14 @@ export default new Router({
             component: Logeo
         },
         {
-            path: "/logged-header",
-            name: "logeedheader",
-            component: LoggedHeader
-        }
+            path: "/editar-usuario",
+            name: "editarusuario",
+            component: EditarUsuario
+        },
+        {
+            path: "/inicio",
+            name: "inicio",
+            component: Inicio
+        },
     ]
 })

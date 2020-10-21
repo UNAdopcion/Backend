@@ -78,4 +78,123 @@ export default {
 
 <style scoped>
 @import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
+
+</style>
+
+<style>
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 10px;
+  padding: 20px;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-image: url("../assets/fondo_patitas3.jpeg");
+  background-attachment: fixed;
+  text-align: justify;
+}
+
+body::before{
+  content: "";
+  width: 100%;
+  min-height:150vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(45deg, #F3E2A9, #EFFBFB,#58FA58);
+  background-attachment: scroll;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+}
+
+.titulo{
+  background: #0EA7E7;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: 3px solid #EA484E;
+}
+
+.form-control{
+  font-family:  Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+p.texto {
+  font-family:  Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+input{
+  font-family:  Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+}
+.input-48{
+  width: 48%;
+}
+.input-100{
+  width: 100%;
+}
+.btn btn-success{
+  background: #EA484E;
+  color: #fff;
+  margin: auto;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.btn btn-success:hover{
+  background: #0EA7E7;
+  transform: scale(1.1);
+}
+.btn btn-success:active{
+  transform: scale(1.2);
+}
+
+.checkbox {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border-radius: 0.25em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imagen{
+  display:block;
+  margin:auto;
+}
+
+.divM{
+  color: #000000;
+  border:6px solid;
+}
+
+h2,h3{
+  color:#000000;
+  font-weight: bold;
+  text-align: left;
+}
+
+.h12{
+  color: #000000;
+  text-align: center;
+}
+
 </style>

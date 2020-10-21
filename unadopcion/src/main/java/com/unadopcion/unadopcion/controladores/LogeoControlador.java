@@ -99,6 +99,18 @@ public class LogeoControlador {
         }
     }
 
+    @RequestMapping(value = "/mostrar-perfil", method = RequestMethod.POST, consumes = "application/json")
+    public Usuario buscarUsuarioPorNombre(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException{
+        JsonLector jsonLector = new JsonLector(json);
+        String nombre = jsonLector.getJsonCampo("nombre");
+
+        if(usuarioServicio.usuarioExiste(nombre)) {
+            return usuarioServicio.buscarUsuario(nombre);
+        }else{
+            return null;
+        }
+    }
+
     @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
