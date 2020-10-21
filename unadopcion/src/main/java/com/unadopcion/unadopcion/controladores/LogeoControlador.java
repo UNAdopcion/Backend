@@ -1,15 +1,13 @@
 package com.unadopcion.unadopcion.controladores;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.modelo.Logeo;
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.servicio.LogeoServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
@@ -18,8 +16,7 @@ import java.util.Optional;
 @RestController
 public class LogeoControlador {
 
-    Logger logger = LoggerFactory.getLogger(LogeoControlador.class);
-
+    MiLogger miLogger = new MiLogger(LogeoControlador.class);
     @Autowired
     private LogeoServicio logeoServicio;
     @Autowired
@@ -44,22 +41,28 @@ public class LogeoControlador {
             logeo.setUsuarioId(usuario.getUsuarioId());
             // guardar cambio a logeo
             logeoServicio.guardar(logeo);
-            logger.info("Se registro un nuevo usuario con el mombre " + usuario.getUsuarioNombre() + " y rol "
-                    + usuario.getUsuarioRol());
+
+            miLogger.info("Se registro un nuevo usuario con el mombre " + usuario.getUsuarioNombre() + " y rol "
+                    + usuario.getUsuarioRol() );
+
             return "ID nuevo usuario: " + usuario.getUsuarioId();
         } else {
 
             if (nombreExiste) {
-                logger.error("Usuario tratando de registrarse con el nombre " + nombre + " pero ya existe");
+                miLogger.cuidado("Usuario tratando de registrarse con el nombre " + nombre + " pero ya existe");
                 return "El nombre de usuario " + nombre + " ya existe";
             } else {
-                logger.error("El correo  " + correo + " esta asociado con otra cuenta");
+                miLogger.cuidado("El correo  " + correo + " esta asociado con otra cuenta");
                 return "El correo " + correo + " ya existe";
             }
 
         }
 
     }
+
+
+
+
 
     // esto es para poner en usuarioControlador
     @GetMapping("/buscausuario/{id}")
@@ -73,19 +76,20 @@ public class LogeoControlador {
         return null;
     }
 
-    @RequestMapping(value = "/autenticar", method = RequestMethod.GET, consumes = "application/json", produces = "text/plain")
-    public String autenticarUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
+    @RequestMapping(value = "/hacer-logeo", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
+    public String hacerLogeo(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
         JsonLector jsonLector = new JsonLector(json);
         String nombre = jsonLector.getJsonCampo("nombre");
         String contrasena = jsonLector.getJsonCampo("contrasena");
         boolean existe = usuarioServicio.usuarioExiste(nombre);
+        //si el usuario existe intentar logeo
         if (!existe) {
             return "El usuario con nombre " + nombre + " no existe";
         } else {
-            if (logeoServicio.autenticar(nombre, contrasena)) {
-                return "Acceso permitido.";
+            if (logeoServicio.verificarContrasena(nombre, contrasena)) {
+                return "logeado";
             } else {
-                return "Acceso denegado.";
+                return "Usuario o contrasena incorrectos";
             }
         }
     }

@@ -8,7 +8,7 @@ import CuidadosMascota from "@/views/CuidadosMascota";
 import Contacto from "@/views/Contacto";
 import BusquedaMascota from "@/views/BusquedaMascota";
 import LoggedHeader from "@/components/LoggedHeader";
-import Login from "@/views/Login";
+import Logeo from "@/views/Logeo";
 
 
 Vue.use(Router);
@@ -55,9 +55,9 @@ export default new Router({
             component: Contacto
         },
         {
-            path: "/login",
-            name: "login",
-            component: Login
+            path: "/logeo",
+            name: "logeo",
+            component: Logeo
         },
         {
             path: "/logged-header",

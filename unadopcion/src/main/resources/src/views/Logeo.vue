@@ -1,5 +1,5 @@
 <template>
-  <div id="Login">
+  <div id="logeo">
     <Header></Header>
     <br /><br />
     <div class="container">
@@ -65,34 +65,41 @@
 import swal from "sweetalert2";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import AutenticarUsuario from "../servicio/RealizarLogin"
+import RealizarLogeoServicio from "../servicio/RealizarLogeoServicio";
 
 export default {
   methods: {
     enviarDatos(e) {
       e.preventDefault();
       let objectoActual = this;
-      //diccionario para ser convertido en JSON
-      let infoAutenticar = {
+     // para ser convertido en JSON
+      let info = {
         nombre: this.nombre,
         contrasena: this.contrasena,
       };
 
-      this.autenticar(objectoActual, infoAutenticar);
+      this.hacerLogeo(objectoActual, info);
     },
     
-    autenticar(objetoActual, datos) {
-      AutenticarUsuario.login(datos).then((respuesta) => {
+    hacerLogeo(objetoActual, datos) {
+      RealizarLogeoServicio.hacerLogeo(datos).then((respuesta) => {
         objetoActual.probar = respuesta.data;
-        console.log(respuesta.data);
+        if (respuesta.data.lastIndexOf("Logeado") >= 0 ){
+          this.$router.push('logged-header');//redireccionar a logged-header
+          console.log(respuesta.data);
+        }
+        else {
+          this.mostrarLogeoFallido(respuesta.data);
+          console.log(respuesta.data);
+        }
       });
     },
     
-    mostrarLogeoExitoso(mensaje) {
-      swal.fire("Inicio de sesion completado", mensaje, "success");
+    mostrarLogeoFallido(mensaje) {
+      swal.fire("Intenta nuevamente", mensaje, "error");
     },
   },
-  name: "Login",
+  name: "Logeo",
   components: {
     Header,
     Footer,
@@ -101,6 +108,7 @@ export default {
     return {
       nombre: "",
       contrasena: "",
+      probar: ""
     };
   },
 };

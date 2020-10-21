@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const UNADOPCION_API_URL = "http://localhost:8080";
-const CONTROLADOR = "/hacer-login";
+const CONTROLADOR = "/hacer-logeo";
 
-class LoginService{
-    login(datos){
-        console.log("SE HA REALIZADO EL LOGIN", datos)
+class RealizarLogeoServicio{
+    hacerLogeo(datos){
+
         return axios.post(UNADOPCION_API_URL + CONTROLADOR, {
             nombre: datos.nombre,
             contrasena: datos.contrasena
@@ -13,4 +13,4 @@ class LoginService{
     }
 }
 
-export default new LoginService();
+export default new RealizarLogeoServicio();

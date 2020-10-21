@@ -27,6 +27,11 @@ public class AdopcionServicio {
         return adopcionRepositorio.save(adopcion);
     }
 
+    public boolean animalHaSidoAdoptado(int animalId){
+
+        return adopcionRepositorio.existsByAnimId(animalId);
+    }
+
     public Optional buscarAdopcionById(int id){
         return adopcionRepositorio.findById(id);
     }

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface AdopcionRepositorio extends CrudRepository<Adopcion, Integer> {
 
 
-    //boolean existsAdopcionAprobada(int animalId);
+    boolean existsByAnimId(int animalId);
 }

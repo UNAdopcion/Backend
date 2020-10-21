@@ -2,6 +2,7 @@ package com.unadopcion.unadopcion.controladores;
 
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
+import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Registro;
 import com.unadopcion.unadopcion.modelo.Animal;
@@ -9,14 +10,9 @@ import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import com.unadopcion.unadopcion.servicio.RegistroServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.transaction.Transactional;
 import java.io.IOException;
 
@@ -24,8 +20,7 @@ import java.io.IOException;
 @RestController
 public class RegistroControlador {
 
-    Logger logger = LoggerFactory.getLogger(RegistroControlador.class);
-
+    private MiLogger miLogger = new MiLogger(RegistroControlador.class);
     @Autowired
     private RegistroServicio registroServicio;
     @Autowired
@@ -63,10 +58,11 @@ public class RegistroControlador {
             registro.setAnimId(animal.getAnimId());
             //guardar cambios posteriores a creacion
             registroServicio.guardar(registro);
-
-
+            
+            miLogger.info("Se registro mascota con id:" + registro.getAnimId());
             return "ID de la mascota: " + registro.getAnimId() + " Asociada al usuario: " + nombreusuario;
         } else {
+            miLogger.info("Se intenta registrar mascota con usuario no existente:" + nombreusuario);
             return "El usuario con nombre de usuario " + nombreusuario + " no existe. ";
         }
 
