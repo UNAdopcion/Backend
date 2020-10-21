@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="unadopciondb@localhost" uuid="3b0f4943-303d-41e9-b511-194d0ef53d1e">
+    <data-source source="LOCAL" name="unadopciondb2@localhost" uuid="3b0f4943-303d-41e9-b511-194d0ef53d1e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/unadopciondb</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/unadopciondb2</jdbc-url>
       <driver-properties>
         <property name="serverTimezone" value="UTC" />
       </driver-properties>

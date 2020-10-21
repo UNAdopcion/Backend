@@ -4,15 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
+import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 
@@ -20,8 +17,8 @@ import java.util.List;
 @RestController
 public class BusquedaAnimalControlador {
 
-    Logger logger = LoggerFactory.getLogger(BusquedaAnimalControlador.class);
 
+    private MiLogger miLogger = new MiLogger(BusquedaAnimalControlador.class);
     @Autowired
     private AnimalServicio animalServicio;
 
@@ -32,6 +29,7 @@ public class BusquedaAnimalControlador {
             List<Animal> resultados = animalServicio.buscarAnimalPorTipo(tipo);
             ObjectMapper mapper = new ObjectMapper();
             String respuestaJson = mapper.writeValueAsString(resultados);
+            miLogger.info("Busqueda animal por:" + tipo);
            return respuestaJson;
 
     }
