@@ -92,7 +92,7 @@ export default {
 
   data() {
     return {
-      nombre: '',
+      nombre:'pepe' ,
       tipo: '',
       estadofinal: '',
       testigo: '',

@@ -73,7 +73,7 @@ public class LogeoControlador {
         return null;
     }
 
-    @RequestMapping(value = "/autenticar", method = RequestMethod.GET, consumes = "application/json", produces = "text/plain")
+    @RequestMapping(value = "/hacer-login", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
     public String autenticarUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
         JsonLector jsonLector = new JsonLector(json);
         String nombre = jsonLector.getJsonCampo("nombre");
