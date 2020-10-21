@@ -1,8 +1,6 @@
 package com.unadopcion.unadopcion.servicio;
 
-import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.modelo.Logeo;
-import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.repositorio.LogeoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -6,8 +6,7 @@ import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.servicio.AdopcionServicio;
-import com.unadopcion.unadopcion.servicio.AnimalServicio;
-import com.unadopcion.unadopcion.servicio.UsuarioServicio;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,10 +17,7 @@ public class AdopcionControlador {
 
     @Autowired
     private AdopcionServicio adopcionServicio;
-    @Autowired
-    private UsuarioServicio usuarioServicio;
-    @Autowired
-    private AnimalServicio animalServicio;
+
 
 
     @RequestMapping(value = "/adoptar", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")

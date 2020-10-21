@@ -2,9 +2,7 @@ package com.unadopcion.unadopcion.servicio;
 
 import javax.transaction.Transactional;
 
-import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.modelo.Registro;
-import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.repositorio.RegistroRepositorio;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.unadopcion</groupId>
     <artifactId>unadopcion</artifactId>
@@ -16,6 +15,10 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <sonar.projectKey>UNAdopcion_Backend</sonar.projectKey>
+        <sonar.organization>unadopcion</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>4bad7fed69b8ba521389a7ae03e7d8294f75e810</sonar.login>
         <spring.profiles.active>local,no-liquibase</spring.profiles.active>
     </properties>
 
@@ -25,10 +28,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-core</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-maven-plugin</artifactId>
@@ -53,7 +56,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -92,32 +95,51 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.3.0.603</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <goalPrefix>sonar</goalPrefix>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <executions>
-                   <execution>
-                      <phase>generate-sources</phase>
-                      <goals>
-                         <goal>migrate</goal>
-                      </goals>
-                   </execution>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>migrate</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
-                   <driver>com.mysql.jdbc.Driver</driver>
-                   <url>jdbc:mysql://localhost:3306/unadopciondb</url>
-                   <user>root</user>
-                   <password></password>
-                   <baselineOnMigrate>true</baselineOnMigrate>
-                   <!--schemas>public</schemas-->
-                   <locations>
-                      <location>
+                    <!--driver>com.mysql.jdbc.Driver</driver-->
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/unadopciondb?serverTimezone=UTC</url>
+                    <user>root</user>
+                    <password></password>
+                    <baselineOnMigrate>true</baselineOnMigrate>
+                    <!--schemas>public</schemas-->
+                    <locations>
+                        <location>
                           filesystem:src/main/resources/db/migration
                       </location>
-                   </locations>
+                    </locations>
                 </configuration>
-             </plugin>
+            </plugin>
 
         </plugins>
     </build>

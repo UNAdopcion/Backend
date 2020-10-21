@@ -46,7 +46,6 @@ public class RegistroControlador {
 
         Fecha fecha = new Fecha();
         Usuario usuario = usuarioServicio.buscarUsuario(nombreusuario);
-        //logger.info("Valores:", valores);
         // Verifica si el usuario existe
         if (usuarioServicio.usuarioExiste(nombreusuario)) {
             //crea una entidad registro primero

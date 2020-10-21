@@ -1,19 +1,16 @@
 package com.unadopcion.unadopcion.controladores;
 
-import java.util.Optional;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
-import com.unadopcion.unadopcion.modelo.Denuncia;
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.servicio.DenunciaServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

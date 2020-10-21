@@ -19,7 +19,6 @@ public class Denuncia {
     private String denunDescrip;
 
     public Denuncia() {
-
     }
 
     public int getDenunId() {

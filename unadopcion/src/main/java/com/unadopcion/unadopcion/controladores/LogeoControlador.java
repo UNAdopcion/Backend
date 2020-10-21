@@ -26,7 +26,7 @@ public class LogeoControlador {
     private UsuarioServicio usuarioServicio;
 
     @Autowired
-    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();;
+    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @RequestMapping(value = "/crearusuario", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
     public String crearNuevoUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {

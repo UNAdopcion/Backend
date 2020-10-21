@@ -1,7 +1,7 @@
 package com.unadopcion.unadopcion.modelo;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+
 
 
 import javax.persistence.*;
