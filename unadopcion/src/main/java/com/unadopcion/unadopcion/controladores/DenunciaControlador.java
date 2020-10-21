@@ -44,6 +44,7 @@ public class DenunciaControlador {
             System.out.println(usuarioId);
             return "Se ha registrado la denuncia.";
         }
+
     }
 
 }

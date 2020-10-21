@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Principal from "@/views/Principal";
 import RegistroUsuario from "@/views/RegistroUsuario";
 import RegistroMascota from "@/views/RegistroMascota";
-import Denuncia from "@/views/Denuncia";
+import Denuncia from "@/components/Denuncia";
 import CuidadosMascota from "@/views/CuidadosMascota";
 import Contacto from "@/views/Contacto";
 import BusquedaMascota from "@/views/BusquedaMascota";
