@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/herramientas/MiLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" afterDir="false" />
@@ -35,6 +36,17 @@
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/AdopcionRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/AdopcionRepositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/AdopcionServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/AdopcionServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Denuncia.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/ComponentDenuncia.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarDenunciaServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarDenunciaServicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Denuncia.vue" beforeDir="false" />
+>>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +91,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyecto/Backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -89,10 +101,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nano\Documents\IngesoftII\Proyecto 2.0\Backend\unadopcion\src\main\resources\src\components" />
       <recent name="C:\Users\nano\Documents\IngesoftII\Nueva carpeta\Backend\unadopcion\src\main\resources\src\views" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Spring Boot.UnadopcionApplication">
+=======
+  <component name="RunManager" selected="JavaScript Debug.Denuncia.vue">
+>>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -115,7 +132,7 @@
     <configuration name="App.vue (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/App.vue" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="App.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Backend/unadopcion/src/main/resources/src/App.vue" useBuiltInWebServerPort="true">
+    <configuration name="Denuncia.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/components/Denuncia.vue" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="RegistroMascota.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/views/RegistroMascota.vue" useBuiltInWebServerPort="true">
@@ -133,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Denuncia.vue" />
         <item itemvalue="JavaScript Debug.App.vue (1)" />
         <item itemvalue="JavaScript Debug.RegistroMascota.vue" />
         <item itemvalue="JavaScript Debug.RegistroUsuario.vue" />
         <item itemvalue="JUnit.All in unadopcion" />
-        <item itemvalue="JavaScript Debug.App.vue" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +172,11 @@
       <workItem from="1603071298317" duration="677000" />
       <workItem from="1603176849808" duration="153000" />
       <workItem from="1603177141038" duration="13012000" />
+<<<<<<< HEAD
       <workItem from="1603218664675" duration="11409000" />
+=======
+      <workItem from="1603229473971" duration="12309000" />
+>>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     </task>
     <servers />
   </component>
@@ -182,17 +203,30 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="385" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603070912049" />
+<<<<<<< HEAD
     <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1603227265463" />
+=======
+    <state x="574" y="299" width="453" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603231282783">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="574" y="299" width="453" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603231282783" />
+>>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603063776607">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603063776607" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1603052949869">
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1603240396060">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+<<<<<<< HEAD
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603052949869" />
     <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1603226326825">
       <screen x="0" y="27" width="1366" height="741" />
+=======
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603240396060" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1603071648433">
+      <screen x="0" y="0" width="1600" height="860" />
+>>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
     <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603226326825" />

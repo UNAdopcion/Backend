@@ -5,7 +5,6 @@ const CONTROLADOR = "/hacer-logeo";
 
 class RealizarLogeoServicio{
     hacerLogeo(datos){
-
         return axios.post(UNADOPCION_API_URL + CONTROLADOR, {
             nombre: datos.nombre,
             contrasena: datos.contrasena

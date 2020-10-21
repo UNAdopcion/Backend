@@ -32,6 +32,16 @@ public class UsuarioServicio {
          return usuarioRepositorio.save(usuario);
 
     }
+
+
+    @Transactional
+    public Usuario crearContacto(){
+        Usuario usuario = new Usuario();
+        return usuarioRepositorio.save(usuario);
+    }
+
+
+
     public boolean existeEmail(String email){
         return usuarioRepositorio.existsByUsuarioEmail(email);
     }
