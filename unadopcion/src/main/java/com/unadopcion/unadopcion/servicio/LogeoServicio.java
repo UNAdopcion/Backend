@@ -33,6 +33,10 @@ public class LogeoServicio {
         return logeoRepositorio.existsByLogeoNombre(nombre);
     }
 
+    public Logeo buscarNombre(String nombre) {
+        return logeoRepositorio.findByLogeoNombre(nombre);
+    }
+
     public boolean verificarContrasena(String nombre, String contrasena) {
         Logeo logeo = logeoRepositorio.findByLogeoNombre(nombre);
         if (logeo.getLogeoContra().equals(contrasena)) {

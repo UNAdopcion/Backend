@@ -9,6 +9,9 @@ import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
@@ -21,6 +24,9 @@ public class LogeoControlador {
     private LogeoServicio logeoServicio;
     @Autowired
     private UsuarioServicio usuarioServicio;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();;
 
     @RequestMapping(value = "/crearusuario", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
     public String crearNuevoUsuario(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
@@ -35,7 +41,7 @@ public class LogeoControlador {
         // correo
         if (!nombreExiste && !correoExiste) {
             // primero crear logeo
-            Logeo logeo = logeoServicio.crearLogeo(nombre, contrasena);
+            Logeo logeo = logeoServicio.crearLogeo(nombre, passwordEncoder.encode(contrasena));
             // crear usuario con el id del logeo
             Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(), nombre, correo, telefono);
             logeo.setUsuarioId(usuario.getUsuarioId());
@@ -43,7 +49,7 @@ public class LogeoControlador {
             logeoServicio.guardar(logeo);
 
             miLogger.info("Se registro un nuevo usuario con el mombre " + usuario.getUsuarioNombre() + " y rol "
-                    + usuario.getUsuarioRol() );
+                    + usuario.getUsuarioRol());
 
             return "ID nuevo usuario: " + usuario.getUsuarioId();
         } else {
@@ -59,10 +65,6 @@ public class LogeoControlador {
         }
 
     }
-
-
-
-
 
     // esto es para poner en usuarioControlador
     @GetMapping("/buscausuario/{id}")
@@ -83,16 +85,23 @@ public class LogeoControlador {
         String nombre = jsonLector.getJsonCampo("nombre");
         String contrasena = jsonLector.getJsonCampo("contrasena");
         boolean existe = usuarioServicio.usuarioExiste(nombre);
-        //si el usuario existe intentar logeo
+        // si el usuario existe intentar logeo
         if (!existe) {
             return "El usuario con nombre " + nombre + " no existe";
         } else {
-            if (logeoServicio.verificarContrasena(nombre, contrasena)) {
+
+            Logeo logeo = logeoServicio.buscarNombre(nombre);
+            if (passwordEncoder.matches(contrasena, logeo.getLogeoContra())) {
                 return "logeado";
             } else {
                 return "Usuario o contrasena incorrectos";
             }
         }
+    }
+
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
     }
 
 }
