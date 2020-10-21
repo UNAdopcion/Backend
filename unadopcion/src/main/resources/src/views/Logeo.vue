@@ -84,7 +84,7 @@ export default {
     hacerLogeo(objetoActual, datos) {
       RealizarLogeoServicio.hacerLogeo(datos).then((respuesta) => {
         objetoActual.probar = respuesta.data;
-        if (respuesta.data.lastIndexOf("Logeado") >= 0 ){
+        if (respuesta.data.lastIndexOf("logeado") >= 0 ){
           this.$router.push('logged-header');//redireccionar a logged-header
           console.log(respuesta.data);
         }
