@@ -36,6 +36,7 @@
 import RegistrarUsuarioServicio from "../servicio/RegistrarUsuarioServicio";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import swal from "sweetalert2";
 
 export default {
   name: "RegistroUsuario",
@@ -72,6 +73,7 @@ export default {
       .then(respuesta=>{
         objetoActual.probar = (respuesta.data);
         console.log(respuesta.data);
+        swal.fire("Registro exitoso", respuesta.data, "success");
       });
     }
   }

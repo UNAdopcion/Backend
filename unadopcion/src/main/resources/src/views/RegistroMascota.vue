@@ -174,6 +174,7 @@ export default {
           .then(respuesta=>{
             objetoActual.probar = (respuesta.data);
             console.log(respuesta.data);
+            swal.fire("Registro exitoso", respuesta.data, "success");
           });
     }
   },

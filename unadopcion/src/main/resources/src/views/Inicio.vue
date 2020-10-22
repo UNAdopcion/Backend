@@ -8,6 +8,13 @@
           <br><div class="mb-2">
          <br><b-avatar src="@/assets/profile.jpg" size="8rem"></b-avatar>
           </div>
+
+         <div class="text-info">
+           <br><div>Usuario: name user</div>
+           <div>Ciudad: city</div>
+           <div>Acerca de mi: Aboutme</div>
+         </div>
+
          <div><br></div>
           <br><div class="text-center">
             <button  class="btn btn-success" @click="editarUsuario">Editar Usuario</button>
@@ -16,9 +23,6 @@
        <div><br></div></div>
       </div>
 
-    <div><br></div>
-    <div><br></div>
-    <div><br></div>
     <div><br></div>
     <div><br></div>
     <div><br></div>
@@ -51,7 +55,7 @@ export default {
   },
    data(){
     return{
-      nameuser: 'Juanito',
+      nameuser: 'Usuario',
       nombre: '',
       probar: ''
     }

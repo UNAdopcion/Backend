@@ -109,11 +109,6 @@ img{
 
 footer,
 
-body{
-  width: 97.5%;
-  position: absolute;
-}
-
 footer{
   bottom: 0.1cm;
   align-self: auto;
