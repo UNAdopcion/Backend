@@ -57,7 +57,7 @@
       </div>
     </div>
     <br /><br />
-    <Footer></Footer>
+    <footer><Footer></Footer></footer>
   </div>
 </template>
 
@@ -85,7 +85,7 @@ export default {
       RealizarLogeoServicio.hacerLogeo(datos).then((respuesta) => {
         objetoActual.probar = respuesta.data;
         if (respuesta.data.lastIndexOf("logeado") >= 0 ){
-          this.$router.push('logged-header');//redireccionar a logged-header
+          this.$router.push('inicio');//redireccionar a logged-header
           console.log(respuesta.data);
         }
         else {
@@ -115,4 +115,11 @@ export default {
 </script>
 
 <style scoped>
+footer,
+
+footer{
+  bottom: 0.1cm;
+  align-self: auto;
+}
+
 </style>

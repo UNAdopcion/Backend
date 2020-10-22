@@ -17,7 +17,7 @@
         <a class="nav-link" href="registro" >Registrarse</a>
       </li>
       <li class="nav-item" id="btnLogUser">
-        <a class="nav-link" href="login" >Iniciar Sesión</a>
+        <a class="nav-link" href="logeo" >Iniciar Sesión</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contacto">Contactanos</a>

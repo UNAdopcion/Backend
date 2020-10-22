@@ -25,9 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" href="cuidados">Cuidados</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="contacto">Contactanos</a>
-          </li>
+          </li>-->
         </ul>
       </div>
     </nav>

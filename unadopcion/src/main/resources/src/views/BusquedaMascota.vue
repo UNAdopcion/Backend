@@ -1,6 +1,6 @@
 <template>
-  <div id="busquedamacota"><LoggedHeader></LoggedHeader>
-  <div class="container">
+  <div><LoggedHeader></LoggedHeader>
+  <br><div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
@@ -19,7 +19,6 @@
                 <option>Gato</option>
                 <option>Ave</option>
                 <option>Roedor</option>
-                <option>Bestia</option>
                 <option>Pez</option>
                 <option>Reptil</option>
                 <option>Otro</option>
@@ -48,19 +47,22 @@
         </div>
       </div>
     </div>
+
   </div>
-  </div>
+    <footer><Footer></Footer></footer>
+    </div>
 </template>
 
 <script>
 import BuscarMascotaServicio from "../servicio/BuscarMascotaServicio";
 import swal from "sweetalert2"
 import LoggedHeader from "../components/LoggedHeader";
+import Footer from "@/components/Footer";
 
 export default {
   name: "BusquedaMascota",
   components: {
-    LoggedHeader,
+    LoggedHeader, Footer
   },
   data() {
     return {
@@ -105,5 +107,16 @@ img{
   border-radius: 8px;
 }
 
+footer,
+
+body{
+  width: 97.5%;
+  position: absolute;
+}
+
+footer{
+  bottom: 0.1cm;
+  align-self: auto;
+}
 
 </style>

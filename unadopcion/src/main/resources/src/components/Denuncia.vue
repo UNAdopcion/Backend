@@ -70,7 +70,7 @@
 
     <br><button class="btn btn-success" @click="formaEnviar">Enviar</button>
 
-    <Footer></Footer>
+    <footer><Footer></Footer></footer>
   </div>
 </template>
 
@@ -125,5 +125,15 @@ export default {
 </script>
 
 <style scoped>
+footer,
 
+body{
+  width: 97.5%;
+  position: absolute;
+}
+
+footer{
+  bottom: 0.1cm;
+  align-self: auto;
+}
 </style>

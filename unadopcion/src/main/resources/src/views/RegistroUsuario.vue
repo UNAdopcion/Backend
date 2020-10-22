@@ -1,20 +1,21 @@
 <template>
   <div id="registrousuario"><Header></Header>
-  <div class="container">
+    <br><h1 class="text-center"><strong class="text-capitalize">¡Crea tu cuenta con nosotros!</strong></h1>
+    <br><div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header"><b>Crea tu cuenta con nosotros!</b></div>
+          <br><div class="card-header"><b>Registro</b></div>
 
           <div class="card-body">
             <form @submit="enviarForma">
-              <strong>Nombre de usuario:</strong>
+              <br><strong>Nombre de usuario:</strong>
               <input type="text" class="form-control" v-model="nombre">
-              <strong>Correo:</strong>
+              <br><strong>Correo:</strong>
               <input type="text" class="form-control" v-model="correo">
-              <strong>Teléfono:</strong>
+              <br><strong>Teléfono:</strong>
               <input type="text" class="form-control" v-model="telefono">
-              <strong>Contraseña:</strong>
+              <br><strong>Contraseña:</strong>
               <input type="password" class="form-control" v-model="contrasena">
 
               <button class="btn btn-success">Enviar</button>
@@ -27,18 +28,19 @@
         </div>
       </div>
     </div>
-  </div>
+  </div><footer><Footer></Footer></footer>
   </div>
 </template>
 
 <script>
 import RegistrarUsuarioServicio from "../servicio/RegistrarUsuarioServicio";
 import Header from "../components/Header";
+import Footer from "@/components/Footer";
 
 export default {
   name: "RegistroUsuario",
   components: {
-    Header
+    Header, Footer
   },
   mounted() {
     console.log('Componente RegistroUsuario OK.')
@@ -137,36 +139,6 @@ p.texto {
   text-align: justify;
 }
 
-input{
-  font-family:  Arial, Helvetica, sans-serif;
-  margin-bottom: 15px;
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 3px;
-  border: 1px solid darkgray;
-}
-.input-48{
-  width: 48%;
-}
-.input-100{
-  width: 100%;
-}
-.btn btn-success{
-  background: #EA484E;
-  color: #fff;
-  margin: auto;
-  padding: 10px 40px;
-  cursor: pointer;
-  font-size: 20px;
-
-}
-.btn btn-success:hover{
-  background: #0EA7E7;
-  transform: scale(1.1);
-}
-.btn btn-success:active{
-  transform: scale(1.2);
-}
 
 .checkbox {
   font-family: Arial, Helvetica, sans-serif;
@@ -196,5 +168,13 @@ h2,h3{
   color: #000000;
   text-align: center;
 }
+
+footer,
+
+footer{
+  bottom: 0.1cm;
+  align-self: auto;
+}
+
 
 </style>

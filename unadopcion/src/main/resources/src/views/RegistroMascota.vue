@@ -1,59 +1,111 @@
 <template>
-  <div><LoggedHeader></LoggedHeader>
-    <br><div class="container">
+  <div id="registromascota"><LoggedHeader></LoggedHeader>
+    <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
+          <br><div class="card">
+          <div class="card-header"><b>Registra una macota!</b></div>
+        </div>
+
           <div class="card">
-            <div class="card-header"><b>Registra una macota!</b></div>
             <div class="card-body">
-              <form id="formulario" @submit="formaEnviar">
-                <strong>Nombre de usuario de quien registra</strong>
-                <input required type="text" class="form-control" v-model="nombreusuario">
+              <form class="text-left" id="formulario" @submit="formaEnviar">
+                <div class="card">
+                  <div class="card-header"><div class="text-center"><strong>Datos Usuario</strong></div></div>
+                  <div class="card-body">
+                    <div class="form-row">
+                      <label class="control-label col-sm-2" for="nombreUsuario"><strong> Usuario: </strong></label>
+                      <div class="col-sm-10">
+                        <input required type="text" id="nombreUsuario" class="form-control" v-model="nombreusuario">
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <strong>Nombre de la mascota</strong>
-                <input required type="text" class="form-control" v-model="animalnombre">
+                <br><div class="card">
+                <div class="card-header"><div class="text-center"><strong>Datos Mascota</strong></div></div>
+                <div class="card-body">
 
-                <strong>Lugar donde se encuentra la mascota</strong>
-                <input required type="text" class="form-control" v-model="animallugar" >
+                  <div class="form-row">
+                    <label class="control-label col-sm-2" for="animalNombre"><strong>Nombre:</strong></label>
+                    <div class="col-sm-10">
+                      <input required type="text" id="animalNombre" class="form-control" v-model="animalnombre">
+                    </div>
+                  </div>
 
-                <strong>Edad de la mascota:</strong>
-                <input required type="number" class="form-control" v-model="animaledad">
+                  <br><div class="form-row">
+                  <label class="control-label col-sm-2" for="animalLugar"><strong>Lugar:</strong></label>
+                  <div class="col-sm-10">
+                    <input required type="text" id="animalLugar" class="form-control" v-model="animallugar" >
+                  </div>
+                </div>
 
-                <strong >Especie del animal</strong>
-                <select required class="form-control" v-model="animaltipo">
-                  <option>Perro</option>
-                  <option>Gato</option>
-                  <option>Ave</option>
-                  <option>Roedor</option>
-                  <option>Bestia</option>
-                  <option>Pez</option>
-                  <option>Reptil</option>
-                  <option>Otro</option>
-                </select>
+                  <br><div class="form-row">
+                  <label class="control-label col-sm-2" for="animalEdad"><strong>Edad:</strong></label>
+                  <div class="col-sm-10">
+                    <input required type="number" id="animalEdad" class="form-control" v-model="animaledad">
+                  </div>
+                </div>
 
-                <strong>Sexo:</strong>
-                <select required class="form-control" v-model="animalsexo">
-                  <option>Hembra</option>
-                  <option>Macho</option>
-                </select>
+                  <br><div class="form-row">
+                  <strong class="control-label col-sm-2" for="animalTipo">Especie:</strong>
+                  <div class="col-sm-10">
+                    <select required class="form-control" id="animalTipo" v-model="animaltipo">
+                      <option>Perro</option>
+                      <option>Gato</option>
+                      <option>Ave</option>
+                      <option>Roedor</option>
+                      <option>Bestia</option>
+                      <option>Pez</option>
+                      <option>Reptil</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
 
-                <strong>Algo curioso sobre la mascota</strong>
-                <input type="text" class="form-control" v-model="animaldescripcion">
+                  <br><div class="form-row">
+                  <strong class="control-label col-sm-2" for="animalSexo">Sexo:</strong>
+                  <div class="col-sm-10">
+                    <select required class="form-control" id="animalSexo" v-model="animalsexo">
+                      <option>Hembra</option>
+                      <option>Macho</option>
+                    </select>
+                  </div>
+                </div>
 
-                <input required type="file" @change="enCambioArchivo">
+                  <br><div class="form-row">
+                  <br><strong class="control-label row-cols-md-2">Algo curioso sobre la mascota:<br></strong>
+                  <textarea type="text" class="control-label row-cols-sm-5"  v-model="animaldescripcion"></textarea>
+                </div>
 
-                <button class="btn btn-success">Enviar</button>
+                  <br><div class="form-row">
+                  <br><strong class="control-label col-sm-2">Fotografia:</strong>
+                  <div class="col-sm-10">
+                    <input required type="file" @change="enCambioArchivo">
+                  </div>
+                </div>
+
+
+
+                </div>
+              </div>
+                <br><div class="align-items-center">
+                <br><button  class="btn btn-success">Enviar</button>
+              </div>
               </form>
-              <strong>Respuesta servidor:</strong>
-              <pre>
-                        {{probar}}
-            </pre>
+
+
             </div>
+
           </div>
+          <br><strong>Respuesta servidor:</strong>
+          <pre>
+                        {{probar}}
+                  </pre>
         </div>
       </div>
     </div>
-    <Footer></Footer>
+    <br><Footer></Footer>
   </div>
 </template>
 
@@ -61,14 +113,13 @@
 import swal from "sweetalert2";
 import RegistrarMascotaServicio from "../servicio/RegistrarMascotaServicio";
 import LoggedHeader from "../components/LoggedHeader";
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
 
 
 export default {
   name: "RegistroMascota",
   components: {
     LoggedHeader, Footer
-
   },
   mounted() {
     console.log('Componente Registro OK.')
