@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const UNADOPCION_API_URL = "http://localhost:8080";
-const CONTROLADOR = "/crearusuario";
+const CONTROLADOR = "/crear-usuario";
 
 class RegistrarUsuarioServicio{
     registrarUsuario(info){

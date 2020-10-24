@@ -1,18 +1,22 @@
 package com.unadopcion.unadopcion.controladores;
-
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.herramientas.Fecha;
-import com.unadopcion.unadopcion.herramientas.JsonLector;
+import com.unadopcion.unadopcion.herramientas.JsonAPOJO;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
-import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Registro;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.modelo.Usuario;
+import com.unadopcion.unadopcion.pojo.NuevaMascotaPOJO;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import com.unadopcion.unadopcion.servicio.RegistroServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
 import javax.transaction.Transactional;
 import java.io.IOException;
 
@@ -31,38 +35,38 @@ public class RegistroControlador {
     @Transactional
     @RequestMapping(value="/registro",
             method = RequestMethod.POST,
-            consumes = {"multipart/form-data"}, produces = "text/plain")
-    public String registrarMascota(@RequestParam("imagen") MultipartFile archivo,
-                                   @RequestParam("info") String json) throws IOException, JsonCampoNoExiste {
+            consumes = {"multipart/form-data"})
+    public ResponseEntity<Void> registrarMascota(@RequestPart("imagen") MultipartFile archivo,
+                                                 @RequestParam("info") String json) throws IOException {
 
-        JsonLector jsonLector = new JsonLector(json);
-        String nombreusuario = jsonLector.getJsonCampo("nombreusuario");
-        String animalnombre = jsonLector.getJsonCampo("animalnombre");
-        String animaltipo = jsonLector.getJsonCampo("animaltipo");
-        String animallugar = jsonLector.getJsonCampo("animallugar");
-        String animaldescripcion = jsonLector.getJsonCampo("animaldescripcion");
-        String animalsexo = jsonLector.getJsonCampo("animalsexo");
-        int animaledad = Integer.parseInt(jsonLector.getJsonCampo("animaledad"));
-
+        //Fecha ahora
         Fecha fecha = new Fecha();
-        Usuario usuario = usuarioServicio.buscarUsuario(nombreusuario);
+        //convertir json a POJO
+        JsonAPOJO jsonAPOJO = new JsonAPOJO();
+        NuevaMascotaPOJO nuevaMascotaPOJO = (NuevaMascotaPOJO) jsonAPOJO.getPOJO(json, NuevaMascotaPOJO.class);
+
+        Usuario usuario = usuarioServicio.buscarUsuario(nuevaMascotaPOJO.getNombreusuario());
         // Verifica si el usuario existe
-        if (usuarioServicio.usuarioExiste(nombreusuario)) {
+        if (usuarioServicio.usuarioExiste(nuevaMascotaPOJO.getNombreusuario())) {
             //crea una entidad registro primero
             Registro registro = registroServicio.crearRegistro(usuario.getUsuarioId(), fecha.getFecha());
             //crea una entidad animal luego con registro id
-            Animal animal = animalServicio.crearAnimal(registro.getRegisId(), animalnombre,
-                    animaltipo, animallugar, animaldescripcion, animalsexo, animaledad, archivo.getBytes());
+            Animal animal = animalServicio.crearAnimal(registro.getRegisId(), nuevaMascotaPOJO.getAnimalnombre(),
+                    nuevaMascotaPOJO.getAnimaltipo(), nuevaMascotaPOJO.getAnimallugar(),
+                    nuevaMascotaPOJO.getAnimaldescripcion(), nuevaMascotaPOJO.getAnimalsexo(),
+                    nuevaMascotaPOJO.getAnimaledad(), archivo.getBytes());
 
             registro.setAnimId(animal.getAnimId());
             //guardar cambios posteriores a creacion
             registroServicio.guardar(registro);
             
             miLogger.info("Se registro mascota con id:" + registro.getAnimId());
-            return "ID de la mascota: " + registro.getAnimId() + " Asociada al usuario: " + nombreusuario;
+            //Una mascota ha sido creada
+            return new ResponseEntity<>(HttpStatus.CREATED);
         } else {
-            miLogger.info("Se intenta registrar mascota con usuario no existente:" + nombreusuario);
-            return "El usuario con nombre de usuario " + nombreusuario + " no existe. ";
+            miLogger.info("Se intenta registrar mascota con usuario no existente:" + nuevaMascotaPOJO.getNombreusuario());
+            //El usuario no existe para registrar mascota
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
     }

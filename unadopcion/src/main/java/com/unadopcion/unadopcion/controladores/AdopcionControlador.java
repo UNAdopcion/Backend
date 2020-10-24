@@ -1,13 +1,11 @@
 package com.unadopcion.unadopcion.controladores;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.unadopcion.unadopcion.herramientas.Fecha;
-import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
-import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.servicio.AdopcionServicio;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -21,9 +19,9 @@ public class AdopcionControlador {
 
 
     @RequestMapping(value = "/adoptar", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
-    public String crearAdopcion(@RequestBody String json) throws JsonProcessingException, JsonCampoNoExiste {
-
-        JsonLector jsonLector = new JsonLector(json);
+    public ResponseEntity<Void> crearAdopcion(@RequestBody String json) throws JsonProcessingException, JsonCampoNoExiste {
+        //TODO: DEFINIR EL PROCESO DE ADOPCION
+       /* JsonLector jsonLector = new JsonLector(json);
         int animalid = Integer.parseInt(jsonLector.getJsonCampo("animalid"));
         int usuarioid = Integer.parseInt(jsonLector.getJsonCampo("usuarioid"));
         //Fecha ahora
@@ -39,8 +37,9 @@ public class AdopcionControlador {
         }else{
             miLogger.cuidado("Se intenta adoptar un animal ya adoptado id:" + animalid);
             return "La mascota ya fue adoptada";
-        }
+        }*/
 
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 

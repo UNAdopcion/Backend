@@ -172,10 +172,16 @@ export default {
     registrarMascota(objetoActual, datos){
       RegistrarMascotaServicio.registrarMascota(datos)
           .then(respuesta=>{
-            objetoActual.probar = (respuesta.data);
-            console.log(respuesta.data);
-            swal.fire("Registro exitoso", respuesta.data, "success");
-          });
+            //objetoActual.probar = (respuesta.data);
+            //console.log(respuesta.data);
+            if(respuesta.status === 201) {
+              swal.fire("Registro exitoso", "Bienvenido " + this.animalnombre, "success");
+            }
+          }).catch(error =>{
+            if(error.response.status === 400){
+              swal.fire("Algo salio mal", "Verifica que estas registrado", "error");
+            }
+      });
     }
   },
 

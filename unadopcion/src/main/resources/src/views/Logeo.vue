@@ -18,7 +18,7 @@
                     <strong>Nombre de usuario:</strong>
                   </div>
                   <div class="col-8">
-                    <input type="text" class="form-control" v-model="nombre" />
+                    <input required type="text" class="form-control" v-model="nombre" />
                   </div>
                 </div>
                 <br />
@@ -27,7 +27,7 @@
                     <strong>Contraseña:</strong>
                   </div>
                   <div class="col-8">
-                    <input
+                    <input required
                       type="password"
                       class="form-control"
                       v-model="contrasena"
@@ -83,14 +83,19 @@ export default {
     
     hacerLogeo(objetoActual, datos) {
       RealizarLogeoServicio.hacerLogeo(datos).then((respuesta) => {
-        objetoActual.probar = respuesta.data;
-        if (respuesta.data.lastIndexOf("logeado") >= 0 ){
-          this.$router.push('inicio');//redireccionar a logged-header
-          console.log(respuesta.data);
+        //objetoActual.probar = respuesta.data;
+        console.log(respuesta.status);
+        if (respuesta.status === 200){
+          this.$router.push('inicio');//redireccionar a principal
+
         }
-        else {
-          this.mostrarLogeoFallido(respuesta.data);
-          console.log(respuesta.data);
+      }).catch(error =>{// hay un error
+        if (error.response.status === 401){
+          this.mostrarLogeoFallido("Las credenciales no coinciden");//credenciales erroneas
+        }else if(error.response.status === 404){
+          this.mostrarLogeoFallido("No se encuentra el usuario con esas credenciales");//no existe usuario
+        }else{
+          this.mostrarLogeoFallido("Error de red");
         }
       });
     },

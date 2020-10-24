@@ -10,6 +10,9 @@ import com.unadopcion.unadopcion.servicio.DenunciaServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,9 +29,12 @@ public class DenunciaControlador {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
-    @RequestMapping(value = "/denunciarmaltrato", method = RequestMethod.POST, consumes = "application/json", produces = "text/plain")
-    public String denunciarMaltrato(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
-        JsonLector jsonLector = new JsonLector(json);
+    @RequestMapping(value = "/denunciarmaltrato", method = RequestMethod.POST)
+    public ResponseEntity<Void> denunciarMaltrato(@RequestBody String json) {
+
+        //TODO:HAY QUE REPLANTEAR LA FUNCION DE LA DENUNCIA, DEBERIA SER ANONIMA
+        // Y EL NOMBRE DE USUARIO ES EL DENUNCIADO ?
+        /*JsonLector jsonLector = new JsonLector(json);
         Usuario usuario = usuarioServicio.buscarUsuario(jsonLector.getJsonCampo("nombre"));
         int usuarioId = 0;
         usuarioId = usuario.getUsuarioId();
@@ -42,7 +48,9 @@ public class DenunciaControlador {
             denunciaServicio.crearDenuncia(usuarioId, fecha.getFecha(), denunTipo, denunDescrip);
             System.out.println(usuarioId);
             return "Se ha registrado la denuncia.";
-        }
+        }*/
+
+        return new ResponseEntity<>(HttpStatus.OK);
 
     }
 

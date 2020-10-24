@@ -10,17 +10,17 @@
           <div class="card-body">
             <form @submit="enviarForma">
               <br><strong>Nombre de usuario:</strong>
-              <input type="text" class="form-control" v-model="nombre">
+              <input required type="text" class="form-control" v-model="nombre">
               <br><strong>Correo:</strong>
-              <input type="text" class="form-control" v-model="correo">
+              <input required type="text" class="form-control" v-model="correo">
               <br><strong>Teléfono:</strong>
-              <input type="text" class="form-control" v-model="telefono">
+              <input required type="text" class="form-control" v-model="telefono">
               <br><strong>Contraseña:</strong>
-              <input type="password" class="form-control" v-model="contrasena">
+              <input required type="password" class="form-control" v-model="contrasena">
 
               <button class="btn btn-success">Enviar</button>
             </form>
-            <strong>Salida:</strong>
+            <strong></strong>
             <pre>
                         {{probar}}
             </pre>
@@ -71,9 +71,14 @@ export default {
     registrarUsuario(objetoActual, info){
       RegistrarUsuarioServicio.registrarUsuario(info)
       .then(respuesta=>{
-        objetoActual.probar = (respuesta.data);
-        console.log(respuesta.data);
-        swal.fire("Registro exitoso", respuesta.data, "success");
+        //objetoActual.probar = (respuesta.data);
+        //.log(respuesta.data);
+        if(respuesta.status === 201)
+        swal.fire("Registro exitoso", "Bienvenido", "success");
+      }).catch(error =>{
+          if(error.response.status == 400){
+            swal.fire("Intente nuevamente", "El usuario o email ya existe", "error");
+          }
       });
     }
   }

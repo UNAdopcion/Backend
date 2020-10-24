@@ -22,10 +22,8 @@ public class BusquedaAnimalControlador {
     @Autowired
     private AnimalServicio animalServicio;
 
-    @RequestMapping(value="/buscarmascota")
-    public String buscarAnimalPorTipo(@RequestBody String json) throws JsonCampoNoExiste, JsonProcessingException {
-            JsonLector jsonLector = new JsonLector(json);
-            String tipo = jsonLector.getJsonCampo("tipo");
+    @RequestMapping(value="/buscar-mascota/{tipo}", produces = "application/json")
+    public String buscarAnimalPorTipo(@PathVariable String tipo) throws JsonProcessingException {
             List<Animal> resultados = animalServicio.buscarAnimalPorTipo(tipo);
             ObjectMapper mapper = new ObjectMapper();
             String respuestaJson = mapper.writeValueAsString(resultados);

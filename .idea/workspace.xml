@@ -23,30 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/herramientas/MiLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-10-23.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-10-23.012549212666191.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/herramientas/JsonAPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/FormaAdopcionPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevaMascotaPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevoUsuarioPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/UsuarioLogeoPOJO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion.log" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/AdopcionControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/AdopcionControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/BusquedaAnimalControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/BusquedaAnimalControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/LogeoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/LogeoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/RegistroControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/RegistroControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/AdopcionRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/AdopcionRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/AdopcionServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/AdopcionServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Denuncia.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/ComponentDenuncia.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarDenunciaServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarDenunciaServicio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Denuncia.vue" beforeDir="false" />
->>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/BuscarMascotaServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/BuscarMascotaServicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarUsuarioServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarUsuarioServicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Logeo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Logeo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroMascota.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroMascota.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroUsuario.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroUsuario.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,18 +102,16 @@
       <recent name="C:\Users\nano\Documents\IngesoftII\Nueva carpeta\Backend\unadopcion\src\main\resources\src\views" />
     </key>
   </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="Spring Boot.UnadopcionApplication">
-=======
-  <component name="RunManager" selected="JavaScript Debug.Denuncia.vue">
->>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,11 +167,8 @@
       <workItem from="1603071298317" duration="677000" />
       <workItem from="1603176849808" duration="153000" />
       <workItem from="1603177141038" duration="13012000" />
-<<<<<<< HEAD
       <workItem from="1603218664675" duration="11409000" />
-=======
-      <workItem from="1603229473971" duration="12309000" />
->>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
+      <workItem from="1603499071314" duration="13776000" />
     </task>
     <servers />
   </component>
@@ -203,14 +195,15 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="385" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603070912049" />
-<<<<<<< HEAD
     <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1603227265463" />
-=======
-    <state x="574" y="299" width="453" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603231282783">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1603500833457">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="574" y="299" width="453" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603231282783" />
->>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
+    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1603500833457" />
+    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603501120028">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1603501120028" />
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603063776607">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -218,53 +211,47 @@
     <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1603240396060">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-<<<<<<< HEAD
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603052949869" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1603226326825">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1603518335699">
       <screen x="0" y="27" width="1366" height="741" />
-=======
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603240396060" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1603071648433">
-      <screen x="0" y="0" width="1600" height="860" />
->>>>>>> 397a92bc859b854f770b77d14f272a6c1d89341d
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603226326825" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1603226326824">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603518335699" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1603518335698">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648432" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603226326824" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1603226326823">
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603518335698" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1603518335696">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648432" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603226326823" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1603226326824">
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603518335696" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1603518335698">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603226326824" />
-    <state width="1320" height="172" key="GridCell.Tab.1.bottom" timestamp="1603226326828">
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603518335698" />
+    <state width="1320" height="172" key="GridCell.Tab.1.bottom" timestamp="1603518335701">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648434" />
-    <state width="1320" height="172" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603226326828" />
-    <state width="1320" height="172" key="GridCell.Tab.1.center" timestamp="1603226326827">
+    <state width="1320" height="172" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603518335701" />
+    <state width="1320" height="172" key="GridCell.Tab.1.center" timestamp="1603518335700">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1603226326827" />
-    <state width="1320" height="172" key="GridCell.Tab.1.left" timestamp="1603226326826">
+    <state width="1320" height="172" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1603518335700" />
+    <state width="1320" height="172" key="GridCell.Tab.1.left" timestamp="1603518335700">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1603226326826" />
-    <state width="1320" height="172" key="GridCell.Tab.1.right" timestamp="1603226326828">
+    <state width="1320" height="172" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1603518335700" />
+    <state width="1320" height="172" key="GridCell.Tab.1.right" timestamp="1603518335701">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1603226326828" />
+    <state width="1320" height="172" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1603518335701" />
     <state width="1557" height="276" key="GridCell.Tab.2.bottom" timestamp="1603058143683">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -285,9 +272,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603054731496" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1603062168989">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="395" y="182" width="672" height="585" key="search.everywhere.popup" timestamp="1603514644886">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603062168989" />
+    <state x="395" y="182" width="672" height="585" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1603514644886" />
   </component>
 </project>
