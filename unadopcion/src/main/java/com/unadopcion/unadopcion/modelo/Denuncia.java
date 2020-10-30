@@ -12,11 +12,12 @@ public class Denuncia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int denunId;
-
     private int usuarioId;
+    private int animalId;
     private String denunFecha;
     private String denunTipo;
     private String denunDescrip;
+    private String detalles;
 
     public Denuncia() {
     }
@@ -60,5 +61,13 @@ public class Denuncia {
     public void setDenunDescrip(String denunDescrip) {
         this.denunDescrip = denunDescrip;
     }
+
+    public int getAnimalId() { return animalId; }
+
+    public void setAnimalId(int animalId) { this.animalId = animalId; }
+
+    public String getDetalles() { return detalles; }
+
+    public void setDetalles(String detalles) { this.detalles = detalles; }
 
 }
