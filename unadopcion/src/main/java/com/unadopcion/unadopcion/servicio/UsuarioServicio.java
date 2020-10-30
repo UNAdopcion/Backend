@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,13 +17,14 @@ public class UsuarioServicio {
     private UsuarioRepositorio usuarioRepositorio;
 
     @Transactional
-    public Usuario crearUsuario(int logeoId, String usuarioNombre,
+    public Usuario crearUsuario(int logeoId, String usuarioNombre,String usuarioNombreReal,
                                 String usuarioCorreo,
                                 String usuarioTelefono){
          String ninguno = "";
          Usuario usuario = new Usuario();
          usuario.setLogeoId(logeoId);
          usuario.setUsuarioNombre(usuarioNombre);
+         usuario.setUsuarioNombre(usuarioNombreReal);
          usuario.setUsuarioTelefono(usuarioTelefono);
          usuario.setUsuarioRol(ninguno);
          usuario.setUsuarioPuntos(0);
@@ -41,7 +43,6 @@ public class UsuarioServicio {
     }
 
 
-
     public boolean existeEmail(String email){
         return usuarioRepositorio.existsByUsuarioEmail(email);
     }
@@ -57,6 +58,10 @@ public class UsuarioServicio {
 
     public Usuario buscarUsuario(String nombre){
         return usuarioRepositorio.getUsuarioByUsuarioNombre(nombre);
+    }
+
+    public List<Usuario> buscarUsuarios(String nombre){
+          return usuarioRepositorio.findAllByUsuarioNombreRealIsLike(nombre);
     }
 
     public boolean usuarioExiste(String nombre){

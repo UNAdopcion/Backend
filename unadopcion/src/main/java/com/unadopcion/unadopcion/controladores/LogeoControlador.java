@@ -15,6 +15,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @CrossOrigin
 @RestController
@@ -41,7 +43,7 @@ public class LogeoControlador {
             Logeo logeo = logeoServicio.crearLogeo(nuevoUsuarioPOJO.getNombre(), passwordEncoder.encode(nuevoUsuarioPOJO.getContrasena()
             ));
             // crear usuario con el id del logeo
-            Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(), nuevoUsuarioPOJO.getNombre(), nuevoUsuarioPOJO.getCorreo(), nuevoUsuarioPOJO.getTelefono());
+            Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(), nuevoUsuarioPOJO.getNombre(), nuevoUsuarioPOJO.getNombreReal(), nuevoUsuarioPOJO.getCorreo(), nuevoUsuarioPOJO.getTelefono());
             logeo.setUsuarioId(usuario.getUsuarioId());
             // guardar cambio a logeo
             logeoServicio.guardar(logeo);
@@ -93,6 +95,11 @@ public class LogeoControlador {
         }else{
             return null;
         }
+    }
+
+    @RequestMapping(value = "mostrar-usuarios/{nombre}", produces = "application/json")
+    public List<Usuario> mostrarUsuarios(@PathVariable String nombre){
+        return usuarioServicio.buscarUsuarios(nombre);
     }
 
     @Bean

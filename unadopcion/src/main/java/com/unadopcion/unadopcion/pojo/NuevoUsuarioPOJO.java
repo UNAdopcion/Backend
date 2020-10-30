@@ -3,9 +3,18 @@ package com.unadopcion.unadopcion.pojo;
 public class NuevoUsuarioPOJO {
 
     private String nombre;
+    private String nombreReal;
     private String correo;
     private String telefono;
     private String contrasena;
+
+    public String getNombreReal() {
+        return nombreReal;
+    }
+
+    public void setNombreReal(String nombreReal) {
+        this.nombreReal = nombreReal;
+    }
 
     public String getNombre() {
         return nombre;

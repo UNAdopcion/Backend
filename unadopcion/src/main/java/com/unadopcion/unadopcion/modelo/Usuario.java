@@ -17,6 +17,7 @@ public class Usuario {
     private String usuarioTelefono;
     private String usuarioLugar;
     private String usuarioInfo;
+    private String usuarioNombreReal;
     @Lob
     @Column(columnDefinition = "LONGBLOB")
     private byte[] usuarioFoto;
@@ -25,6 +26,18 @@ public class Usuario {
 
 
     public Usuario() {}
+
+    public void setLogeoId(Integer logeoId) {
+        this.logeoId = logeoId;
+    }
+
+    public String getUsuarioNombreReal() {
+        return usuarioNombreReal;
+    }
+
+    public void setUsuarioNombreReal(String usuarioNombreReal) {
+        this.usuarioNombreReal = usuarioNombreReal;
+    }
 
     public byte[] getUsuarioFoto() {
         return usuarioFoto;
