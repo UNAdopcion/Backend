@@ -4,8 +4,10 @@ package com.unadopcion.unadopcion.controladores;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
+import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Usuario;
+import com.unadopcion.unadopcion.pojo.DenunciaPOJO;
 import com.unadopcion.unadopcion.servicio.DenunciaServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
 
@@ -23,34 +25,40 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DenunciaControlador {
 
+    MiLogger miLogger = new MiLogger(DenunciaControlador.class);
+
     @Autowired
     private DenunciaServicio denunciaServicio;
 
     @Autowired
     private UsuarioServicio usuarioServicio;
 
-    @RequestMapping(value = "/denunciarmaltrato", method = RequestMethod.POST)
-    public ResponseEntity<Void> denunciarMaltrato(@RequestBody String json) {
+    @RequestMapping(value = "/denunciar-maltrato", method = RequestMethod.POST)
+    public ResponseEntity<Void> denunciarMaltrato(@RequestBody DenunciaPOJO denunciaPOJO) {
 
-        //TODO:HAY QUE REPLANTEAR LA FUNCION DE LA DENUNCIA, DEBERIA SER ANONIMA
-        // Y EL NOMBRE DE USUARIO ES EL DENUNCIADO ?
-        /*JsonLector jsonLector = new JsonLector(json);
-        Usuario usuario = usuarioServicio.buscarUsuario(jsonLector.getJsonCampo("nombre"));
+        Usuario usuario = usuarioServicio.buscarUsuario(denunciaPOJO.getNombreUsuario());
+
         int usuarioId = 0;
         usuarioId = usuario.getUsuarioId();
+        int animalId = 0;
+        animalId = denunciaPOJO.getAnimalId();
         Fecha fecha = new Fecha();
-        String denunTipo = jsonLector.getJsonCampo("tipo");
-        String denunDescrip = jsonLector.getJsonCampo("descripcion");
-        boolean existe = usuarioServicio.usuarioIdExiste(usuarioId);
-        if (!existe) {
-            return "El usuario " + usuarioId + " no existe";
-        } else {
-            denunciaServicio.crearDenuncia(usuarioId, fecha.getFecha(), denunTipo, denunDescrip);
-            System.out.println(usuarioId);
-            return "Se ha registrado la denuncia.";
-        }*/
+        String denunTipo = denunciaPOJO.getDenunTipo();
+        String denunDescrip = denunciaPOJO.getDenunDescrip();
+        String detalles = denunciaPOJO.getDetalles();
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        boolean existe = usuarioServicio.usuarioIdExiste(usuarioId);
+
+;       if (!existe) {
+            miLogger.cuidado("El usuario " + usuarioId + " no existe");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else {
+            denunciaServicio.crearDenuncia(usuarioId, animalId, fecha.getFecha(), denunTipo, denunDescrip, detalles);
+            miLogger.info("Se ha registrado la denuncia del usuario" + usuarioId);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+
+
 
     }
 

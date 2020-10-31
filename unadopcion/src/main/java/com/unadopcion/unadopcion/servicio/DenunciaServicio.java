@@ -16,13 +16,15 @@ public class DenunciaServicio {
     private DenunciaRepositorio denunciaRepositorio;
 
     @Transactional
-    public Denuncia crearDenuncia(int usuarioId, String denunFecha, String denunTipo, String denunDescrip) {
+    public Denuncia crearDenuncia(int usuarioId, int animalId, String denunFecha, String denunTipo, String denunDescrip, String detalles) {
 
         Denuncia denuncia = new Denuncia();
         denuncia.setUsuarioId(usuarioId);
+        denuncia.setAnimalId(animalId);
         denuncia.setDenunFecha(denunFecha);
         denuncia.setDenunTipo(denunTipo);
         denuncia.setDenunDescrip(denunDescrip);
+        denuncia.setDetalles(detalles);
         return denunciaRepositorio.save(denuncia);
 
     }
