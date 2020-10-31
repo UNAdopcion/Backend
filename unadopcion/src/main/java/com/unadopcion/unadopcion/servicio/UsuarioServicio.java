@@ -24,7 +24,7 @@ public class UsuarioServicio {
          Usuario usuario = new Usuario();
          usuario.setLogeoId(logeoId);
          usuario.setUsuarioNombre(usuarioNombre);
-         usuario.setUsuarioNombre(usuarioNombreReal);
+         usuario.setUsuarioNombreReal(usuarioNombreReal);
          usuario.setUsuarioTelefono(usuarioTelefono);
          usuario.setUsuarioRol(ninguno);
          usuario.setUsuarioPuntos(0);

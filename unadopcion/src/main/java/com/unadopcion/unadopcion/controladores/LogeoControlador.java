@@ -33,7 +33,7 @@ public class LogeoControlador {
 
     @RequestMapping(value = "/crear-usuario")
     public ResponseEntity<Void> crearNuevoUsuario(@RequestBody NuevoUsuarioPOJO nuevoUsuarioPOJO)  {
-
+        System.out.println(nuevoUsuarioPOJO);
         boolean nombreExiste = logeoServicio.existsByNombre(nuevoUsuarioPOJO.getNombre());
         boolean correoExiste = usuarioServicio.existeEmail(nuevoUsuarioPOJO.getCorreo());
         // crea logeo primero, verifica que no exista usuario nombre o usuario con mismo
@@ -43,7 +43,7 @@ public class LogeoControlador {
             Logeo logeo = logeoServicio.crearLogeo(nuevoUsuarioPOJO.getNombre(), passwordEncoder.encode(nuevoUsuarioPOJO.getContrasena()
             ));
             // crear usuario con el id del logeo
-            Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(), nuevoUsuarioPOJO.getNombre(), nuevoUsuarioPOJO.getNombreReal(), nuevoUsuarioPOJO.getCorreo(), nuevoUsuarioPOJO.getTelefono());
+            Usuario usuario = usuarioServicio.crearUsuario(logeo.getLogeoId(), nuevoUsuarioPOJO.getNombre(), nuevoUsuarioPOJO.getNombre(), nuevoUsuarioPOJO.getCorreo(), nuevoUsuarioPOJO.getTelefono());
             logeo.setUsuarioId(usuario.getUsuarioId());
             // guardar cambio a logeo
             logeoServicio.guardar(logeo);
