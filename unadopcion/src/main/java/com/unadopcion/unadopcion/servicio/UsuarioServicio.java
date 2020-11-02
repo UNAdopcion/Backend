@@ -17,24 +17,14 @@ public class UsuarioServicio {
     private UsuarioRepositorio usuarioRepositorio;
 
     @Transactional
-    public Usuario crearUsuario(int logeoId, String usuarioNombre,String usuarioNombreReal,
-                                String usuarioCorreo,
-                                String usuarioTelefono){
-         String ninguno = "";
-         Usuario usuario = new Usuario();
-         usuario.setLogeoId(logeoId);
-         usuario.setUsuarioNombre(usuarioNombre);
-         usuario.setUsuarioNombreReal(usuarioNombreReal);
-         usuario.setUsuarioTelefono(usuarioTelefono);
-         usuario.setUsuarioRol(ninguno);
-         usuario.setUsuarioPuntos(0);
-         usuario.setUsuarioEmail(usuarioCorreo);
-         usuario.setUsuarioLugar(ninguno);
-         usuario.setUsuarioInfo(ninguno);
-         return usuarioRepositorio.save(usuario);
-
+    public Usuario crearUsuario(Usuario user){
+         return usuarioRepositorio.save(user);
     }
 
+    @Transactional
+    public void editar(Usuario user){
+        usuarioRepositorio.save(user);
+    }
 
     @Transactional
     public Usuario crearContacto(){

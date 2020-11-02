@@ -7,6 +7,9 @@ public class NuevoUsuarioPOJO {
     private String correo;
     private String telefono;
     private String contrasena;
+    private String rol;
+    private String lugar;
+    private String info;
 
     public String getNombreReal() {
         return nombreReal;
@@ -18,10 +21,6 @@ public class NuevoUsuarioPOJO {
 
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getCorreo() {
@@ -46,5 +45,29 @@ public class NuevoUsuarioPOJO {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }
