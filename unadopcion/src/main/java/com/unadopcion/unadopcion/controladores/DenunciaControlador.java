@@ -6,6 +6,7 @@ import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
+import com.unadopcion.unadopcion.modelo.Denuncia;
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.pojo.DenunciaPOJO;
 import com.unadopcion.unadopcion.servicio.DenunciaServicio;
@@ -15,11 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -33,6 +32,10 @@ public class DenunciaControlador {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
+    @RequestMapping(value = "/consultar-maltrato/{id}", produces = "application/json")
+    public List<Denuncia> consultaMaltratoId(@PathVariable int id){
+        return denunciaServicio.buscarDenunciaByAnimalId(id);
+    }
     @RequestMapping(value = "/denunciar-maltrato", method = RequestMethod.POST)
     public ResponseEntity<Void> denunciarMaltrato(@RequestBody DenunciaPOJO denunciaPOJO) {
 

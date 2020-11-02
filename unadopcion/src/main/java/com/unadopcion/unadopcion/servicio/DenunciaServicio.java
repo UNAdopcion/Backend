@@ -33,6 +33,10 @@ public class DenunciaServicio {
         return denunciaRepositorio.findAllByUsuarioId(idUser);
     }
 
+    public List<Denuncia> buscarDenunciaByAnimalId(int id) {
+        return denunciaRepositorio.findAllByAnimalId(id);
+    }
+
     public Denuncia actualizar(Denuncia denuncia) {
         return denunciaRepositorio.save(denuncia);
     }
