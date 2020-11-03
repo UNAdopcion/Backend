@@ -1,6 +1,5 @@
 package com.unadopcion.unadopcion.controladores;
 
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonLector;
@@ -8,6 +7,7 @@ import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Denuncia;
 import com.unadopcion.unadopcion.modelo.Usuario;
+import com.unadopcion.unadopcion.pojo.ConsultarDenunciaPOJO;
 import com.unadopcion.unadopcion.pojo.DenunciaPOJO;
 import com.unadopcion.unadopcion.servicio.DenunciaServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
@@ -33,9 +33,10 @@ public class DenunciaControlador {
     private UsuarioServicio usuarioServicio;
 
     @RequestMapping(value = "/consultar-maltrato/{id}", produces = "application/json")
-    public List<Denuncia> consultaMaltratoId(@PathVariable int id){
+    public List<Denuncia> consultaMaltratoId(@PathVariable int id) {
         return denunciaServicio.buscarDenunciaByAnimalId(id);
     }
+
     @RequestMapping(value = "/denunciar-maltrato", method = RequestMethod.POST)
     public ResponseEntity<Void> denunciarMaltrato(@RequestBody DenunciaPOJO denunciaPOJO) {
 
@@ -52,7 +53,8 @@ public class DenunciaControlador {
 
         boolean existe = usuarioServicio.usuarioIdExiste(usuarioId);
 
-;       if (!existe) {
+        ;
+        if (!existe) {
             miLogger.cuidado("El usuario " + usuarioId + " no existe");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } else {
@@ -61,8 +63,21 @@ public class DenunciaControlador {
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
+    }
 
-
+    @GetMapping(value = "/consultar-maltrato/usuario/{nombre}", produces = "application/json")
+    public List<Denuncia> consultaMaltratoPorNombreUsuario(@PathVariable String nombre,
+            @RequestBody ConsultarDenunciaPOJO consultarDenunciaPOJO) {
+        Usuario usuario = usuarioServicio.buscarUsuario(consultarDenunciaPOJO.getNombreUsuario());
+        Usuario usuario_consultado = usuarioServicio.buscarUsuario(nombre);
+        boolean existe = usuarioServicio.usuarioIdExiste(usuario_consultado.getUsuarioId());
+        if (!existe) {
+            miLogger.cuidado("El usuario consultado " + usuario_consultado.getUsuarioNombre() + " no existe. ");
+        } else {
+            miLogger.info("El usuario " + usuario.getUsuarioNombre() + " consulto los casos de maltrato del usuario "
+                    + usuario_consultado.getUsuarioNombre());
+        }
+        return denunciaServicio.buscarDenunciaByUser(usuario_consultado.getUsuarioId());
     }
 
 }
