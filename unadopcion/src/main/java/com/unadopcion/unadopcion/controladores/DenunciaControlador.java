@@ -66,15 +66,17 @@ public class DenunciaControlador {
     }
 
     @GetMapping(value = "/consultar-maltrato/usuario/{nombre}", produces = "application/json")
-    public List<Denuncia> consultaMaltratoPorNombreUsuario(@PathVariable String nombre,
-            @RequestBody ConsultarDenunciaPOJO consultarDenunciaPOJO) {
-        Usuario usuario = usuarioServicio.buscarUsuario(consultarDenunciaPOJO.getNombreUsuario());
+    public List<Denuncia> consultaMaltratoPorNombreUsuario(@PathVariable String nombre
+            //,@RequestBody ConsultarDenunciaPOJO consultarDenunciaPOJO
+            ) {
+        //Usuario usuario = usuarioServicio.buscarUsuario(consultarDenunciaPOJO.getNombreUsuario());
         Usuario usuario_consultado = usuarioServicio.buscarUsuario(nombre);
         boolean existe = usuarioServicio.usuarioIdExiste(usuario_consultado.getUsuarioId());
         if (!existe) {
             miLogger.cuidado("El usuario consultado " + usuario_consultado.getUsuarioNombre() + " no existe. ");
         } else {
-            miLogger.info("El usuario " + usuario.getUsuarioNombre() + " consulto los casos de maltrato del usuario "
+            miLogger.info("El usuario " //+ usuario.getUsuarioNombre() 
+            + " consulto los casos de maltrato del usuario "
                     + usuario_consultado.getUsuarioNombre());
         }
         return denunciaServicio.buscarDenunciaByUser(usuario_consultado.getUsuarioId());
