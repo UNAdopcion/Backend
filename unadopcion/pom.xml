@@ -67,6 +67,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+
+
+
 
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
         <!-- hibernate para trabajar con OMR -->
@@ -87,6 +95,7 @@
         </dependency>
 
     </dependencies>
+
 
     <build>
         <plugins>
@@ -109,7 +118,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <goalPrefix>sonar</goalPrefix>
+
                 </configuration>
             </plugin>
 

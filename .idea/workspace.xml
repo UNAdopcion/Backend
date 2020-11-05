@@ -23,27 +23,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-10-23.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-10-23.012549212666191.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/herramientas/JsonAPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/FormaAdopcionPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevaMascotaPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevoUsuarioPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/UsuarioLogeoPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_content_type_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_lang_tag_1_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_8_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_oauth2_oidc_sdk_7_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_client_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_client_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-11-02.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion.log.2020-11-03.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/Config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/GoogleAPIControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/db/migration/V1_4_nuevo_constraint_adopcion.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3b0f4943-303d-41e9-b511-194d0ef53d1e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion.log" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/AdopcionControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/AdopcionControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/BusquedaAnimalControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/BusquedaAnimalControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/DenunciaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion.log.2020-10-23.012549212666191.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/Config/CORSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/Config/CORSConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/LogeoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/LogeoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/RegistroControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/controladores/RegistroControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/modelo/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevaMascotaPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/pojo/NuevaMascotaPOJO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/UsuarioRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/repositorio/UsuarioRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/java/com/unadopcion/unadopcion/servicio/UsuarioServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/BuscarMascotaServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/BuscarMascotaServicio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarUsuarioServicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/servicio/RegistrarUsuarioServicio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Logeo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/Logeo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroMascota.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroMascota.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroUsuario.vue" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/src/views/RegistroUsuario.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +99,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyecto/Backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gitFront/Frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -102,27 +113,212 @@
       <recent name="C:\Users\nano\Documents\IngesoftII\Nueva carpeta\Backend\unadopcion\src\main\resources\src\views" />
     </key>
   </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="DF22A23403C946FE2CD60737D46DA6DB" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1667403688000" />
+                <option name="domain" value="accounts.google.com" />
+                <option name="name" value="__Host-GAPS" />
+                <option name="path" value="/" />
+                <option name="value" value="1:at8JeBP39FyUAgeB7-HJq-tEB7NJyQ:7o3aj9HfXBn1O4QL" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/autenticar/" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="DF22A23403C946FE2CD60737D46DA6DB" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1667403614000" />
+                <option name="domain" value="accounts.google.com" />
+                <option name="name" value="__Host-GAPS" />
+                <option name="path" value="/" />
+                <option name="value" value="1:2Degir3OSXUOdQdAIEeLHjr8fAkr1w:tdfnFCpTx3BLpwKY" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/autenticar/" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="DF6354F3D2D0A4F92CAACB33B82689F4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1667339987000" />
+                <option name="domain" value="accounts.google.com" />
+                <option name="name" value="__Host-GAPS" />
+                <option name="path" value="/" />
+                <option name="value" value="1:rcII6SVTKwGtMRhWcLx9qF3j-yU2_g:1oVAP6u6RjszGMqU" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/autenticar/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="DF6354F3D2D0A4F92CAACB33B82689F4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1667339514000" />
+                <option name="domain" value="accounts.google.com" />
+                <option name="name" value="__Host-GAPS" />
+                <option name="path" value="/" />
+                <option name="value" value="1:M2ejWjwwaCY8wRQWMAZIMn3RA78zUA:aZd0KDq5sf2AwNca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/autenticar/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="DF6354F3D2D0A4F92CAACB33B82689F4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1667339146000" />
+                <option name="domain" value="accounts.google.com" />
+                <option name="name" value="__Host-GAPS" />
+                <option name="path" value="/" />
+                <option name="value" value="1:Bff7Z-jqcD-uuZT2E4Y5bEDnCK0i_w:AA_oEYHB-4cNXUiD" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/mostrar-usuarios/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/mostrar-usuarios/Mike" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.UnadopcionApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in unadopcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unadopcion" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="V1_4_nuevo_constraint_adopcion.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/unadopcion/src/main/resources/db/migration/V1_4_nuevo_constraint_adopcion.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="c9fd7366-682a-4428-9c37-d3c2db5c2b30" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="App.vue (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/App.vue" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -131,9 +327,6 @@
       <method v="2" />
     </configuration>
     <configuration name="RegistroMascota.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/views/RegistroMascota.vue" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistroUsuario.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/unadopcion/src/views/RegistroUsuario.vue" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="UnadopcionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -145,11 +338,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
+        <item itemvalue="Database Script.V1_4_nuevo_constraint_adopcion.sql" />
         <item itemvalue="JavaScript Debug.Denuncia.vue" />
         <item itemvalue="JavaScript Debug.App.vue (1)" />
         <item itemvalue="JavaScript Debug.RegistroMascota.vue" />
-        <item itemvalue="JavaScript Debug.RegistroUsuario.vue" />
-        <item itemvalue="JUnit.All in unadopcion" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +362,12 @@
       <workItem from="1603177141038" duration="13012000" />
       <workItem from="1603218664675" duration="11409000" />
       <workItem from="1603499071314" duration="13776000" />
+      <workItem from="1604102707600" duration="2734000" />
+      <workItem from="1604153726819" duration="71818000" />
+      <workItem from="1604282348925" duration="177000" />
+      <workItem from="1604282565055" duration="20680000" />
+      <workItem from="1604437093974" duration="15076000" />
+      <workItem from="1604514442482" duration="16991000" />
     </task>
     <servers />
   </component>
@@ -191,67 +390,72 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603227265463">
+    <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604437607780">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="385" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603070912049" />
-    <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1603227265463" />
-    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1603500833457">
+    <state x="329" y="84" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1604437607780" />
+    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1604534559320">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1603500833457" />
-    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603501120028">
+    <state x="491" y="84" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1604534559320" />
+    <state x="395" y="265" width="575" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604518581490">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1603501120028" />
+    <state x="395" y="265" width="575" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1366.741@0.27.1366.741" timestamp="1604518581490" />
+    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604534712070">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="391" y="27" width="574" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1604534712070" />
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603063776607">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603063776607" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1603240396060">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="495" y="186" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604516655833">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603052949869" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1603518335699">
+    <state x="495" y="186" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604516655833" />
+    <state width="1320" height="181" key="GridCell.Tab.0.bottom" timestamp="1604535636861">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603518335699" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1603518335698">
+    <state width="1320" height="181" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604535636861" />
+    <state width="1320" height="181" key="GridCell.Tab.0.center" timestamp="1604535636859">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648432" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603518335698" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1603518335696">
+    <state width="1320" height="181" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1604535636859" />
+    <state width="1320" height="181" key="GridCell.Tab.0.left" timestamp="1604535636849">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648432" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603518335696" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1603518335698">
+    <state width="1320" height="181" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1604535636849" />
+    <state width="1320" height="181" key="GridCell.Tab.0.right" timestamp="1604535636860">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603518335698" />
-    <state width="1320" height="172" key="GridCell.Tab.1.bottom" timestamp="1603518335701">
+    <state width="1320" height="181" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1604535636860" />
+    <state width="1320" height="181" key="GridCell.Tab.1.bottom" timestamp="1604535636866">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648434" />
-    <state width="1320" height="172" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603518335701" />
-    <state width="1320" height="172" key="GridCell.Tab.1.center" timestamp="1603518335700">
+    <state width="1320" height="181" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604535636866" />
+    <state width="1320" height="181" key="GridCell.Tab.1.center" timestamp="1604535636864">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1603518335700" />
-    <state width="1320" height="172" key="GridCell.Tab.1.left" timestamp="1603518335700">
+    <state width="1320" height="181" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1604535636864" />
+    <state width="1320" height="181" key="GridCell.Tab.1.left" timestamp="1604535636862">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1603518335700" />
-    <state width="1320" height="172" key="GridCell.Tab.1.right" timestamp="1603518335701">
+    <state width="1320" height="181" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1604535636862" />
+    <state width="1320" height="181" key="GridCell.Tab.1.right" timestamp="1604535636865">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603071648433" />
-    <state width="1320" height="172" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1603518335701" />
+    <state width="1320" height="181" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1604535636865" />
     <state width="1557" height="276" key="GridCell.Tab.2.bottom" timestamp="1603058143683">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -268,10 +472,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="276" key="GridCell.Tab.2.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603058143683" />
+    <state x="216" y="55" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1604183104461">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="216" y="55" width="924" height="691" key="Maven.ArtifactSearchDialog/0.27.1366.741@0.27.1366.741" timestamp="1604183104461" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1603054731496">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1603054731496" />
+    <state x="436" y="215" width="484" height="368" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1604447276255">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="436" y="215" width="484" height="368" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.27.1366.741@0.27.1366.741" timestamp="1604447276255" />
+    <state x="295" y="243" width="636" height="525" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604442976916">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="295" y="243" width="636" height="525" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1366.741@0.27.1366.741" timestamp="1604442976916" />
+    <state x="464" y="312" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604252953148">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="464" y="312" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1604252953148" />
+    <state x="347" y="174" key="run.anything.popup" timestamp="1604170145715">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1604170145715" />
     <state x="395" y="182" width="672" height="585" key="search.everywhere.popup" timestamp="1603514644886">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

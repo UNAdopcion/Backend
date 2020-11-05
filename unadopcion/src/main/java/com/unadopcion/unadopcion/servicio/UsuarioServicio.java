@@ -1,6 +1,5 @@
 package com.unadopcion.unadopcion.servicio;
 
-import com.unadopcion.unadopcion.modelo.Adopcion;
 import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.repositorio.UsuarioRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +34,24 @@ public class UsuarioServicio {
 
     }
 
+    @Transactional
+    public Usuario googleCrearUsuario(int logeoId, String googleId, String usuarioNombreReal, String  urlFoto, String correo){
+        String ninguno = "";
+        Usuario usuario = new Usuario();
+        usuario.setLogeoId(logeoId);
+        usuario.setUsuarioNombre(googleId);
+        usuario.setUsuarioTelefono("0");
+        usuario.setUsuarioNombreReal(usuarioNombreReal);
+        usuario.setUsuarioGoogleId(googleId);
+        usuario.setUsuarioRol(ninguno);
+        usuario.setUsuarioPuntos(0);
+        usuario.setUsuarioEmail(correo);
+        usuario.setUsuarioUrlFoto(urlFoto);
+        usuario.setUsuarioInfo(ninguno);
+        return usuarioRepositorio.save(usuario);
+
+    }
+
 
     @Transactional
     public Usuario crearContacto(){
@@ -42,6 +59,9 @@ public class UsuarioServicio {
         return usuarioRepositorio.save(usuario);
     }
 
+    public void guardarUsuario(Usuario usuario){
+        usuarioRepositorio.save(usuario);
+    }
 
     public boolean existeEmail(String email){
         return usuarioRepositorio.existsByUsuarioEmail(email);
@@ -60,14 +80,20 @@ public class UsuarioServicio {
         return usuarioRepositorio.getUsuarioByUsuarioNombre(nombre);
     }
 
+        public Usuario buscarUsuarioPorGoogleId(String googleId){
+        return usuarioRepositorio.getUsuarioByUsuarioGoogleId(googleId);
+    }
     public List<Usuario> buscarUsuarios(String nombre){
           return usuarioRepositorio.findAllByUsuarioNombreRealIsLike(nombre);
     }
 
+
     public boolean usuarioExiste(String nombre){
         return usuarioRepositorio.existsByUsuarioNombre(nombre);
     }
-
+    public boolean usuarioExistePorGoogleId(String googleId){
+        return usuarioRepositorio.existsByUsuarioGoogleId(googleId);
+    }
     public boolean usuarioIdExiste(int  usuarioId){
         return usuarioRepositorio.existsByUsuarioId(usuarioId);
     }

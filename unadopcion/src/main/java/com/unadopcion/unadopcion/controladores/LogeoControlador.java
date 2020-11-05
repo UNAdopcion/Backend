@@ -87,12 +87,13 @@ public class LogeoControlador {
         }
     }
 
-    @RequestMapping(value = "/mostrar-perfil")
-    public Usuario buscarUsuarioPorNombre(@RequestBody String nombre) {
+    @RequestMapping(value = "/mostrar-perfil/{googleid}", produces = "application/json")
+    public Usuario buscarUsuarioPorId(@PathVariable  String googleid) {
 
-        if(usuarioServicio.usuarioExiste(nombre)) {
-            return usuarioServicio.buscarUsuario(nombre);
+        if(usuarioServicio.usuarioExistePorGoogleId(googleid)) {
+            return usuarioServicio.buscarUsuarioPorGoogleId(googleid);
         }else{
+            miLogger.cuidado("No existe usuario con el googleId " + googleid);
             return null;
         }
     }

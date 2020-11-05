@@ -3,12 +3,21 @@ package com.unadopcion.unadopcion.pojo;
 public class NuevaMascotaPOJO {
 
     private String nombreusuario;
+    private String usuariogoogleid;
     private String animalnombre;
     private String animaltipo;
     private String animallugar;
     private String animaldescripcion;
     private String animalsexo;
     private int animaledad;
+
+    public String getUsuariogoogleid() {
+        return usuariogoogleid;
+    }
+
+    public void setUsuariogoogleid(String usuariogoogleid) {
+        this.usuariogoogleid = usuariogoogleid;
+    }
 
     public String getNombreusuario() {
         return nombreusuario;

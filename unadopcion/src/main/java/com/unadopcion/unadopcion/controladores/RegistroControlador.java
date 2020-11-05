@@ -45,9 +45,9 @@ public class RegistroControlador {
         JsonAPOJO jsonAPOJO = new JsonAPOJO();
         NuevaMascotaPOJO nuevaMascotaPOJO = (NuevaMascotaPOJO) jsonAPOJO.getPOJO(json, NuevaMascotaPOJO.class);
 
-        Usuario usuario = usuarioServicio.buscarUsuario(nuevaMascotaPOJO.getNombreusuario());
+        Usuario usuario = usuarioServicio.buscarUsuarioPorGoogleId(nuevaMascotaPOJO.getUsuariogoogleid());
         // Verifica si el usuario existe
-        if (usuarioServicio.usuarioExiste(nuevaMascotaPOJO.getNombreusuario())) {
+        if (usuarioServicio.usuarioExistePorGoogleId(nuevaMascotaPOJO.getUsuariogoogleid())) {
             //crea una entidad registro primero
             Registro registro = registroServicio.crearRegistro(usuario.getUsuarioId(), fecha.getFecha());
             //crea una entidad animal luego con registro id
@@ -57,7 +57,7 @@ public class RegistroControlador {
                     nuevaMascotaPOJO.getAnimaledad(), archivo.getBytes());
 
             registro.setAnimId(animal.getAnimId());
-            //guardar cambios posteriores a creacion
+            //guardar cambios posteriores a creacion de registro
             registroServicio.guardar(registro);
             
             miLogger.info("Se registro mascota con id:" + registro.getAnimId());

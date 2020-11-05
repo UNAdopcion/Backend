@@ -18,6 +18,8 @@ public class Usuario {
     private String usuarioLugar;
     private String usuarioInfo;
     private String usuarioNombreReal;
+    private String usuarioUrlFoto;
+    private String usuarioGoogleId;
     @Lob
     @Column(columnDefinition = "LONGBLOB")
     private byte[] usuarioFoto;
@@ -26,6 +28,22 @@ public class Usuario {
 
 
     public Usuario() {}
+
+    public String getUsuarioGoogleId() {
+        return usuarioGoogleId;
+    }
+
+    public void setUsuarioGoogleId(String googleId) {
+        this.usuarioGoogleId = googleId;
+    }
+
+    public String getUsuarioUrlFoto() {
+        return usuarioUrlFoto;
+    }
+
+    public void setUsuarioUrlFoto(String usuarioUrlFoto) {
+        this.usuarioUrlFoto = usuarioUrlFoto;
+    }
 
     public void setLogeoId(Integer logeoId) {
         this.logeoId = logeoId;
