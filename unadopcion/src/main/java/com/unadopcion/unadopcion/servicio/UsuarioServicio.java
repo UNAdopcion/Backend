@@ -16,25 +16,12 @@ public class UsuarioServicio {
     private UsuarioRepositorio usuarioRepositorio;
 
     @Transactional
-    public Usuario crearUsuario(int logeoId, String usuarioNombre,String usuarioNombreReal,
-                                String usuarioCorreo,
-                                String usuarioTelefono){
-         String ninguno = "";
-         Usuario usuario = new Usuario();
-         usuario.setLogeoId(logeoId);
-         usuario.setUsuarioNombre(usuarioNombre);
-         usuario.setUsuarioNombre(usuarioNombreReal);
-         usuario.setUsuarioTelefono(usuarioTelefono);
-         usuario.setUsuarioRol(ninguno);
-         usuario.setUsuarioPuntos(0);
-         usuario.setUsuarioEmail(usuarioCorreo);
-         usuario.setUsuarioLugar(ninguno);
-         usuario.setUsuarioInfo(ninguno);
-         return usuarioRepositorio.save(usuario);
-
+    public Usuario crearUsuario(Usuario user){
+         return usuarioRepositorio.save(user);
     }
 
     @Transactional
+<<<<<<< HEAD
     public Usuario googleCrearUsuario(int logeoId, String googleId, String usuarioNombreReal, String  urlFoto, String correo){
         String ninguno = "";
         Usuario usuario = new Usuario();
@@ -52,6 +39,11 @@ public class UsuarioServicio {
 
     }
 
+=======
+    public void editar(Usuario user){
+        usuarioRepositorio.save(user);
+    }
+>>>>>>> 5ad9e0b3108dd41895055850eb085035169ad5df
 
     @Transactional
     public Usuario crearContacto(){

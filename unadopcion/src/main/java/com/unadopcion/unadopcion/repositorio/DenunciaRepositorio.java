@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface DenunciaRepositorio extends CrudRepository<Denuncia, Integer>{
 
 List <Denuncia> findAllByUsuarioId(int usuarioId);
+List <Denuncia> findAllByAnimalId(int animalId);
 
 
 }
