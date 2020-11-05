@@ -21,7 +21,7 @@ public class UsuarioServicio {
     }
 
     @Transactional
-<<<<<<< HEAD
+
     public Usuario googleCrearUsuario(int logeoId, String googleId, String usuarioNombreReal, String  urlFoto, String correo){
         String ninguno = "";
         Usuario usuario = new Usuario();
@@ -39,11 +39,10 @@ public class UsuarioServicio {
 
     }
 
-=======
+
     public void editar(Usuario user){
         usuarioRepositorio.save(user);
     }
->>>>>>> 5ad9e0b3108dd41895055850eb085035169ad5df
 
     @Transactional
     public Usuario crearContacto(){

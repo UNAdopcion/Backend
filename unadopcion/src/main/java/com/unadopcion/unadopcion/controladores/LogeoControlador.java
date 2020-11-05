@@ -42,7 +42,7 @@ public class LogeoControlador {
             // primero crear logeo
             logeo.setLogeoNombre(nuevoUsuarioPOJO.getNombre());
             logeo.setLogeoContra(passwordEncoder.encode(nuevoUsuarioPOJO.getContrasena()));
-            logeo = logeoServicio.crearLogeo(logeo);
+            logeo = logeoServicio.guardar(logeo);
 
             // crear usuario con el id del logeo
             user.setLogeoId(logeo.getLogeoId());
@@ -56,7 +56,7 @@ public class LogeoControlador {
             user = usuarioServicio.crearUsuario(user);
 
             logeo.setUsuarioId(user.getUsuarioId());
-            logeoServicio.crearLogeo(logeo);
+            logeoServicio.guardar(logeo);
 
             miLogger.info("Se registro un nuevo usuario con el mombre " + user.getUsuarioNombre() + " y rol "
                     + user.getUsuarioRol());
@@ -88,7 +88,7 @@ public class LogeoControlador {
             user.setUsuarioLugar(editarUsuarioPOJO.getLugar());
             user.setUsuarioInfo(editarUsuarioPOJO.getInfo());
 
-            logeoServicio.editar(logeo);
+            logeoServicio.guardar(logeo);
             usuarioServicio.editar(user);
 
             miLogger.info("Se registro edición de usuario con el mombre " + user.getUsuarioNombre() + " y rol "

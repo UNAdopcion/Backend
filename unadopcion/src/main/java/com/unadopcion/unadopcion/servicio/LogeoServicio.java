@@ -14,13 +14,16 @@ public class LogeoServicio {
     private LogeoRepositorio logeoRepositorio;
 
     @Transactional
-    public Logeo crearLogeo(Logeo logeo) {
+    public Logeo crearLogeo(String nombre, String contrasena) {
+        Logeo logeo = new Logeo();
+        logeo.setLogeoNombre(nombre);
+        logeo.setLogeoContra(contrasena);
         return logeoRepositorio.save(logeo);
     }
 
     @Transactional
-    public void editar(Logeo logeo){
-        logeoRepositorio.save(logeo);
+    public Logeo guardar(Logeo logeo){
+        return logeoRepositorio.save(logeo);
     }
 
     public boolean existsByNombre(String nombre) {
@@ -39,5 +42,6 @@ public class LogeoServicio {
             return false;
         }
     }
+
 
 }
