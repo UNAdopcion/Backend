@@ -2383,3 +2383,116 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'fk_adop
 2020-11-05 12:27:56.650  INFO 4792 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2020-11-05 12:27:57.214  INFO 4792 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-11-05 12:27:57.230  INFO 4792 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 5.955 seconds (JVM running for 7.139)
+2020-11-05 18:57:36.944  INFO 4584 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on DESKTOP-9JUT8G0 with PID 4584 (C:\Users\nano\Documents\IngesoftII\Paralelo\Backend\unadopcion\target\classes started by nano in C:\Users\nano\Documents\IngesoftII\Paralelo\Backend\unadopcion)
+2020-11-05 18:57:36.949  INFO 4584 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-05 18:57:37.989  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 18:57:37.989  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-05 18:57:38.049  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.059  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.059  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.059  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.059  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.069  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.069  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.069  INFO 4584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:57:38.069  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 0 JDBC repository interfaces.
+2020-11-05 18:57:38.079  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 18:57:38.079  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-05 18:57:38.159  INFO 4584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 8 JPA repository interfaces.
+2020-11-05 18:57:38.909  INFO 4584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-05 18:57:38.919  INFO 4584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 18:57:38.919  INFO 4584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 18:57:39.189  INFO 4584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 18:57:39.189  INFO 4584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2174 ms
+2020-11-05 18:57:39.369  INFO 4584 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-05 18:57:39.939  INFO 4584 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-05 18:57:40.864  INFO 4584 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.5
+2020-11-05 18:57:40.869  WARN 4584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `unadopciondb` contains a failed migration to version 1.5 !
+2020-11-05 18:57:40.869  INFO 4584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-05 18:57:40.889  INFO 4584 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-05 18:57:40.899 ERROR 4584 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `unadopciondb` contains a failed migration to version 1.5 !
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.unadopcion.unadopcion.UnadopcionApplication.main(UnadopcionApplication.java:13) ~[classes/:na]
+Caused by: org.flywaydb.core.api.FlywayException: Schema `unadopciondb` contains a failed migration to version 1.5 !
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:227) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:161) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 19 common frames omitted
+
+2020-11-05 18:59:35.554  INFO 10816 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on DESKTOP-9JUT8G0 with PID 10816 (C:\Users\nano\Documents\IngesoftII\Paralelo\Backend\unadopcion\target\classes started by nano in C:\Users\nano\Documents\IngesoftII\Paralelo\Backend\unadopcion)
+2020-11-05 18:59:35.559  INFO 10816 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-05 18:59:36.549  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 18:59:36.549  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-05 18:59:36.609  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.609  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.609  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.609  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.619  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.619  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.619  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.619  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-05 18:59:36.619  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 0 JDBC repository interfaces.
+2020-11-05 18:59:36.639  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 18:59:36.639  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-05 18:59:36.709  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 8 JPA repository interfaces.
+2020-11-05 18:59:37.379  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-05 18:59:37.389  INFO 10816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 18:59:37.389  INFO 10816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 18:59:37.659  INFO 10816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 18:59:37.659  INFO 10816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2035 ms
+2020-11-05 18:59:37.829  INFO 10816 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-05 18:59:39.079  INFO 10816 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-05 18:59:39.139  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.4
+2020-11-05 18:59:39.159  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.5 - Adicion Columna Tabla Animal
+2020-11-05 18:59:39.259  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.6 - Edicion Tablas Vacuna Animal Vacuna
+2020-11-05 18:59:39.459  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `unadopciondb` (execution time 00:00.352s)
+2020-11-05 18:59:39.569  INFO 10816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-05 18:59:39.635  INFO 10816 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-05 18:59:39.719  WARN 10816 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-05 18:59:39.724  INFO 10816 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-05 18:59:39.970  INFO 10816 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-05 18:59:40.139  INFO 10816 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a1dda83, org.springframework.security.web.context.SecurityContextPersistenceFilter@79e10fb4, org.springframework.security.web.header.HeaderWriterFilter@5c59a0f7, org.springframework.web.filter.CorsFilter@7f2b39a, org.springframework.security.web.authentication.logout.LogoutFilter@3360283, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1c74d19, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@2776fd8f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@79be91eb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7a358613, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36510e73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d1c933, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@760f1081, org.springframework.security.web.session.SessionManagementFilter@625487a6, org.springframework.security.web.access.ExceptionTranslationFilter@7c71c889, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@722531ab]
+2020-11-05 18:59:40.229  INFO 10816 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-05 18:59:40.289  INFO 10816 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-05 18:59:40.313  INFO 10816 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-05 18:59:40.824  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-05 18:59:40.825  INFO 10816 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-05 18:59:41.379  INFO 10816 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-05 18:59:41.389  INFO 10816 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-05 18:59:41.999  INFO 10816 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-05 18:59:42.009  INFO 10816 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 6.919 seconds (JVM running for 8.131)

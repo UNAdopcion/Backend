@@ -1,0 +1,31 @@
+package com.unadopcion.unadopcion.servicio;
+
+import com.unadopcion.unadopcion.modelo.Usuario;
+import com.unadopcion.unadopcion.modelo.Vacuna;
+import com.unadopcion.unadopcion.repositorio.VacunaRepositorio;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.util.List;
+
+@Service
+public class VacunaServicio {
+
+    @Autowired
+    private VacunaRepositorio vacunaRepositorio;
+
+    @Transactional
+    public Vacuna crearVacuna(int vacunaId, String vacunaNombre, String vacunaTipo, String vacunaClase){
+
+        Vacuna vacuna = new Vacuna();
+        vacuna.setVacunaId(vacunaId);
+        vacuna.setVacunaNombre(vacunaNombre);
+        vacuna.setVacunaTipo(vacunaTipo);
+        vacuna.setVacunaClase(vacunaClase);
+        return vacunaRepositorio.save(vacuna);
+    }
+
+    public List<Vacuna>buscarVacunabyNombre(String vacunaNombre){return vacunaRepositorio.findAllByVacunaNombre(vacunaNombre); }
+
+}
