@@ -67,8 +67,8 @@ public class UsuarioServicio {
         return usuarioRepositorio.findById(id);
     }
 
-    public Usuario buscarUsuario(String nombre){
-        return usuarioRepositorio.getUsuarioByUsuarioNombre(nombre);
+    public Usuario buscarUsuarioNombre(String nombre){
+        return usuarioRepositorio.findByUsuarioNombreRealIsLike(nombre);
     }
 
         public Usuario buscarUsuarioPorGoogleId(String googleId){

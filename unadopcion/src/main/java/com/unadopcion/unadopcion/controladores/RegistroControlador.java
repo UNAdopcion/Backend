@@ -1,6 +1,5 @@
 package com.unadopcion.unadopcion.controladores;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.JsonAPOJO;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
@@ -33,46 +32,44 @@ public class RegistroControlador {
     private UsuarioServicio usuarioServicio;
 
     @Transactional
-    @RequestMapping(value="/registro",
-            method = RequestMethod.POST,
-            consumes = {"multipart/form-data"})
+    @RequestMapping(value = "/registro", method = RequestMethod.POST, consumes = { "multipart/form-data" })
     public ResponseEntity<Void> registrarMascota(@RequestPart("imagen") MultipartFile archivo,
-                                                 @RequestParam("info") String json) throws IOException {
+            @RequestParam("info") String json) throws IOException {
 
-        //Fecha ahora
+        // Fecha ahora
         Fecha fecha = new Fecha();
-        //convertir json a POJO
+        // convertir json a POJO
         JsonAPOJO jsonAPOJO = new JsonAPOJO();
         NuevaMascotaPOJO nuevaMascotaPOJO = (NuevaMascotaPOJO) jsonAPOJO.getPOJO(json, NuevaMascotaPOJO.class);
 
         Usuario usuario = usuarioServicio.buscarUsuarioPorGoogleId(nuevaMascotaPOJO.getUsuariogoogleid());
         // Verifica si el usuario existe
         if (usuarioServicio.usuarioExistePorGoogleId(nuevaMascotaPOJO.getUsuariogoogleid())) {
-            //crea una entidad registro primero
+            // crea una entidad registro primero
             Registro registro = registroServicio.crearRegistro(usuario.getUsuarioId(), fecha.getFecha());
-            //crea una entidad animal luego con registro id
+            // crea una entidad animal luego con registro id
             Animal animal = animalServicio.crearAnimal(registro.getRegisId(), nuevaMascotaPOJO.getAnimalnombre(),
                     nuevaMascotaPOJO.getAnimaltipo(), nuevaMascotaPOJO.getAnimallugar(),
                     nuevaMascotaPOJO.getAnimaldescripcion(), nuevaMascotaPOJO.getAnimalsexo(),
                     nuevaMascotaPOJO.getAnimaledad(), archivo.getBytes());
 
             registro.setAnimId(animal.getAnimId());
-            //guardar cambios posteriores a creacion de registro
+            // guardar cambios posteriores a creacion de registro
             registroServicio.guardar(registro);
-            
+
             miLogger.info("Se registro mascota con id:" + registro.getAnimId());
-            //Una mascota ha sido creada
+            // Una mascota ha sido creada
             return new ResponseEntity<>(HttpStatus.CREATED);
         } else {
-            miLogger.info("Se intenta registrar mascota con usuario no existente:" + nuevaMascotaPOJO.getNombreusuario());
-            //El usuario no existe para registrar mascota
+            miLogger.info(
+                    "Se intenta registrar mascota con usuario no existente:" + nuevaMascotaPOJO.getNombreusuario());
+            // El usuario no existe para registrar mascota
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
     }
 }
 
-
 // String imagen64 = "data:image;base64," +
-//  + new String(Base64.getEncoder().encode(file.getBytes()));
-//return imagen64;
+// + new String(Base64.getEncoder().encode(file.getBytes()));
+// return imagen64;

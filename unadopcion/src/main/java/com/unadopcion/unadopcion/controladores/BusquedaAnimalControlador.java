@@ -3,9 +3,7 @@ package com.unadopcion.unadopcion.controladores;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.unadopcion.unadopcion.herramientas.JsonLector;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
-import com.unadopcion.unadopcion.herramientas.excepciones.JsonCampoNoExiste;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import org.springframework.beans.factory.annotation.Autowired;
