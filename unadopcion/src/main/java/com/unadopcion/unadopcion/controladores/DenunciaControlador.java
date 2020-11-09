@@ -8,7 +8,6 @@ import com.unadopcion.unadopcion.pojo.ConsultarDenunciaPOJO;
 import com.unadopcion.unadopcion.pojo.DenunciaPOJO;
 import com.unadopcion.unadopcion.servicio.DenunciaServicio;
 import com.unadopcion.unadopcion.servicio.UsuarioServicio;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

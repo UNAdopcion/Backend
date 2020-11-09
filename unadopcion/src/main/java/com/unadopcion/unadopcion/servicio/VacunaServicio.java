@@ -15,10 +15,9 @@ public class VacunaServicio {
     private VacunaRepositorio vacunaRepositorio;
 
     @Transactional
-    public Vacuna crearVacuna(int vacunaId, String vacunaNombre, String vacunaTipo, String vacunaClase) {
+    public Vacuna crearVacuna( String vacunaNombre, String vacunaTipo, String vacunaClase) {
 
         Vacuna vacuna = new Vacuna();
-        vacuna.setVacunaId(vacunaId);
         vacuna.setVacunaNombre(vacunaNombre);
         vacuna.setVacunaTipo(vacunaTipo);
         vacuna.setVacunaClase(vacunaClase);
