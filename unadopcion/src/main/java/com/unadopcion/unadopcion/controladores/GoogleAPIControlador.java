@@ -74,7 +74,7 @@ public class GoogleAPIControlador {
                 correo);
         // poner id de usuario creado en logeo
         logeo.setUsuarioId(usuario.getUsuarioId());
-        // guardar cambios a logeo despues de creacion
+
         logeoServicio.guardar(logeo);
 
         return usuario;

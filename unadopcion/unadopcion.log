@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-11-05 11:14:14.966  INFO 6288 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on DESKTOP-9JUT8G0 with PID 6288 (C:\Users\nano\Documents\IngesoftII\Proyecto\Back\Backend\unadopcion\target\classes started by nano in C:\Users\nano\Documents\IngesoftII\Proyecto\Back\Backend\unadopcion)
 2020-11-05 11:14:14.982  INFO 6288 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
 2020-11-05 11:14:15.967  INFO 6288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -2662,3 +2663,749 @@ Caused by: org.flywaydb.core.api.FlywayException: Schema `unadopciondb` contains
 2020-11-08 12:29:36.388  INFO 8544 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-08 12:29:36.400  INFO 8544 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2020-11-08 12:29:37.353  INFO 8544 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+=======
+2020-11-07 11:42:19.569  INFO 21768 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 21768 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-07 11:42:19.637  INFO 21768 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-07 11:42:24.122  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-07 11:42:24.126  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-07 11:42:24.255  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.259  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.266  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.276  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.283  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.287  INFO 21768 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 11:42:24.289  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148ms. Found 0 JDBC repository interfaces.
+2020-11-07 11:42:24.317  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-07 11:42:24.318  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-07 11:42:24.637  INFO 21768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 291ms. Found 6 JPA repository interfaces.
+2020-11-07 11:42:27.973  INFO 21768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-07 11:42:27.996  INFO 21768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-07 11:42:28.001  INFO 21768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-07 11:42:28.521  INFO 21768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-07 11:42:28.533  INFO 21768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8440 ms
+2020-11-07 11:42:29.133  INFO 21768 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-07 11:42:30.582  INFO 21768 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-07 11:42:30.853  INFO 21768 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.4
+2020-11-07 11:42:30.858  INFO 21768 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopciondb` is up to date. No migration necessary.
+2020-11-07 11:42:31.683  INFO 21768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-07 11:42:31.870  INFO 21768 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-07 11:42:32.091  WARN 21768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-07 11:42:32.131  INFO 21768 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-07 11:42:32.924  INFO 21768 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-07 11:42:33.558  INFO 21768 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-07 11:42:33.562  INFO 21768 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7af327e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a40bb52, org.springframework.security.web.header.HeaderWriterFilter@37775bb1, org.springframework.web.filter.CorsFilter@743d0d44, org.springframework.security.web.authentication.logout.LogoutFilter@78d92eef, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@57ce2898, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1fe8f5e8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@477523ba, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@35563e4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e2445f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42a0786f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dd79214, org.springframework.security.web.session.SessionManagementFilter@2d206a71, org.springframework.security.web.access.ExceptionTranslationFilter@16681017, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@646d810b]
+2020-11-07 11:42:33.806  INFO 21768 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-07 11:42:33.924  INFO 21768 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-07 11:42:36.180  INFO 21768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-07 11:42:36.192  INFO 21768 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-07 11:42:37.293  INFO 21768 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-07 11:42:37.312  INFO 21768 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-07 11:42:38.778  INFO 21768 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-07 11:42:38.830  INFO 21768 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 22.868 seconds (JVM running for 27.658)
+2020-11-07 12:10:59.078  INFO 21768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-07 12:10:59.080  INFO 21768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-07 12:10:59.104  INFO 21768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-11-07 12:11:17.648  INFO 21768 --- [http-nio-8080-exec-2] c.u.u.c.GoogleAPIControlador             : Nuevo usuario Jhon Montoya Gomez
+2020-11-07 12:11:17.655  INFO 21768 --- [http-nio-8080-exec-2] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh6.googleusercontent.com/-lYxiCfDgOWY/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmPks8pKGH5u8GccRx4gSw_Lkg-0A/s96-c/photo.jpg
+2020-11-07 12:12:00.713  INFO 21768 --- [http-nio-8080-exec-7] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-07 12:12:04.375  INFO 21768 --- [http-nio-8080-exec-8] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Ave
+2020-11-07 12:12:44.467  INFO 21768 --- [http-nio-8080-exec-10] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Gato
+2020-11-07 12:15:13.117  INFO 21768 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-07 12:15:13.133  INFO 21768 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-07 12:15:13.135  INFO 21768 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-07 12:15:13.156  INFO 21768 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-07 12:51:29.089  INFO 25207 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 25207 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-07 12:51:29.116  INFO 25207 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-07 12:51:34.369  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-07 12:51:34.373  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-07 12:51:34.498  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.503  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.508  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.513  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.517  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.522  INFO 25207 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-07 12:51:34.524  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136ms. Found 0 JDBC repository interfaces.
+2020-11-07 12:51:34.555  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-07 12:51:34.556  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-07 12:51:34.826  INFO 25207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 254ms. Found 6 JPA repository interfaces.
+2020-11-07 12:51:36.577  INFO 25207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-07 12:51:36.600  INFO 25207 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-07 12:51:36.602  INFO 25207 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-07 12:51:37.014  INFO 25207 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-07 12:51:37.019  INFO 25207 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7441 ms
+2020-11-07 12:51:37.819  INFO 25207 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-07 12:51:39.146  INFO 25207 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-07 12:51:39.317  INFO 25207 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.4
+2020-11-07 12:51:39.360  INFO 25207 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.5 - Cambio tamano usuario email
+2020-11-07 12:51:39.587  INFO 25207 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `unadopciondb` (execution time 00:00.337s)
+2020-11-07 12:51:39.908  INFO 25207 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-07 12:51:40.173  INFO 25207 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-07 12:51:40.425  WARN 25207 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-07 12:51:40.995  INFO 25207 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-07 12:51:42.580  INFO 25207 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-07 12:51:42.650  INFO 25207 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35f7969d, org.springframework.security.web.context.SecurityContextPersistenceFilter@54495935, org.springframework.security.web.header.HeaderWriterFilter@1eb85a47, org.springframework.web.filter.CorsFilter@3404e5c4, org.springframework.security.web.authentication.logout.LogoutFilter@1e495414, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4d81e83a, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@62cf6a84, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@403364e9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@47569167, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a6e9856, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f3bd37f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42d9e8d2, org.springframework.security.web.session.SessionManagementFilter@99a8de3, org.springframework.security.web.access.ExceptionTranslationFilter@34c62fdf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71166348]
+2020-11-07 12:51:43.188  INFO 25207 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-07 12:51:43.515  INFO 25207 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-07 12:51:43.653  INFO 25207 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-07 12:51:46.259  INFO 25207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-07 12:51:46.280  INFO 25207 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-07 12:51:48.826  INFO 25207 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-07 12:51:48.861  INFO 25207 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-07 12:51:50.478  INFO 25207 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-07 12:51:50.545  INFO 25207 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 23.481 seconds (JVM running for 28.422)
+2020-11-07 13:12:46.060  INFO 25207 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-07 13:12:46.065  INFO 25207 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-07 13:12:46.114  INFO 25207 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2020-11-07 13:12:58.166  INFO 25207 --- [http-nio-8080-exec-4] c.u.u.c.GoogleAPIControlador             : Usuario existente Silence Dogood
+2020-11-07 13:12:58.168  INFO 25207 --- [http-nio-8080-exec-4] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Silence Dogood 101967283686267454695 ilovehelenholman@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GhtpGmZfpcpFGrnwSp7ECMH1Ussg4NuDH90bmdVSw=s96-c
+2020-11-07 13:13:38.420  INFO 25207 --- [http-nio-8080-exec-6] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-07 13:13:41.595  INFO 25207 --- [http-nio-8080-exec-7] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Gato
+2020-11-07 14:59:34.777  INFO 25207 --- [http-nio-8080-exec-2] c.u.u.c.GoogleAPIControlador             : Usuario existente Silence Dogood
+2020-11-07 14:59:34.787  INFO 25207 --- [http-nio-8080-exec-2] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Silence Dogood 101967283686267454695 ilovehelenholman@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GhtpGmZfpcpFGrnwSp7ECMH1Ussg4NuDH90bmdVSw=s96-c
+2020-11-07 15:44:55.242  INFO 25207 --- [http-nio-8080-exec-3] c.u.u.c.GoogleAPIControlador             : Usuario existente Silence Dogood
+2020-11-07 15:44:55.245  INFO 25207 --- [http-nio-8080-exec-3] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Silence Dogood 101967283686267454695 ilovehelenholman@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GhtpGmZfpcpFGrnwSp7ECMH1Ussg4NuDH90bmdVSw=s96-c
+2020-11-07 20:08:53.606  INFO 25207 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-07 20:08:53.982  INFO 25207 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-07 20:08:53.999  INFO 25207 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-07 20:08:54.110  INFO 25207 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> John
+2020-11-09 15:09:33.717  INFO 38242 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 38242 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-09 15:09:33.724  INFO 38242 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 15:09:38.903  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:09:38.907  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-09 15:09:39.021  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.027  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.032  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.037  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.045  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.049  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.052  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.056  INFO 38242 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:09:39.058  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 0 JDBC repository interfaces.
+2020-11-09 15:09:39.086  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:09:39.087  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 15:09:39.477  INFO 38242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 376ms. Found 8 JPA repository interfaces.
+2020-11-09 15:09:41.842  INFO 38242 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-09 15:09:41.891  INFO 38242 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 15:09:41.892  INFO 38242 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 15:09:42.334  INFO 38242 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 15:09:42.335  INFO 38242 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8215 ms
+2020-11-09 15:09:43.088  INFO 38242 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-09 15:09:44.357  INFO 38242 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-09 15:09:44.574  WARN 38242 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+2020-11-09 15:09:44.605  INFO 38242 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-09 15:09:44.676  INFO 38242 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-09 15:09:44.701 ERROR 38242 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.unadopcion.unadopcion.UnadopcionApplication.main(UnadopcionApplication.java:13) ~[classes/:na]
+Caused by: org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.checkForIncompatibilities(CompositeMigrationResolver.java:147) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.doFindAvailableMigrations(CompositeMigrationResolver.java:112) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:95) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:46) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.info.MigrationInfoServiceImpl.refresh(MigrationInfoServiceImpl.java:130) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:185) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:161) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 19 common frames omitted
+
+2020-11-09 15:11:30.983  INFO 38444 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 38444 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-09 15:11:31.006  INFO 38444 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 15:11:35.735  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:11:35.739  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-09 15:11:35.961  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.966  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.975  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.982  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.986  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.990  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.994  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:35.998  INFO 38444 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:11:36.022  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216ms. Found 0 JDBC repository interfaces.
+2020-11-09 15:11:36.070  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:11:36.072  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 15:11:36.254  INFO 38444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165ms. Found 8 JPA repository interfaces.
+2020-11-09 15:11:38.002  INFO 38444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-09 15:11:38.029  INFO 38444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 15:11:38.031  INFO 38444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 15:11:38.557  INFO 38444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 15:11:38.558  INFO 38444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7023 ms
+2020-11-09 15:11:39.059  INFO 38444 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-09 15:11:40.265  INFO 38444 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-09 15:11:40.492  INFO 38444 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `unadopciondb`.`flyway_schema_history` ...
+2020-11-09 15:11:41.662  WARN 38444 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+2020-11-09 15:11:41.671  INFO 38444 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-09 15:11:41.727  INFO 38444 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-09 15:11:41.759 ERROR 38444 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.unadopcion.unadopcion.UnadopcionApplication.main(UnadopcionApplication.java:13) ~[classes/:na]
+Caused by: org.flywaydb.core.api.FlywayException: Found more than one migration with version 1.5
+Offenders:
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_5__Adicion_Columna_Tabla_Animal.sql (SQL)
+-> /home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes/db/migration/V1_8__Cambio_tamano_usuario_email.sql (SQL)
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.checkForIncompatibilities(CompositeMigrationResolver.java:147) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.doFindAvailableMigrations(CompositeMigrationResolver.java:112) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:95) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.resolver.CompositeMigrationResolver.resolveMigrations(CompositeMigrationResolver.java:46) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.info.MigrationInfoServiceImpl.refresh(MigrationInfoServiceImpl.java:130) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:185) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:161) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530) ~[flyway-core-6.4.4.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159) ~[flyway-core-6.4.4.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 19 common frames omitted
+
+2020-11-09 15:13:55.386  INFO 38668 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 38668 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-09 15:13:55.406  INFO 38668 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 15:14:02.105  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:14:02.109  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-09 15:14:02.220  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.225  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.231  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.235  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.241  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.246  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.249  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.256  INFO 38668 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 15:14:02.258  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 0 JDBC repository interfaces.
+2020-11-09 15:14:02.318  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 15:14:02.319  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 15:14:02.681  INFO 38668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 295ms. Found 8 JPA repository interfaces.
+2020-11-09 15:14:04.510  INFO 38668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-09 15:14:04.532  INFO 38668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 15:14:04.533  INFO 38668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 15:14:04.922  INFO 38668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 15:14:04.923  INFO 38668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9029 ms
+2020-11-09 15:14:05.456  INFO 38668 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-09 15:14:06.815  INFO 38668 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-09 15:14:06.985  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: << Empty Schema >>
+2020-11-09 15:14:07.117  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.0 - CrearTablas
+2020-11-09 15:14:07.186  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.adopcion' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.198  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.animal' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.209  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.animal_vacuna' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.220  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.denuncia' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.229  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.logeo' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.238  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.registro' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.248  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.solicitud' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.265  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.usuario' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.277  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.vacuna' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.289  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.veterinaria' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:07.891  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Specifying number of digits for floating point data types is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2020-11-09 15:14:12.474  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.1 - AdicionDatos
+2020-11-09 15:14:12.614  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.2 - Adicion Tabla Contacto
+2020-11-09 15:14:12.625  WARN 38668 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'unadopciondb.contacto' (SQL State: 42S02 - Error Code: 1051)
+2020-11-09 15:14:12.786  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.3 - Adicion Campos Tabla Denuncia
+2020-11-09 15:14:12.971  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.4 - Adicion Columna Usuario
+2020-11-09 15:14:13.327  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.5 - Adicion Columna Tabla Animal
+2020-11-09 15:14:13.628  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.6 - Edicion Tablas Vacuna Animal Vacuna
+2020-11-09 15:14:13.907  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.7 - Adicion Campo Tabla Solicitud
+2020-11-09 15:14:14.045  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `unadopciondb` to version 1.8 - Cambio tamano usuario email
+2020-11-09 15:14:15.830  INFO 38668 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema `unadopciondb` (execution time 00:08.925s)
+2020-11-09 15:14:16.084  INFO 38668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-09 15:14:16.203  INFO 38668 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-09 15:14:16.405  INFO 38668 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-09 15:14:16.449  WARN 38668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-09 15:14:17.424  INFO 38668 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-09 15:14:17.959  INFO 38668 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-09 15:14:17.978  INFO 38668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18cf5c52, org.springframework.security.web.context.SecurityContextPersistenceFilter@50cbcca7, org.springframework.security.web.header.HeaderWriterFilter@7cf8f45a, org.springframework.web.filter.CorsFilter@10618775, org.springframework.security.web.authentication.logout.LogoutFilter@101330ad, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@207dd1b7, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6bce4140, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ac058a0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5aea8994, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bec3e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73bb573d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20a3e10c, org.springframework.security.web.session.SessionManagementFilter@204d9edf, org.springframework.security.web.access.ExceptionTranslationFilter@4d81e83a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@133aacbe]
+2020-11-09 15:14:18.139  INFO 38668 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-09 15:14:18.190  INFO 38668 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-09 15:14:20.363  INFO 38668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-09 15:14:20.368  INFO 38668 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-09 15:14:21.763  INFO 38668 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-09 15:14:21.781  INFO 38668 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 15:14:25.810  INFO 38668 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-09 15:14:25.858  INFO 38668 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 32.276 seconds (JVM running for 36.388)
+2020-11-09 16:02:24.402  INFO 38668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-09 16:02:24.411  INFO 38668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-09 16:02:24.443  INFO 38668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2020-11-09 16:02:39.068  INFO 38668 --- [http-nio-8080-exec-3] c.u.u.c.GoogleAPIControlador             : Nuevo usuario Jhon Montoya Gomez
+2020-11-09 16:02:39.080  INFO 38668 --- [http-nio-8080-exec-3] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GgATCwvN0kgLr9tIiyR9s_yxa5SFMhB0MH005Pe=s96-c
+2020-11-09 16:03:18.513  INFO 38668 --- [http-nio-8080-exec-6] c.u.u.controladores.LogeoControlador     : Usuario con nombre Jhon Montoya Gomezedita perfil
+2020-11-09 16:06:20.007  INFO 38668 --- [http-nio-8080-exec-1] c.u.u.controladores.RegistroControlador  : Se registro mascota con id:4
+2020-11-09 16:06:20.115  WARN 38668 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-11-09 16:06:20.117 ERROR 38668 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'anim_microchipId' doesn't have a default value
+2020-11-09 16:06:20.211 ERROR 38668 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement] with root cause
+
+java.sql.SQLException: Field 'anim_microchipId' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3404) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3931) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:104) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:605) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:479) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:476) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:110) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1335) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:422) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2655) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1823) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:442) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.unadopcion.unadopcion.controladores.RegistroControlador$$EnhancerBySpringCGLIB$$da583763.registrarMascota(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:160) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-11-09 16:10:47.833  INFO 38668 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 16:10:47.883  INFO 38668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-09 16:10:47.886  INFO 38668 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-09 16:10:47.953  INFO 38668 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-09 16:11:03.227  INFO 41227 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 41227 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-09 16:11:03.249  INFO 41227 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 16:11:09.517  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 16:11:09.520  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-09 16:11:09.629  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.634  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.639  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.646  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.655  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.661  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.667  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.675  INFO 41227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:11:09.679  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143ms. Found 0 JDBC repository interfaces.
+2020-11-09 16:11:09.733  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 16:11:09.735  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 16:11:09.891  INFO 41227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138ms. Found 8 JPA repository interfaces.
+2020-11-09 16:11:11.590  INFO 41227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-09 16:11:11.612  INFO 41227 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 16:11:11.613  INFO 41227 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 16:11:12.039  INFO 41227 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 16:11:12.040  INFO 41227 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8413 ms
+2020-11-09 16:11:12.588  INFO 41227 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-09 16:11:13.822  INFO 41227 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-09 16:11:14.112  INFO 41227 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.8
+2020-11-09 16:11:14.116  INFO 41227 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopciondb` is up to date. No migration necessary.
+2020-11-09 16:11:14.397  INFO 41227 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-09 16:11:14.531  INFO 41227 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-09 16:11:14.742  INFO 41227 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-09 16:11:14.759  WARN 41227 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-09 16:11:16.386  INFO 41227 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-09 16:11:17.505  INFO 41227 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77324a58, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d133fb7, org.springframework.security.web.header.HeaderWriterFilter@a3cba3a, org.springframework.web.filter.CorsFilter@2c7c0e36, org.springframework.security.web.authentication.logout.LogoutFilter@17ec335a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5175d9ad, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@656c5c3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@545d2560, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@307cf964, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7eb27768, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50e5032c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@374ccb9, org.springframework.security.web.session.SessionManagementFilter@5ca4dce5, org.springframework.security.web.access.ExceptionTranslationFilter@33eb0d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@482f7af0]
+2020-11-09 16:11:17.589  INFO 41227 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-09 16:11:18.152  INFO 41227 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-09 16:11:18.610  INFO 41227 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-09 16:11:24.123  INFO 41227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-09 16:11:24.148  INFO 41227 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-09 16:11:26.639  INFO 41227 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-09 16:11:26.677  INFO 41227 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 16:11:30.515  INFO 41227 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-09 16:11:30.680  INFO 41227 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 29.481 seconds (JVM running for 34.114)
+2020-11-09 16:11:37.858  INFO 41227 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-09 16:11:37.861  INFO 41227 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-09 16:11:37.881  INFO 41227 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-11-09 16:14:18.746  INFO 41227 --- [http-nio-8080-exec-10] c.u.u.c.GoogleAPIControlador             : Usuario existente Jhon Montoya Gomez
+2020-11-09 16:14:18.759  INFO 41227 --- [http-nio-8080-exec-10] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GgATCwvN0kgLr9tIiyR9s_yxa5SFMhB0MH005Pe=s96-c
+2020-11-09 16:14:48.293  INFO 41227 --- [http-nio-8080-exec-3] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-09 16:15:51.401  INFO 41227 --- [http-nio-8080-exec-6] c.u.u.controladores.RegistroControlador  : Se registro mascota con id:6
+2020-11-09 16:15:51.616  WARN 41227 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2020-11-09 16:15:51.619 ERROR 41227 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'anim_microchipId' doesn't have a default value
+2020-11-09 16:15:51.730 ERROR 41227 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement] with root cause
+
+java.sql.SQLException: Field 'anim_microchipId' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3404) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3931) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:104) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:605) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:479) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:476) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:110) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1335) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:422) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2655) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1823) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:442) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.0.0.Alpha6.jar:6.0.0.Alpha6]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:633) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.unadopcion.unadopcion.controladores.RegistroControlador$$EnhancerBySpringCGLIB$$f1a4c0ef.registrarMascota(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:160) ~[spring-security-oauth2-client-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2020-11-09 16:16:59.776  INFO 41227 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 16:16:59.797  INFO 41227 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-09 16:16:59.799  INFO 41227 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-09 16:16:59.867  INFO 41227 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-09 16:18:41.486  INFO 42513 --- [main] c.u.unadopcion.UnadopcionApplication     : Starting UnadopcionApplication on john-HP-Stream with PID 42513 (/home/john/Documents/proyectoIngesoftII/Backend/unadopcion/target/classes started by john in /home/john/Documents/proyectoIngesoftII/Backend/unadopcion)
+2020-11-09 16:18:41.513  INFO 42513 --- [main] c.u.unadopcion.UnadopcionApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 16:18:45.737  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 16:18:45.740  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-09 16:18:45.857  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AdopcionRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.862  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.866  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.AnimalVacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.870  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.DenunciaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.874  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.LogeoRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.878  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.RegistroRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.881  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.UsuarioRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.885  INFO 42513 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.unadopcion.unadopcion.repositorio.VacunaRepositorio. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-09 16:18:45.887  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131ms. Found 0 JDBC repository interfaces.
+2020-11-09 16:18:45.917  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-09 16:18:45.918  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-09 16:18:46.139  INFO 42513 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 206ms. Found 8 JPA repository interfaces.
+2020-11-09 16:18:47.785  INFO 42513 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-09 16:18:47.808  INFO 42513 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-09 16:18:47.809  INFO 42513 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-09 16:18:48.213  INFO 42513 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-09 16:18:48.214  INFO 42513 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6361 ms
+2020-11-09 16:18:48.756  INFO 42513 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-09 16:18:49.895  INFO 42513 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/unadopciondb (MySQL 8.0)
+2020-11-09 16:18:50.049  INFO 42513 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `unadopciondb`: 1.8
+2020-11-09 16:18:50.053  INFO 42513 --- [main] o.f.core.internal.command.DbMigrate      : Schema `unadopciondb` is up to date. No migration necessary.
+2020-11-09 16:18:50.316  INFO 42513 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-09 16:18:50.437  INFO 42513 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-09 16:18:50.652  WARN 42513 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-09 16:18:50.682  INFO 42513 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.0.Alpha6
+2020-11-09 16:18:51.227  INFO 42513 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-09 16:18:51.645  INFO 42513 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-09 16:18:51.899  INFO 42513 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-09 16:18:51.914  INFO 42513 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56cfe6be, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c9fdb64, org.springframework.security.web.header.HeaderWriterFilter@71531dd7, org.springframework.web.filter.CorsFilter@7f0d8eff, org.springframework.security.web.authentication.logout.LogoutFilter@340afaf8, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@34009349, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4f811029, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5627cb29, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@149aa7b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c3b6963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61da0413, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ca3648, org.springframework.security.web.session.SessionManagementFilter@624b3544, org.springframework.security.web.access.ExceptionTranslationFilter@6e95973c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b297740]
+2020-11-09 16:18:51.966  INFO 42513 --- [task-1] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-11-09 16:18:54.079  INFO 42513 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-09 16:18:54.097  INFO 42513 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-09 16:18:55.226  INFO 42513 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-09 16:18:55.246  INFO 42513 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 16:18:56.912  INFO 42513 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-09 16:18:56.972  INFO 42513 --- [main] c.u.unadopcion.UnadopcionApplication     : Started UnadopcionApplication in 17.565 seconds (JVM running for 22.107)
+2020-11-09 16:19:38.398  INFO 42513 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-09 16:19:38.408  INFO 42513 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-09 16:19:38.456  INFO 42513 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-11-09 16:20:12.690  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario existente Jhon Montoya Gomez
+2020-11-09 16:20:12.700  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GgATCwvN0kgLr9tIiyR9s_yxa5SFMhB0MH005Pe=s96-c
+2020-11-09 16:23:00.299  INFO 42513 --- [http-nio-8080-exec-8] c.u.u.controladores.RegistroControlador  : Se registro mascota con id:8
+2020-11-09 16:24:04.310  INFO 42513 --- [http-nio-8080-exec-10] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-09 16:26:55.781  INFO 42513 --- [http-nio-8080-exec-2] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-09 16:32:44.800  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario existente Jhon Montoya Gomez
+2020-11-09 16:32:44.814  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GgATCwvN0kgLr9tIiyR9s_yxa5SFMhB0MH005Pe=s96-c
+2020-11-09 16:32:57.792  INFO 42513 --- [http-nio-8080-exec-7] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-09 16:35:16.679  INFO 42513 --- [http-nio-8080-exec-1] c.u.u.c.BusquedaAnimalControlador        : Busqueda animal por:Perro
+2020-11-09 16:36:11.727  WARN 42513 --- [http-nio-8080-exec-5] c.u.u.controladores.DenunciaControlador  : El usuario consultado jjmontoyag no existe. 
+2020-11-09 16:36:46.625  INFO 42513 --- [http-nio-8080-exec-10] c.u.u.controladores.LogeoControlador     : Usuario con nombre Jhon Montoya Gomezedita perfil
+2020-11-09 16:39:28.064  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario existente Jhon Montoya Gomez
+2020-11-09 16:39:28.084  INFO 42513 --- [http-nio-8080-exec-5] c.u.u.c.GoogleAPIControlador             : Usuario se a logeado Jhon Montoya Gomez 100208585498896465550 jjmontoyagg@gmail.com foto https://lh3.googleusercontent.com/a-/AOh14GgATCwvN0kgLr9tIiyR9s_yxa5SFMhB0MH005Pe=s96-c
+2020-11-09 16:40:35.619  INFO 42513 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-09 16:40:35.625  INFO 42513 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-09 16:40:35.627  INFO 42513 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-09 16:40:35.803  INFO 42513 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
