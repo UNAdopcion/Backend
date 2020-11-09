@@ -69,7 +69,7 @@ public class GoogleAPIControlador {
 
     }
 
-    //Metodos auxiliares
+    //Metodos
 
     private Usuario crearUsuarioConGoogle(String googleId, String usuarioNombreReal, String  urlFoto, String correo){
         //crear logeo primero
@@ -78,7 +78,7 @@ public class GoogleAPIControlador {
         Usuario usuario = usuarioServicio.googleCrearUsuario(logeo.getLogeoId(), googleId, usuarioNombreReal, urlFoto, correo);
         //poner id de usuario creado en logeo
         logeo.setUsuarioId(usuario.getUsuarioId());
-        //guardar cambios a logeo despues de creacion
+        //guardar cambios a logeo despues/home/john/Documents/ingesoftII/gitBack/Backend/unadopcion de creacion
         logeoServicio.guardar(logeo);
 
         return usuario;

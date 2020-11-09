@@ -1,0 +1,1 @@
+alter table usuario modify column usuario_email varchar(400)
