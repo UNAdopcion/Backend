@@ -1,6 +1,5 @@
 package com.unadopcion.unadopcion.servicio;
 
-import com.unadopcion.unadopcion.modelo.Usuario;
 import com.unadopcion.unadopcion.modelo.Vacuna;
 import com.unadopcion.unadopcion.repositorio.VacunaRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class VacunaServicio {
     private VacunaRepositorio vacunaRepositorio;
 
     @Transactional
-    public Vacuna crearVacuna(int vacunaId, String vacunaNombre, String vacunaTipo, String vacunaClase){
+    public Vacuna crearVacuna(int vacunaId, String vacunaNombre, String vacunaTipo, String vacunaClase) {
 
         Vacuna vacuna = new Vacuna();
         vacuna.setVacunaId(vacunaId);
@@ -26,6 +25,8 @@ public class VacunaServicio {
         return vacunaRepositorio.save(vacuna);
     }
 
-    public List<Vacuna>buscarVacunabyNombre(String vacunaNombre){return vacunaRepositorio.findAllByVacunaNombre(vacunaNombre); }
+    public List<Vacuna> buscarVacunabyNombre(String vacunaNombre) {
+        return vacunaRepositorio.findAllByVacunaNombre(vacunaNombre);
+    }
 
 }
