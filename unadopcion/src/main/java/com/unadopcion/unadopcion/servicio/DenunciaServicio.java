@@ -1,5 +1,6 @@
 package com.unadopcion.unadopcion.servicio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -16,7 +17,8 @@ public class DenunciaServicio {
     private DenunciaRepositorio denunciaRepositorio;
 
     @Transactional
-    public Denuncia crearDenuncia(int usuarioId, int animalId, String denunFecha, String denunTipo, String denunDescrip, String detalles) {
+    public Denuncia crearDenuncia(int usuarioId, int animalId, String denunFecha, String denunTipo, String denunDescrip,
+            String detalles) {
 
         Denuncia denuncia = new Denuncia();
         denuncia.setUsuarioId(usuarioId);
@@ -39,6 +41,26 @@ public class DenunciaServicio {
 
     public Denuncia actualizar(Denuncia denuncia) {
         return denunciaRepositorio.save(denuncia);
+    }
+
+    public List<Denuncia> buscarMaltratoIdMascota(List<Denuncia> listaDenuncias, int idMascota) {
+        List<Denuncia> listaDenunciasFiltrada = new ArrayList<>();
+        for (Denuncia denuncia : listaDenuncias) {
+            if (denuncia.getAnimalId() == idMascota) {
+                listaDenunciasFiltrada.add(denuncia);
+            }
+        }
+        return listaDenunciasFiltrada;
+    }
+
+    public List<Denuncia> buscarMaltratoFecha(List<Denuncia> listaDenuncias, String fecha) {
+        List<Denuncia> listaDenunciasFiltrada = new ArrayList<>();
+        for (Denuncia denunciaF : listaDenuncias) {
+            if (fecha.equals(denunciaF.getDenunFecha().substring(0, 10))) {
+                listaDenunciasFiltrada.add(denunciaF);
+            }
+        }
+        return listaDenunciasFiltrada;
     }
 
 }

@@ -22,7 +22,7 @@ public class LogeoServicio {
     }
 
     @Transactional
-    public Logeo guardar(Logeo logeo){
+    public Logeo guardar(Logeo logeo) {
         return logeoRepositorio.save(logeo);
     }
 
@@ -36,12 +36,8 @@ public class LogeoServicio {
 
     public boolean verificarContrasena(String nombre, String contrasena) {
         Logeo logeo = logeoRepositorio.findByLogeoNombre(nombre);
-        if (logeo.getLogeoContra().equals(contrasena)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+        return logeo.getLogeoContra().equals(contrasena);
 
+    }
 
 }

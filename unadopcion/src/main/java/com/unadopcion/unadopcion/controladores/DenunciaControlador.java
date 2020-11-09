@@ -29,25 +29,22 @@ public class DenunciaControlador {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
-    @RequestMapping(value = "/consultar-maltrato/{id}", produces = "application/json")
+    @GetMapping(value = "/consultar-maltrato/{id}", produces = "application/json")
     public List<Denuncia> consultaMaltratoId(@PathVariable int id) {
         return denunciaServicio.buscarDenunciaByAnimalId(id);
     }
 
-    @RequestMapping(value = "/denunciar-maltrato", method = RequestMethod.POST)
+    @PostMapping(value = "/denunciar-maltrato")
     public ResponseEntity<Void> denunciarMaltrato(@RequestBody DenunciaPOJO denunciaPOJO) {
         Usuario usuario = usuarioServicio.buscarUsuarioNombre(denunciaPOJO.getNombreUsuario());
         int usuarioId = 0;
         usuarioId = usuario.getUsuarioId();
-        int animalId = 8;
+        int animalId = 3;
         Fecha fecha = new Fecha();
         String denunTipo = denunciaPOJO.getDenunTipo();
         String denunDescrip = denunciaPOJO.getDenunDescrip();
         String detalles = denunciaPOJO.getDetalles();
-
         boolean existe = usuarioServicio.usuarioIdExiste(usuarioId);
-
-        ;
         if (!existe) {
             miLogger.cuidado("El usuario " + usuarioId + " no existe");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -61,35 +58,24 @@ public class DenunciaControlador {
 
     // Servicio que busca las denuncia de maltrato animal asociadas a un usuario y
     // las filtra por id del animal y fecha
-    @RequestMapping(value = "/consultar-maltrato", method = RequestMethod.POST, produces = "application/json")
-    public List<Denuncia> consultaMaltratoPorNombreUsuario(@RequestBody ConsultarDenunciaPOJO consultarPOJO) {
-        Usuario usuario_consultado = usuarioServicio.buscarUsuarioNombre(consultarPOJO.getNombreUsuario());
-        boolean existe = usuarioServicio.usuarioIdExiste(usuario_consultado.getUsuarioId());
-        List<Denuncia> listaDenuncias = new ArrayList<Denuncia>();
-        List<Denuncia> listaDenunciasFiltrada = new ArrayList<Denuncia>();
-        listaDenuncias = denunciaServicio.buscarDenunciaByUser(usuario_consultado.getUsuarioId());
-        if (!consultarPOJO.getIdMascota().equals("")) {
-            for (Denuncia denuncia : listaDenuncias) {
-                if (denuncia.getAnimalId() == Integer.parseInt(consultarPOJO.getIdMascota())) {
-                    listaDenunciasFiltrada.add(denuncia);
-                }
-            }
-            listaDenuncias = listaDenunciasFiltrada;
-        }
-        if (!consultarPOJO.getFecha().equals("")) {
-            listaDenunciasFiltrada = new ArrayList<Denuncia>();
-            for (Denuncia denunciaF : listaDenuncias) {
-                if (consultarPOJO.getFecha().equals(denunciaF.getDenunFecha().substring(0, 10))) {
-                    listaDenunciasFiltrada.add(denunciaF);
-                }
-            }
-            listaDenuncias = listaDenunciasFiltrada;
-        }
-        if (!existe) {
-            miLogger.cuidado("El usuario consultado " + usuario_consultado.getUsuarioNombre() + " no existe. ");
+    @PostMapping(value = "/consultar-maltrato", produces = "application/json")
+    public List<Denuncia> consulMaltrato(@RequestBody ConsultarDenunciaPOJO consultarPOJO) {
+        Usuario usuarioConsultado = usuarioServicio.buscarUsuarioNombre(consultarPOJO.getNombreUsuario());
+        List<Denuncia> listaDenuncias = new ArrayList<>();
+        if (usuarioConsultado == null) {
+            miLogger.cuidado("El usuario consultado " + consultarPOJO.getNombreUsuario() + " no existe. ");
         } else {
+            listaDenuncias = denunciaServicio.buscarDenunciaByUser(usuarioConsultado.getUsuarioId());
+            if (!consultarPOJO.getIdMascota().equals("")) {
+                listaDenuncias = denunciaServicio.buscarMaltratoIdMascota(listaDenuncias,
+                        Integer.parseInt(consultarPOJO.getIdMascota()));
+            }
+            if (!consultarPOJO.getFecha().equals("")) {
+
+                listaDenuncias = denunciaServicio.buscarMaltratoFecha(listaDenuncias, consultarPOJO.getFecha());
+            }
             miLogger.info("El usuario " + " consulto los casos de maltrato del usuario "
-                    + usuario_consultado.getUsuarioNombre());
+                    + usuarioConsultado.getUsuarioNombre());
         }
         return listaDenuncias;
     }

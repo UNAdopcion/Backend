@@ -32,7 +32,7 @@ public class RegistroControlador {
     private UsuarioServicio usuarioServicio;
 
     @Transactional
-    @RequestMapping(value = "/registro", method = RequestMethod.POST, consumes = { "multipart/form-data" })
+    @PostMapping(value = "/registro", consumes = { "multipart/form-data" })
     public ResponseEntity<Void> registrarMascota(@RequestPart("imagen") MultipartFile archivo,
             @RequestParam("info") String json) throws IOException {
 
@@ -69,7 +69,3 @@ public class RegistroControlador {
 
     }
 }
-
-// String imagen64 = "data:image;base64," +
-// + new String(Base64.getEncoder().encode(file.getBytes()));
-// return imagen64;
