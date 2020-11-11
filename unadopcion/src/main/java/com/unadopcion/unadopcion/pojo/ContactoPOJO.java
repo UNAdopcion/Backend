@@ -1,21 +1,20 @@
 package com.unadopcion.unadopcion.pojo;
 
-import java.security.PrivateKey;
 
 public class ContactoPOJO {
     private String contactoNombre;
-    private String contatoCorreo;
+    private String contactoCorreo;
     private String contactoTipo;
     private String contactoCelular;
-    private String ContactoConsulta;
+    private String contactoConsulta;
 
     public String getContactoNombre() { return contactoNombre; }
 
     public void setContactoNombre(String contactoNombre) { this.contactoNombre = contactoNombre; }
 
-    public String getContatoCorreo() { return contatoCorreo; }
+    public String getContactoCorreo() { return contactoCorreo; }
 
-    public void setContatoCorreo(String contatoCorreo) { this.contatoCorreo = contatoCorreo; }
+    public void setContactoCorreo(String contactoCorreo) { this.contactoCorreo = contactoCorreo; }
 
     public String getContactoTipo() { return contactoTipo; }
 
@@ -28,11 +27,11 @@ public class ContactoPOJO {
     }
 
     public String getContactoConsulta() {
-        return ContactoConsulta;
+        return contactoConsulta;
     }
 
     public void setContactoConsulta(String contactoConsulta) {
-        ContactoConsulta = contactoConsulta;
+        this.contactoConsulta = contactoConsulta;
     }
 
 

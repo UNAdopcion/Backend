@@ -19,7 +19,7 @@ public class VacunaControlador {
     @Autowired
     private VacunaServicio vacunaServicio;
 
-    @PostMapping(value = "/vacunas", produces = "application/json")
+    @PostMapping(value = "/ingresar-vacuna", produces = "application/json")
     public ResponseEntity<Void> crearVacuna(@RequestBody NuevaVacunaPOJO nuevaVacunaPOJO) {
         String vacunaNombre = nuevaVacunaPOJO.getVacunaNombre();
         String vacunaTipo = nuevaVacunaPOJO.getVacunaTipo();

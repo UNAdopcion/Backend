@@ -17,14 +17,13 @@ public class ContactoControlador {
     @Autowired
     private ContactoServicio contactoServicio;
 
-    @PostMapping(value = "/contacto", produces = "application/json")
+    @PostMapping(value = "/contacto")
     public ResponseEntity<Void>  crearRegistroContacto(@RequestBody ContactoPOJO contactoPOJO) {
         String contactoNombre = contactoPOJO.getContactoNombre();
-        String contactoCorreo = contactoPOJO.getContatoCorreo();
+        String contactoCorreo = contactoPOJO.getContactoCorreo();
         String contactoTipo= contactoPOJO.getContactoTipo();
         String contactoCelular= contactoPOJO.getContactoCelular();
         String contactoConsulta= contactoPOJO.getContactoConsulta();
-
 
         contactoServicio.crearRegistroContacto(contactoNombre, contactoCorreo, contactoTipo, contactoCelular, contactoConsulta);
         miLogger.info("Se han registrado los datos de contacto");

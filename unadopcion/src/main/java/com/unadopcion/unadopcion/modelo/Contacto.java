@@ -18,6 +18,7 @@ public class Contacto {
     public Contacto() {
     }
 
+
     public int getContactoId() { return contactoId; }
 
     public void setContactoId(int contactoId) { this.contactoId = contactoId; }
@@ -54,13 +55,11 @@ public class Contacto {
         this.contactoCelular = contactoCelular;
     }
 
-    public String getContactoConsulta() {
-        return contactoConsulta;
-    }
+    public String getContactoConsulta() { return contactoConsulta; }
 
-    public void setContactoConsulta(String contactoConsuta) {
-        this.contactoConsulta = contactoConsulta;
-    }
+    public void setContactoConsulta(String contactoConsulta) { this.contactoConsulta = contactoConsulta; }
+
+
 
 
 }
