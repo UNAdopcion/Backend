@@ -99,15 +99,13 @@ create table registro
    primary key (regis_id)
 );
 
-/*==============================================================*/
-/* table: solicitud                                             */
-/*==============================================================*/
 create table solicitud
 (
-   solici_id            int not null auto_increment,
-   anim_id              int not null,
-   solici_fecha         varchar(32) not null,
-   primary key (solici_id)
+   id           int not null auto_increment,
+   animid       int not null,
+   fecha        varchar(32) not null,
+   estado       varchar(32) not null,
+   primary key (id)
 );
 
 /*==============================================================*/
@@ -180,7 +178,7 @@ alter table logeo add constraint fk_logeado2 foreign key (usuario_id)
 alter table registro add constraint fk_registrado2 foreign key (anim_id)
       references animal (anim_id) on delete restrict on update restrict;
 
-alter table solicitud add constraint fk_solicitado foreign key (anim_id)
+alter table solicitud add constraint fk_solicitado foreign key (animid)
       references animal (anim_id) on delete restrict on update restrict;
 
 alter table usuario add constraint fk_logeado foreign key (logeo_id)

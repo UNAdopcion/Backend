@@ -43,6 +43,8 @@ public class AnimalServicio {
         return Optional.ofNullable(animalRepositorio.findById(id));
     }
 
-
+    public Animal findFirstByAnimId(int anim_id){
+        return animalRepositorio.findFirstByAnimId(anim_id);
+    }
 
 }

@@ -89,5 +89,8 @@ public class UsuarioServicio {
         return usuarioRepositorio.existsByUsuarioId(usuarioId);
     }
 
+    public Usuario findFirstByUsuarioGoogleId(String googleId){
+        return usuarioRepositorio.findFirstByUsuarioGoogleId(googleId);
+    }
 }
 

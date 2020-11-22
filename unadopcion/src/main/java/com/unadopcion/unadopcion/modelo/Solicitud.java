@@ -8,49 +8,54 @@ public class Solicitud {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int solici_id;
-    int anim_id;
-    String solici_fecha;
-    String solici_estado;
-    int persona_id;
+    private int id;
+    private int animid;
+    private String fecha;
+    private String estado;
+    private int personaid;
 
-    public int getSolici_id() {
-        return solici_id;
+
+    public int getId() {
+        return id;
     }
 
-    public void setSolici_id(int solici_id) {
-        this.solici_id = solici_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getAnim_id() {
-        return anim_id;
+    public int getAnimid() {
+        return animid;
     }
 
-    public void setAnim_id(int anim_id) {
-        this.anim_id = anim_id;
+    public void setAnimid(int animid) {
+        this.animid = animid;
     }
 
-    public String getSolici_fecha() {
-        return solici_fecha;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setSolici_fecha(String solici_fecha) {
-        this.solici_fecha = solici_fecha;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getSolici_estado() {
-        return solici_estado;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setSolici_estado(String solici_estado) {
-        this.solici_estado = solici_estado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public int getPersona_id() {
-        return persona_id;
+    public int getPersonaid() {
+        return personaid;
     }
 
-    public void setPersona_id(int persona_id) {
-        this.persona_id = persona_id;
+    public void setPersonaid(int personaid) {
+        this.personaid = personaid;
     }
+
+
+
+
 }
