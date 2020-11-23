@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SolicitudServicio {
 
@@ -19,5 +21,9 @@ public class SolicitudServicio {
 
     public boolean existsByAnimidAndPersonaid(int Anim_id, int Persona_id){
         return solicitudRepositorio.existsByAnimidAndPersonaid(Anim_id, Persona_id);
+    }
+
+    public List<Solicitud> findAllByAnimid(int animid){
+        return solicitudRepositorio.findAllByAnimid(animid);
     }
 }

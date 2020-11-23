@@ -92,5 +92,9 @@ public class UsuarioServicio {
     public Usuario findFirstByUsuarioGoogleId(String googleId){
         return usuarioRepositorio.findFirstByUsuarioGoogleId(googleId);
     }
+
+    public Usuario findFirstByUsuarioId(int Id){
+        return usuarioRepositorio.findFirstByUsuarioId(Id);
+    }
 }
 

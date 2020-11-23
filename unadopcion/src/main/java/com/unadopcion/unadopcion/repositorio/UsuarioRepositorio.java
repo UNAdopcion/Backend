@@ -24,5 +24,5 @@ public interface UsuarioRepositorio extends CrudRepository<Usuario, Integer>{
     boolean existsByUsuarioId(int usuarioId);
 
     Usuario findFirstByUsuarioGoogleId(String googleId);
-
+    Usuario findFirstByUsuarioId(int Id);
 }
