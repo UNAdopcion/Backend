@@ -22,5 +22,5 @@ public interface SolicitudRepositorio extends CrudRepository<Solicitud, Integer>
     @Query("SELECT s FROM Solicitud  s where s.personaid = ?1")
     List<Solicitud> findAllByPersonaidIsLike(int personaId);
 
-
+    Solicitud findFirstById(int id);
 }

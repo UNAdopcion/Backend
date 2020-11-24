@@ -42,4 +42,8 @@ public class SolicitudServicio {
     public void deleteById(int id){
         solicitudRepositorio.deleteById(id);
     }
+
+    public Solicitud findFirstById(int id){
+        return solicitudRepositorio.findFirstById(id);
+    }
 }
