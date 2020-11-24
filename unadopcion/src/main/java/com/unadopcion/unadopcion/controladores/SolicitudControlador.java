@@ -1,6 +1,8 @@
 package com.unadopcion.unadopcion.controladores;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.modelo.Animal;
@@ -18,9 +20,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
-
 
 @CrossOrigin
 @RestController
@@ -32,8 +34,10 @@ public class SolicitudControlador {
     private UsuarioServicio usuarioServicio;
     @Autowired
     private AnimalServicio animalServicio;
+
     @Autowired
     private SolicitudServicio solicitudServicio;
+
     @Autowired
     private RegistroServicio registroServicio;
 
@@ -44,11 +48,11 @@ public class SolicitudControlador {
     @RequestMapping(value = "/Solicitud/Realizar/{animid}/{google_Id}")
     public ResponseEntity<Void> RealizarSolicitud(@PathVariable int animid, @PathVariable String google_Id) {
 
-        Usuario user= usuarioServicio.findFirstByUsuarioGoogleId(google_Id);
-        Animal animal=  animalServicio.findFirstByAnimId(animid);
-        boolean existeSolicitud = solicitudServicio.existsByAnimidAndPersonaid(animal.getAnimId(),user.getUsuarioId());
+        Usuario user = usuarioServicio.findFirstByUsuarioGoogleId(google_Id);
+        Animal animal = animalServicio.findFirstByAnimId(animid);
+        boolean existeSolicitud = solicitudServicio.existsByAnimidAndPersonaid(animal.getAnimId(), user.getUsuarioId());
         Registro registro = registroServicio.findFirstByAnimId(animid);
-        if(existeSolicitud || registro.getUsuarioId() == user.getUsuarioId()){
+        if (existeSolicitud || registro.getUsuarioId() == user.getUsuarioId()) {
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
@@ -67,30 +71,49 @@ public class SolicitudControlador {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/Solicitud/Consultar-Pendiente")
-    public List<SolicitudConsultaPOJO> ConsultarPendiente(@RequestBody SolicitudConsultaPOJO solicitudConsultaPOJO){
+    @RequestMapping(value="/Solicitud/Cancelar/{id}")
+    public ResponseEntity<Void> cancelarSolicitud(@PathVariable int id) {
+        boolean solicitud = solicitudServicio.existsById(id);
+        if(solicitud){
+            solicitudServicio.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        }
+        return null;
+    }
 
-        Usuario user= usuarioServicio.findFirstByUsuarioGoogleId(solicitudConsultaPOJO.getPersonaid());
+    @RequestMapping(value = "/Solicitud/Consultar-Pendiente")
+    public List<SolicitudConsultaPOJO> ConsultarPendiente(@RequestBody SolicitudConsultaPOJO solicitudConsultaPOJO) {
+
+        Usuario user = usuarioServicio.findFirstByUsuarioGoogleId(solicitudConsultaPOJO.getPersonaid());
         List<Registro> registros = registroServicio.findAllByUsuarioIdIsLike(user.getUsuarioId());
 
         List<Solicitud> solicitudes = new ArrayList<Solicitud>();
-        for(int i = 0; i < registros.size(); i++){
+        for (int i = 0; i < registros.size(); i++) {
             solicitudes.addAll(solicitudServicio.findAllByAnimid(registros.get(i).getAnimId()));
         }
 
-        List<SolicitudConsultaPOJO> pojos = new ArrayList<SolicitudConsultaPOJO>();
-        for(int i = 0; i < solicitudes.size(); i++){
-            SolicitudConsultaPOJO pojo = new SolicitudConsultaPOJO();
-            pojo.setId(solicitudes.get(i).getId());
-            pojo.setAnimid(solicitudes.get(i).getAnimid());
-            pojo.setFecha(solicitudes.get(i).getFecha());
-            pojo.setEstado(solicitudes.get(i).getEstado());
-            pojo.setPersonaid(solicitudConsultaPOJO.getPersonaid());
-            pojo.setAnimNombre(animalServicio.findFirstByAnimId(solicitudes.get(i).getAnimid()).getAnimNombre());
-            pojo.setPersonaNombre(usuarioServicio.findFirstByUsuarioId(solicitudes.get(i).getPersonaid()).getUsuarioNombreReal());
+        solicitudes.addAll(solicitudServicio.findAllByPersonaidIsLike(user.getUsuarioId()));
 
-            pojos.add(pojo);
+        List<SolicitudConsultaPOJO> pojos = new ArrayList<SolicitudConsultaPOJO>();
+        for (int i = 0; i < solicitudes.size(); i++) {
+            if (solicitudes.get(i).getEstado().equals(PENDIENTE)) {
+                SolicitudConsultaPOJO pojo = new SolicitudConsultaPOJO();
+                pojo.setId(solicitudes.get(i).getId());
+                pojo.setAnimid(solicitudes.get(i).getAnimid());
+                pojo.setFecha(solicitudes.get(i).getFecha());
+                pojo.setEstado(solicitudes.get(i).getEstado());
+                if(solicitudes.get(i).getPersonaid() == user.getUsuarioId()){
+                    pojo.setPersonaid(user.getUsuarioGoogleId());
+                }else{
+                    pojo.setPersonaid(null);
+                }
+                pojo.setAnimNombre(animalServicio.findFirstByAnimId(solicitudes.get(i).getAnimid()).getAnimNombre());
+                pojo.setPersonaNombre(usuarioServicio.findFirstByUsuarioId(solicitudes.get(i).getPersonaid()).getUsuarioNombreReal());
+
+                pojos.add(pojo);
+            }
         }
+
         return pojos;
 
     }
