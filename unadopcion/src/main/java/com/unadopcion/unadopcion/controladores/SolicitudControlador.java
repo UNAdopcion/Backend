@@ -1,15 +1,12 @@
 package com.unadopcion.unadopcion.controladores;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.herramientas.Fecha;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.modelo.Registro;
 import com.unadopcion.unadopcion.modelo.Solicitud;
 import com.unadopcion.unadopcion.modelo.Usuario;
-import com.unadopcion.unadopcion.pojo.NuevaVacunaPOJO;
 import com.unadopcion.unadopcion.pojo.SolicitudConsultaPOJO;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import com.unadopcion.unadopcion.servicio.RegistroServicio;
@@ -20,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,9 +37,9 @@ public class SolicitudControlador {
     @Autowired
     private RegistroServicio registroServicio;
 
-    private final String PENDIENTE = "Pendiente";
-    private final String ACEPTADA = "Aceptada";
-    private final String RECHAZADA = "Rechazada";
+    public final static String PENDIENTE = "Pendiente";
+    public final static String ACEPTADA = "Aceptada";
+    public final static String RECHAZADA = "Rechazada";
 
     @RequestMapping(value = "/Solicitud/Realizar/{animid}/{google_Id}")
     public ResponseEntity<Void> RealizarSolicitud(@PathVariable int animid, @PathVariable String google_Id) {
@@ -67,7 +63,7 @@ public class SolicitudControlador {
         solicitud.setEstado(PENDIENTE);
 
         solicitudServicio.save(solicitud);
-
+        miLogger.info("El usuario " + google_Id + " ha realizado la solicitud por " + animid);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
@@ -76,9 +72,10 @@ public class SolicitudControlador {
         boolean solicitud = solicitudServicio.existsById(id);
         if (solicitud) {
             solicitudServicio.deleteById(id);
+            miLogger.info("Se ha cancelado la solicitud " + id);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }
-        return null;
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
     @RequestMapping(value = "/Solicitud/Rechazar/{id}")
@@ -88,9 +85,10 @@ public class SolicitudControlador {
             Solicitud solicitud = solicitudServicio.findFirstById(id);
             solicitud.setEstado(RECHAZADA);
             solicitudServicio.save(solicitud);
+            miLogger.info("Se ha rechazado la solicitud " + id);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }
-        return null;
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
     @RequestMapping(value = "/Solicitud/Aceptar/{solicitudId}/{googleId}")
@@ -98,12 +96,13 @@ public class SolicitudControlador {
         boolean existe = solicitudServicio.existsById(solicitudId);
         if (existe) {
             Solicitud solicitud = solicitudServicio.findFirstById(solicitudId);
-            if(solicitud.getEstado().equals(PENDIENTE)){
+            if (solicitud.getEstado().equals(PENDIENTE)) {
                 List<Solicitud> solicitudList = solicitudServicio.findAllByAnimid(solicitud.getAnimid());
 
-                for(int i = 0; i < solicitudList.size(); i++){
+                for (int i = 0; i < solicitudList.size(); i++) {
                     solicitudList.get(i).setEstado(RECHAZADA);
                     solicitudServicio.save(solicitudList.get(i));
+                    miLogger.info("Se ha rechazado la solicitud " + solicitudList.get(i).getId());
                 }
 
                 Registro registro = registroServicio.findFirstByAnimId(solicitud.getAnimid());
@@ -115,13 +114,15 @@ public class SolicitudControlador {
                 solicitud.setEstado(ACEPTADA);
                 solicitudServicio.save(solicitud);
 
+                miLogger.info("Se ha aceptado la solicitud " + solicitud.getId());
+
                 return new ResponseEntity<>(HttpStatus.ACCEPTED);
 
-            }else{
-                return null;
+            } else {
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
             }
         }
-        return null;
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
     @RequestMapping(value = "/Solicitud/Consultar-Pendiente")
@@ -137,9 +138,9 @@ public class SolicitudControlador {
 
         solicitudes.addAll(solicitudServicio.findAllByPersonaidIsLike(user.getUsuarioId()));
 
-        for (int i = 0; i < solicitudes.size()-1; i++) {
+        for (int i = 0; i < solicitudes.size() - 1; i++) {
             for (int j = i + 1; j < solicitudes.size(); j++) {
-                if(solicitudes.get(i).equals(solicitudes.get(j))){
+                if (solicitudes.get(i).equals(solicitudes.get(j))) {
                     solicitudes.remove(solicitudes.get(j));
                 }
             }
