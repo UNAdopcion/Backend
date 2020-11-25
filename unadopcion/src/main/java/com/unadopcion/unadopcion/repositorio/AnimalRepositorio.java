@@ -11,4 +11,5 @@ public interface AnimalRepositorio extends CrudRepository<Animal, Integer> {
 
     List<Animal> findAllByAnimTipo(String tipo);
 
+    Animal findFirstByAnimId(int anim_id);
 }

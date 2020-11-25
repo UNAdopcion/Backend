@@ -14,6 +14,8 @@ create table veterinaria
     sitio_web                   varchar(200),
     descripcion                 varchar(500),
     fecha                       varchar(32) not null,
+       calificacion                       int(3) null,
+          calificadores                       int(4) null,
     primary key (veterinaria_id)
 );
 

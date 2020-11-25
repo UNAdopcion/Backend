@@ -8,6 +8,8 @@ import com.unadopcion.unadopcion.repositorio.RegistroRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RegistroServicio {
 
@@ -28,4 +30,11 @@ public class RegistroServicio {
         return registroRepositorio.save(registro);
     }
 
+    public List<Registro> findAllByUsuarioIdIsLike(int personaid){
+        return registroRepositorio.findAllByUsuarioIdIsLike(personaid);
+    }
+
+    public Registro findFirstByAnimId(int animid){
+        return registroRepositorio.findFirstByAnimId(animid);
+    }
 }

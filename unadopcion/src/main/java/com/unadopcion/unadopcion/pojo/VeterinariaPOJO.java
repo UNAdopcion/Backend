@@ -6,9 +6,9 @@ public class VeterinariaPOJO {
     private double longitud;
     private String direccion;
     private int numero;
-    private String sitioWeb ;
-    private String descripcion ;
-
+    private String sitioWeb;
+    private String descripcion;
+    private int calificacion;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -64,5 +64,13 @@ public class VeterinariaPOJO {
 
     public String getDescripcion() {
         return descripcion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
     }
 }

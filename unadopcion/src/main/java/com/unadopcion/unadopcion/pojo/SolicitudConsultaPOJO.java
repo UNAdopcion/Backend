@@ -1,18 +1,15 @@
-package com.unadopcion.unadopcion.modelo;
+package com.unadopcion.unadopcion.pojo;
 
-import javax.persistence.*;
+public class SolicitudConsultaPOJO {
 
-@Entity
-@Table(name = "solicitud")
-public class Solicitud {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int animid;
     private String fecha;
     private String estado;
-    private int personaid;
+    private String personaid;
+
+    private String personaNombre;
+    private String animNombre;
 
 
     public int getId() {
@@ -47,13 +44,28 @@ public class Solicitud {
         this.estado = estado;
     }
 
-    public int getPersonaid() {
+    public String getPersonaid() {
         return personaid;
     }
 
-    public void setPersonaid(int personaid) {
+    public void setPersonaid(String personaid) {
         this.personaid = personaid;
     }
 
+    public String getPersonaNombre() {
+        return personaNombre;
+    }
+
+    public void setPersonaNombre(String personaNombre) {
+        this.personaNombre = personaNombre;
+    }
+
+    public String getAnimNombre() {
+        return animNombre;
+    }
+
+    public void setAnimNombre(String animNombre) {
+        this.animNombre = animNombre;
+    }
 
 }
