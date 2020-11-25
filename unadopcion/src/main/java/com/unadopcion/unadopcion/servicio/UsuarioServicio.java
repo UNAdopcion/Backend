@@ -30,7 +30,7 @@ public class UsuarioServicio {
         usuario.setUsuarioTelefono("0");
         usuario.setUsuarioNombreReal(usuarioNombreReal);
         usuario.setUsuarioGoogleId(googleId);
-        usuario.setUsuarioRol(ninguno);
+        usuario.setUsuarioRol("visitante");//rol por defecto, privilegio mas bajo visitante
         usuario.setUsuarioPuntos(0);
         usuario.setUsuarioEmail(correo);
         usuario.setUsuarioUrlFoto(urlFoto);
