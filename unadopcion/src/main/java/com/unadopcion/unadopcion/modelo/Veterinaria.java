@@ -3,7 +3,7 @@ package com.unadopcion.unadopcion.modelo;
 import javax.persistence.*;
 
 @Entity
-@Table( name = "veterinaria")
+@Table(name = "veterinaria")
 public class Veterinaria {
 
     @Id
@@ -17,6 +17,8 @@ public class Veterinaria {
     private String sitioWeb;
     private String descripcion;
     private String fecha;
+    private int calificacion = 0;
+    private int calificadores = 0;
 
     public void setVeterinariaId(int veterinariaId) {
         this.veterinariaId = veterinariaId;
@@ -88,5 +90,21 @@ public class Veterinaria {
 
     public String getFecha() {
         return fecha;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificadores(int calificadores) {
+        this.calificadores = calificadores;
+    }
+
+    public int getCalificadores(int calificadores) {
+        return calificadores;
     }
 }
