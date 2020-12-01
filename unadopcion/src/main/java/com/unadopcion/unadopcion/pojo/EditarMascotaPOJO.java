@@ -1,9 +1,7 @@
 package com.unadopcion.unadopcion.pojo;
 
-public class NuevaMascotaPOJO {
-
-    private String nombreusuario;
-    private String usuariogoogleid;
+public class EditarMascotaPOJO {
+    private int animalId;
     private String animalnombre;
     private String animaltipo;
     private String animallugar;
@@ -14,23 +12,12 @@ public class NuevaMascotaPOJO {
     private String animalesterilizacion;
 
 
-
-    private String animalestado;
-
-    public String getUsuariogoogleid() {
-        return usuariogoogleid;
+    public int getAnimalId() {
+        return animalId;
     }
 
-    public void setUsuariogoogleid(String usuariogoogleid) {
-        this.usuariogoogleid = usuariogoogleid;
-    }
-
-    public String getNombreusuario() {
-        return nombreusuario;
-    }
-
-    public void setNombreusuario(String nombreusuario) {
-        this.nombreusuario = nombreusuario;
+    public void setAnimalId(int animalId) {
+        this.animalId = animalId;
     }
 
     public String getAnimalnombre() {
@@ -81,15 +68,20 @@ public class NuevaMascotaPOJO {
         this.animaledad = animaledad;
     }
 
-    public int getAnimalmicrochipid() { return animalmicrochipid; }
+    public int getAnimalmicrochipid() {
+        return animalmicrochipid;
+    }
 
-    public void setAnimalmicrochipid(int animalmicrochipid) { this.animalmicrochipid = animalmicrochipid; }
+    public void setAnimalmicrochipid(int animalmicrochipid) {
+        this.animalmicrochipid = animalmicrochipid;
+    }
 
-    public String getAnimalesterilizacion() { return animalesterilizacion; }
+    public String getAnimalesterilizacion() {
+        return animalesterilizacion;
+    }
 
-    public void setAnimalesterilizacion(String animalesterilizacion) { this.animalesterilizacion = animalesterilizacion; }
+    public void setAnimalesterilizacion(String animalesterilizacion) {
+        this.animalesterilizacion = animalesterilizacion;
+    }
 
-    public String getAnimalestado() { return animalestado; }
-
-    public void setAnimalestado(String animalestado) { this.animalestado = animalestado; }
 }

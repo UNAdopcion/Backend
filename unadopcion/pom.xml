@@ -140,6 +140,9 @@
                     <url>jdbc:mysql://localhost:3306/unadopciondb?serverTimezone=UTC</url>
                     <user>root</user>
                     <password></password>
+                    <!--<url>jdbc:mysql://34.95.55.8:3306/unadopciondb</url>
+                    <user>root</user>
+                    <password></password>-->
                     <baselineOnMigrate>true</baselineOnMigrate>
                     <!--schemas>public</schemas-->
                     <locations>

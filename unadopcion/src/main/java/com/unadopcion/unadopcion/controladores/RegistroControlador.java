@@ -51,7 +51,7 @@ public class RegistroControlador {
             Animal animal = animalServicio.crearAnimal(registro.getRegisId(), nuevaMascotaPOJO.getAnimalnombre(),
                     nuevaMascotaPOJO.getAnimaltipo(), nuevaMascotaPOJO.getAnimallugar(),
                     nuevaMascotaPOJO.getAnimaldescripcion(), nuevaMascotaPOJO.getAnimalsexo(),
-                    nuevaMascotaPOJO.getAnimaledad(), archivo.getBytes());
+                    nuevaMascotaPOJO.getAnimaledad(), archivo.getBytes(), nuevaMascotaPOJO.getAnimalmicrochipid(),nuevaMascotaPOJO.getAnimalesterilizacion(),nuevaMascotaPOJO.getAnimalestado());
 
             registro.setAnimId(animal.getAnimId());
             // guardar cambios posteriores a creacion de registro

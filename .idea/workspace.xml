@@ -22,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="" />
+    <list default="true" id="6bdaf030-1b8e-47f6-ab41-99830752ac81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/unadopcion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/unadopcion/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,17 +270,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.UnadopcionApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="V1_4_nuevo_constraint_adopcion.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/unadopcion/src/main/resources/db/migration/V1_4_nuevo_constraint_adopcion.sql" />
       <script-mode>FILE</script-mode>
@@ -339,6 +331,7 @@
       <workItem from="1604859919810" duration="5634000" />
       <workItem from="1604870108896" duration="4560000" />
       <workItem from="1604946487751" duration="985000" />
+      <workItem from="1606352325069" duration="2000" />
     </task>
     <servers />
   </component>

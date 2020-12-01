@@ -25,6 +25,9 @@ public class Animal implements Serializable {
     @Lob
     @Column(columnDefinition = "LONGBLOB")
     private byte[] animFoto;
+    private int animMicrochipId;
+    private String animEsterilizacion;
+    private String animEstado;
 
 
 
@@ -117,4 +120,17 @@ public class Animal implements Serializable {
     public void setAnimFoto(byte[] animFoto) {
         this.animFoto = animFoto;
     }
+
+    public int getAnimMicrochipId() { return animMicrochipId; }
+
+    public void setAnimMicrochipId(int animMicrochipId) { this.animMicrochipId = animMicrochipId; }
+
+    public String getAnimEsterilizacion() { return animEsterilizacion; }
+
+    public void setAnimEsterilizacion(String animEsterilizacion) { this.animEsterilizacion = animEsterilizacion; }
+
+    public String getAnimEstado() { return animEstado; }
+
+    public void setAnimEstado(String animEstado) { this.animEstado = animEstado; }
+
 }

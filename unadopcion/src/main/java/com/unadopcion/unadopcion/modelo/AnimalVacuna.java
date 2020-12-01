@@ -9,9 +9,10 @@ public class AnimalVacuna {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int animVacId;
+    private String animVacFecha;
     private int animId;
     private int vacunaId;
-    private int vetId;
+    private int veterinariaId;
 
     @Lob
     @Column(columnDefinition = "LONGBLOB")
@@ -21,6 +22,10 @@ public class AnimalVacuna {
 
     public void setAnimVacId(int animVacId) { this.animVacId = animVacId; }
 
+    public String getAnimVacFecha() { return animVacFecha; }
+
+    public void setAnimVacFecha(String animVacFecha) { this.animVacFecha = animVacFecha; }
+
     public int getAnimId() { return animId; }
 
     public void setAnimId(int animId) { this.animId = animId; }
@@ -29,9 +34,9 @@ public class AnimalVacuna {
 
     public void setVacunaId(int vacunaId) { this.vacunaId = vacunaId; }
 
-    public int getVetId() { return vetId; }
+    public int getVeterinariaId() { return veterinariaId; }
 
-    public void setVetId(int vetId) { this.vetId = vetId; }
+    public void setVeterinariaId(int veterinariaId) { this.veterinariaId = veterinariaId; }
 
     public byte[] getVacunaFoto() { return vacunaFoto; }
 

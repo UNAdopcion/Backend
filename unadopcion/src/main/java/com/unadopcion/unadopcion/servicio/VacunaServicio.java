@@ -28,4 +28,7 @@ public class VacunaServicio {
         return vacunaRepositorio.findAllByVacunaNombre(vacunaNombre);
     }
 
+    public List<Vacuna> buscarVacunas(){
+        return vacunaRepositorio.findAll();
+    }
 }
