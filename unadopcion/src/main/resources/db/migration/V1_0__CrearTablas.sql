@@ -1,4 +1,3 @@
-
 drop table if exists adopcion;
 
 drop table if exists animal;
@@ -103,6 +102,7 @@ create table solicitud
 (
    id           int not null auto_increment,
    animid       int not null,
+   personaid int not null,
    fecha        varchar(32) not null,
    estado       varchar(32) not null,
    primary key (id)
@@ -114,13 +114,16 @@ create table solicitud
 create table usuario
 (
    usuario_id           int not null auto_increment,
+   usuario_nombre_real varchar(255) not null,
+   usuario_google_id varchar(255) not null,
+   usuario_url_foto varchar(5000) not null,
    logeo_id             int not null,
    usuario_nombre       varchar(100) not null,
    usuario_rol          varchar(32) not null,
    usuario_puntos       float(8,0) not null,
-   usuario_email        varchar(32),
    usuario_telefono     varchar(15) not null,
    usuario_lugar        varchar(255),
+   usuario_email varchar(400),
    usuario_info         varchar(255),
    usuario_foto         longblob,
    primary key (usuario_id)
@@ -184,4 +187,8 @@ alter table solicitud add constraint fk_solicitado foreign key (animid)
 alter table usuario add constraint fk_logeado foreign key (logeo_id)
       references logeo (logeo_id) on delete restrict on update restrict;
 
+alter table solicitud add constraint fk_solicitud_Persona foreign key (personaid)
+        references  usuario(usuario_id) on delete restrict on update restrict;
 
+alter table solicitud add constraint fk_solicitud_Animal foreign key (animid)
+        references  animal(anim_id) on delete restrict on update restrict;
