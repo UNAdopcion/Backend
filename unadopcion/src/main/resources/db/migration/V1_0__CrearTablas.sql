@@ -105,6 +105,7 @@ create table solicitud
    personaid int not null,
    fecha        varchar(32) not null,
    estado       varchar(32) not null,
+   personaid int not null,
    primary key (id)
 );
 
@@ -149,6 +150,11 @@ create table veterinaria
    primary key (vet_id)
 );
 
+alter table solicitud add constraint fk_solicitud_Persona foreign key (personaid)
+        references  usuario(usuario_id) on delete restrict on update restrict;
+
+alter table solicitud add constraint fk_solicitud_Animal foreign key (animid)
+        references  animal(anim_id) on delete restrict on update restrict;
 create table hibernate_sequence ( next_val bigint not null); 
 
 alter table adopcion add constraint fk_adoptado2 foreign key (anim_id)
