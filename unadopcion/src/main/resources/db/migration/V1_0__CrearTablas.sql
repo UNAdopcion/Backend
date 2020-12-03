@@ -105,7 +105,6 @@ create table solicitud
    personaid int not null,
    fecha        varchar(32) not null,
    estado       varchar(32) not null,
-   personaid int not null,
    primary key (id)
 );
 
