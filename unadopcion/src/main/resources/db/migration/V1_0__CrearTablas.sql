@@ -31,6 +31,7 @@ create table adopcion
    primary key (adop_id)
 );
 
+
 /*==============================================================*/
 /* table: animal                                                */
 /*==============================================================*/
@@ -46,6 +47,9 @@ create table animal
    anim_foto            longblob not null,
    anim_edad            int,
    anim_sexo            varchar(10),
+   anim_microchip_id int,
+   anim_esterilizacion varchar(32) null,
+   anim_estado varchar(32) null,
    primary key (anim_id)
 );
 
