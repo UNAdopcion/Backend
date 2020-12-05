@@ -16,8 +16,8 @@ public class SolicitudServicio {
     @Autowired
     private SolicitudRepositorio solicitudRepositorio;
 
-    public void save(Solicitud solicitud) {
-        solicitudRepositorio.save(solicitud);
+    public Solicitud save(Solicitud solicitud) {
+        return solicitudRepositorio.save(solicitud);
     }
 
     public boolean existsByAnimidAndPersonaid(int Anim_id, int Persona_id) {

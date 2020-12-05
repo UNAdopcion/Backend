@@ -15,8 +15,6 @@ public class Animal implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int animId;
     private int animEdad;
-    private Integer adopId;
-    private Integer regisId;
     private String animNombre;
     private String animTipo;
     private String animLugar;
@@ -29,13 +27,6 @@ public class Animal implements Serializable {
     private String animEsterilizacion;
     private String animEstado;
 
-
-
-    public Animal(){
-        regisId = null;
-
-
-    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -55,22 +46,6 @@ public class Animal implements Serializable {
 
     public void setAnimEdad(int animEdad) {
         this.animEdad = animEdad;
-    }
-
-    public Integer getAdopId() {
-        return adopId;
-    }
-
-    public void setAdopId(Integer adopId) {
-        this.adopId = adopId;
-    }
-
-    public Integer getRegisId() {
-        return regisId;
-    }
-
-    public void setRegisId(Integer regisId) {
-        this.regisId = regisId;
     }
 
     public String getAnimNombre() {

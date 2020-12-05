@@ -153,7 +153,7 @@ create table veterinaria
    primary key (vet_id)
 );
 
-create table hibernate_sequence ( next_val bigint not null); 
+create table hibernate_sequence ( next_val bigint not null);
 
 alter table adopcion add constraint fk_adoptado2 foreign key (anim_id)
       references animal (anim_id) on delete restrict on update restrict;

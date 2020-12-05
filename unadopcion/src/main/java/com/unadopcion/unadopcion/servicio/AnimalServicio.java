@@ -19,7 +19,6 @@ public class AnimalServicio {
                               String animalSexo, int animalEdad, byte[] animalFoto,int animalMicrochipId, String animalEsterilizacion, String animalEstado){
 
         Animal animal = new Animal();
-        animal.setRegisId(registroid);
         animal.setAnimNombre(animalNombre);
         animal.setAnimTipo(animalTipo);
         animal.setAnimLugar(animalLugar);

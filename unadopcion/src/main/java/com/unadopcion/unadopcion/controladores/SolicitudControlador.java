@@ -62,7 +62,8 @@ public class SolicitudControlador {
 
         solicitud.setEstado(PENDIENTE);
 
-        solicitudServicio.save(solicitud);
+        solicitud = solicitudServicio.save(solicitud);
+        System.out.println(solicitud.getId());
         miLogger.info("El usuario " + google_Id + " ha realizado la solicitud por " + animid);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -83,6 +84,9 @@ public class SolicitudControlador {
         boolean existe = solicitudServicio.existsById(id);
         if (existe) {
             Solicitud solicitud = solicitudServicio.findFirstById(id);
+            if(solicitud.getEstado().equals(RECHAZADA)){
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
+            }
             solicitud.setEstado(RECHAZADA);
             solicitudServicio.save(solicitud);
             miLogger.info("Se ha rechazado la solicitud " + id);
