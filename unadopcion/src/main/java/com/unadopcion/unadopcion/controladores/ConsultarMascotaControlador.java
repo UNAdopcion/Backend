@@ -5,11 +5,9 @@ import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin
@@ -20,6 +18,14 @@ public class ConsultarMascotaControlador {
     @Autowired
     private AnimalServicio animalServicio;
 
+
+    /*@PostMapping(value = "/consultar-mascota", produces = "application/json")
+    public List<Animal> buscarAnimal(){
+        List<Animal> listaMascotas = new ArrayList<>();
+        listaMascotas = animalServicio.buscarAnimal();
+        miLogger.info("Busqueda de todas las mascotas");
+        return listaMascotas;
+    }*/
 
     @RequestMapping(value = "/consultar-mascota/{nombre}", produces = "application/json")
     public String buscarAnimalPorNombre(@PathVariable String nombre) throws JsonProcessingException  {

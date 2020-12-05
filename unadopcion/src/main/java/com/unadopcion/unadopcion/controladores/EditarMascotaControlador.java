@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unadopcion.unadopcion.herramientas.MiLogger;
 import com.unadopcion.unadopcion.modelo.Animal;
 import com.unadopcion.unadopcion.pojo.EditarMascotaPOJO;
+import com.unadopcion.unadopcion.pojo.EstadoEsterilizacionPOJO;
+import com.unadopcion.unadopcion.pojo.MicrochipPOJO;
 import com.unadopcion.unadopcion.servicio.AnimalServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -47,11 +49,48 @@ public class EditarMascotaControlador {
             animal.setAnimMicrochipId(editarMascotaPOJO.getAnimalmicrochipid());
             animal.setAnimEsterilizacion(editarMascotaPOJO.getAnimalesterilizacion());;
             animalServicio.guardar(animal);
-            miLogger.info("La mascota con nombre " + animal.getAnimNombre() + "edita perfil");
+            miLogger.info("La mascota con nombre " + animal.getAnimNombre() + "edita sus datos");
             return new ResponseEntity<>(HttpStatus.OK);
         }else{
             //algo raro pasa porque todos los id deberian estar en la BD si es editar
-            miLogger.cuidado("usuario envia googleId que no existe en BD: " + editarMascotaPOJO.getAnimalId());
+            miLogger.cuidado("La mascota identidicada con ID:  " + editarMascotaPOJO.getAnimalId()  + "NO existe en BD");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    @RequestMapping(value = "/editar-microchip")
+    public ResponseEntity<Void> editarMicrochipID(@RequestBody MicrochipPOJO microchipPOJO){
+        boolean animalExiste = animalServicio.animalExiste(microchipPOJO.getAnimalId());
+        Animal animal = null;
+        // si existe editar el microchip ID
+        if(animalExiste){
+            animal = animalServicio.buscarAnimalPorID(microchipPOJO.getAnimalId());
+            animal.setAnimId(microchipPOJO.getAnimalId());
+            animal.setAnimMicrochipId(microchipPOJO.getAnimalmicrochipid());
+            animalServicio.guardar(animal);
+            miLogger.info("La mascota con nombre " + animal.getAnimNombre() + "edita microchipID");
+            return new ResponseEntity<>(HttpStatus.OK);
+        }else{
+            miLogger.cuidado("La mascota identidicada con ID: " + microchipPOJO.getAnimalId() + "NO existe en BD");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @RequestMapping(value = "/editar-esterilizacion")
+    public ResponseEntity<Void> editarEstadoEsterilizacion(@RequestBody EstadoEsterilizacionPOJO estadoEsterilizacionPOJO){
+        boolean animalExiste = animalServicio.animalExiste(estadoEsterilizacionPOJO.getAnimalId());
+        Animal animal = null;
+        // si existe editar el microchip ID
+        if(animalExiste){
+            animal = animalServicio.buscarAnimalPorID(estadoEsterilizacionPOJO.getAnimalId());
+            animal.setAnimId(estadoEsterilizacionPOJO.getAnimalId());
+            animal.setAnimEsterilizacion(estadoEsterilizacionPOJO.getAnimalesterilizacion());
+            animalServicio.guardar(animal);
+            miLogger.info("La mascota con nombre " + animal.getAnimNombre() + "edita estado esterilización");
+            return new ResponseEntity<>(HttpStatus.OK);
+        }else{
+            miLogger.cuidado("La mascota identidicada con ID: " + estadoEsterilizacionPOJO.getAnimalId() + "NO existe en BD");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

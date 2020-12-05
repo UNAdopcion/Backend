@@ -48,5 +48,5 @@ public class AnimalServicio {
     public boolean animalExiste(int animalId){ return animalRepositorio.existsAnimalByAnimId(animalId); }
     public List<Animal> buscarAnimalPorAnimalId(int animalId){return animalRepositorio.findAllByAnimId(animalId);}
     public Animal buscarAnimalPorID(int animalId){return animalRepositorio.getAnimalByAnimId(animalId);}
-
+    public List<Animal> buscarAnimal(){ return animalRepositorio.findAll();}
 }

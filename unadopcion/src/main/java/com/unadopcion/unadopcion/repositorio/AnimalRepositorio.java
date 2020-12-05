@@ -22,4 +22,5 @@ public interface AnimalRepositorio extends CrudRepository<Animal, Integer> {
     List <Animal> findAllByAnimId(int animalId);
     Animal  getAnimalByAnimId(int animalId);
     boolean existsAnimalByAnimId(int animalId);
+    List<Animal> findAll();
 }
